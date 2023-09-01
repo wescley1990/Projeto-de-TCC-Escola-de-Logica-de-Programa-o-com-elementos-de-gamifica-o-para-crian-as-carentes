@@ -18,7 +18,17 @@ namespace TCC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Cursos()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Ranking()
         {
             return View();
         }
