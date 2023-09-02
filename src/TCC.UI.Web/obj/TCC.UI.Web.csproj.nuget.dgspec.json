@@ -4,6 +4,128 @@
     "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj",
+        "projectName": "TCC.Domain",
+        "projectPath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj",
+        "packagesPath": "C:\\Users\\ygors\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ygors\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://p2cr.pkgs.visualstudio.com/f360_libs/_packaging/f360nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj",
+        "projectName": "TCC.Infra.CrossCutting.IoC",
+        "projectPath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj",
+        "packagesPath": "C:\\Users\\ygors\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ygors\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://p2cr.pkgs.visualstudio.com/f360_libs/_packaging/f360nuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj": {
+                "projectPath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +150,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj": {
+                "projectPath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

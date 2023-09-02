@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EkNI0CMUDpX9YbjkwYeWRwqvTeRCtmvOG+unXNwrt3umwIa7RhTzv6nqZQzrb7muoP9tXuT4SzKnvBgDKYE88g==",
+  "dgSpecHash": "rrMcgbRdWtH4Xt2d2Ug6KO38amirwRkGMqf78Xxu8LUCAHmpUkX/f2FgKC4SkcWaAIh4mPgDQI6yzTPMjccRGA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ygors\\source\\repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ygors\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
