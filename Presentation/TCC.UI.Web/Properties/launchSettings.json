@@ -3,16 +3,16 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:16254",
-      "sslPort": 44349
+      "applicationUrl": "http://localhost:48346",
+      "sslPort": 44366
     }
   },
   "profiles": {
-    "TCC": {
+    "TCC.UI.Web": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7125;http://localhost:5182",
+      "applicationUrl": "https://localhost:7056;http://localhost:5043",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

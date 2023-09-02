@@ -1,4 +1,4 @@
-namespace TCC.Models
+namespace TCC.UI.Web.Models
 {
     public class ErrorViewModel
     {
