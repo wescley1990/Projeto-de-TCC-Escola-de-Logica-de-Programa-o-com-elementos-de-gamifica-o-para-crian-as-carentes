@@ -31,7 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Tests.Unit", "src\TCC.Tests.Unit\TCC.Tests.Unit.csproj", "{0A7206E3-683A-46BE-BD48-A627D0F84E7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Testes.Integration", "src\TCC.Testes.Integration\TCC.Testes.Integration.csproj", "{F96531C2-EB26-44F0-8CBC-6CC25C249297}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Tests.Integration", "src\TCC.Tests.Integration\TCC.Tests.Integration.csproj", "{F96531C2-EB26-44F0-8CBC-6CC25C249297}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
