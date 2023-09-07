@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NetDevPack.Data;
+using NetDevPack.Messaging;
+using System.ComponentModel.DataAnnotations;
 using TCC.Domain.Models;
 using TCC.Infra.Data.Mappings;
 
@@ -15,7 +17,9 @@ public class AppDbContext : DbContext, IUnitOfWork
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //modelBuilder.Ignore<ValidationResult>();
+        modelBuilder.Ignore<ValidationResult>();
+        modelBuilder.Ignore<Event>();
+
         foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                      e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
             property.SetColumnType("varchar(100)");

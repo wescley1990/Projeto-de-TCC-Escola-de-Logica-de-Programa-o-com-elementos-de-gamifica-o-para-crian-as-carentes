@@ -15,7 +15,7 @@ public static class NativeInjector
         services.AddScoped<ICursoAppService, CursoAppService>();
         
         // Infra - Data
-        // services.AddScoped<ICursoRepository, CursoRepository>();
-        // services.AddScoped<AppDbContext>();
+        services.AddScoped<ICursoRepository, CursoRepository>();
+        services.AddScoped<AppDbContext>();
     }
 }
