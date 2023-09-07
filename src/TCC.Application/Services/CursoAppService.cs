@@ -23,7 +23,7 @@ public class CursoAppService : ICursoAppService
     
     public async Task<IEnumerable<CursoViewModel>> GetAll()
     {
-        return _mapper.Map<IEnumerable<CursoViewModel>>(_cursoRepository.GetAll());
+        return _mapper.Map<IEnumerable<CursoViewModel>>(await _cursoRepository.GetAll());
     }
     
     public void Dispose()
