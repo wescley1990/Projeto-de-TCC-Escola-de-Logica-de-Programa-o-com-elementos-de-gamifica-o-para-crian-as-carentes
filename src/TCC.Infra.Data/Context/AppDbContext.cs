@@ -9,8 +9,6 @@ public class AppDbContext : DbContext, IUnitOfWork
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
-        ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-        ChangeTracker.AutoDetectChangesEnabled = false;
     }
     
     public DbSet<Curso> Cursos { get; set; }
