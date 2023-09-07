@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using TCC.Domain.Enums;
 
 namespace TCC.Application.ViewModels
 {
@@ -13,5 +14,9 @@ namespace TCC.Application.ViewModels
         [MaxLength(100)]
         [DisplayName("nome")]
         public string Nome { get; set; }
+        
+        public string Descricao { get; set; }
+        public Nivel NivelCurso { get; set; }
+        public long Duracao { get; set; }
     }
 }

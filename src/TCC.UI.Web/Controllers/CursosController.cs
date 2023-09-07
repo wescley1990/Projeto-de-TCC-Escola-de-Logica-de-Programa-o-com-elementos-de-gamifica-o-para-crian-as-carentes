@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TCC.Application.Interfaces;
-using TCC.Application.ViewModels;
 
 namespace TCC.UI.Web.Controllers
 {
