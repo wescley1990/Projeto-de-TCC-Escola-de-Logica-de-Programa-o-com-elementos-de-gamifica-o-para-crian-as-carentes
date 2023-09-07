@@ -1,12 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using TCC.Application.Interfaces;
+using TCC.Application.ViewModels;
 
 namespace TCC.UI.Web.Controllers
 {
     public class CursosController : Controller
     {
-        public IActionResult Index()
+        private readonly ICursoAppService _cursoAppService;
+
+        public CursosController(ICursoAppService cursoAppService)
         {
-            return View();
+            _cursoAppService = cursoAppService;
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("curso-management/list-all")]
+        public async Task<IActionResult> Index()
+        {
+            return View(await _cursoAppService.GetAll());
         }
     }
 }

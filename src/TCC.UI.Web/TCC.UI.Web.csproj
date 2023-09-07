@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TCC.Application\TCC.Application.csproj" />
     <ProjectReference Include="..\TCC.Infra.CrossCutting.IoC\TCC.Infra.CrossCutting.IoC.csproj" />
   </ItemGroup>
 
