@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.21" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
@@ -21,5 +22,6 @@
     <ProjectReference Include="..\TCC.Application\TCC.Application.csproj" />
     <ProjectReference Include="..\TCC.Infra.CrossCutting.IoC\TCC.Infra.CrossCutting.IoC.csproj" />
   </ItemGroup>
+
 
 </Project>

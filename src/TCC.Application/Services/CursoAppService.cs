@@ -23,4 +23,9 @@ public class CursoAppService : ICursoAppService
     {
         return _mapper.Map<IEnumerable<CursoViewModel>>(await _cursoRepository.GetAll());
     }
+    
+    public void Dispose()
+    {
+        GC.SuppressFinalize(this);
+    }
 }

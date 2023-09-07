@@ -2,7 +2,7 @@
 
 namespace TCC.Application.Interfaces;
 
-public interface ICursoAppService
+public interface ICursoAppService : IDisposable
 {
     Task<IEnumerable<CursoViewModel>> GetAll();
 }

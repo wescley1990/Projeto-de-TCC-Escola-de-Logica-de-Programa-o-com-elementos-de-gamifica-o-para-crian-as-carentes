@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TCC.Application\TCC.Application.csproj" />
     <ProjectReference Include="..\TCC.Domain\TCC.Domain.csproj" />
+    <ProjectReference Include="..\TCC.Infra.Data\TCC.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
