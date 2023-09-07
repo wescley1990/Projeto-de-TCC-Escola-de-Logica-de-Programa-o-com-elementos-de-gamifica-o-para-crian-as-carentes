@@ -6,11 +6,11 @@ namespace TCC.Domain.Enums;
 public enum Nivel
 {
     [Display(Name = "Iniciante")]
-    Iniciante,
+    Iniciante = 1,
     
     [Display(Name = "Intermediário")]
-    Intermediario,
+    Intermediario = 2,
     
     [Display(Name = "Avançado")]
-    Avancado
+    Avancado = 3
 }
