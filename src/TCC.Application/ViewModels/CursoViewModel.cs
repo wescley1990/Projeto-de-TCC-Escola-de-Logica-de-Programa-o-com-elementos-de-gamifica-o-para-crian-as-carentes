@@ -12,9 +12,8 @@ namespace TCC.Application.ViewModels
         [Required(ErrorMessage = "O nome é obrigatório!")]
         [MinLength(2)]
         [MaxLength(100)]
-        [DisplayName("nome")]
+        [DisplayName("Nome")]
         public string Nome { get; set; }
-        
         public string Descricao { get; set; }
         public Nivel NivelCurso { get; set; }
         public long Duracao { get; set; }
