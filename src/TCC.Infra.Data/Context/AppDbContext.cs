@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NetDevPack.Data;
 using TCC.Domain.Models;
 using TCC.Infra.Data.Mappings;
 
 namespace TCC.Infra.Data.Context;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IUnitOfWork
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
