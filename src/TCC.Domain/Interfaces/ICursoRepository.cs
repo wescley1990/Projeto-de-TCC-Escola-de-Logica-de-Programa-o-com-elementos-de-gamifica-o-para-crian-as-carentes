@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NetDevPack.Data;
+﻿using NetDevPack.Data;
 using TCC.Domain.Models;
 
 namespace TCC.Domain.Interfaces
