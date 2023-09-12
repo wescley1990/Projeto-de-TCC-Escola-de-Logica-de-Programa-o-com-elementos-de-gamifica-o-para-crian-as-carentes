@@ -6,61 +6,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação Divertida para Crianças</title>
+    <title>Página Inicial Divertida da Escola</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            
         }
 
         h1 {
             color: #007BFF;
         }
 
-        #game-container {
+        #header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #animation-container {
+            background-color: #fff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #why-programming {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
         }
 
-        #instructions {
-            font-style: italic;
-            color: #555;
-        }
+            #why-programming h2 {
+                color: #007BFF;
+            }
 
-        .button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+            #why-programming p {
+                font-size: 18px;
+            }
     </style>
 </head>
 <body>
-    <h1>Bem-vindo à Programação Divertida!</h1>
-    <p>Aprenda lógica de programação de uma forma divertida e emocionante.</p>
-
-    <div id="game-container">
-        <!-- Aqui você pode adicionar elementos interativos de gamificação -->
-        <p><strong>Desafio 1:</strong> Mova o personagem até o ponto final.</p>
-        <button class="button" onclick="moverPersonagem()">Mover</button>
-        <p id="instructions">Dica: Use comandos como 'andarParaFrente()' e 'girarParaEsquerda()'.</p>
+    <div id="header">
+        <h1>Bem-vindo à Escola Divertida!</h1>
+        <p>Explore o mundo da programação e descubra por que é importante.</p>
     </div>
 
-    <div id="conquistas">
-        <!-- Aqui você pode exibir as conquistas desbloqueadas pelas crianças -->
-        <h2>Conquistas</h2>
-        <ul>
-            <li>Concluiu o Desafio 1</li>
-            <!-- Adicione mais conquistas à medida que as crianças progridem -->
-        </ul>
+    <div id="animation-container">
+        <!-- Imagens em movimento e animações -->
+        <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></dotlottie-player>
+        <dotlottie-player src="https://lottie.host/b3201e5f-304c-4912-8dd8-3f02ca095ace/OlOUljltFS.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="-1" mode="bounce" loop autoplay></dotlottie-player>
+        <img src="imagem1.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
+        <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
     </div>
 
+    <div id="why-programming">
+        <!-- Texto explicativo sobre por que estudar programação -->
+        <h2>Por que Estudar Programação?</h2>
+        <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
+    </div>
+
+</body>
+</html>
+
+
+@section scripts
+{
     <script>
         // Função para mover o personagem (exemplo)
         function moverPersonagem() {
@@ -69,12 +84,16 @@
             // Você pode adicionar mais lógica e desafios aqui
         }
     </script>
-</body>
-</html>
 
-@section scripts
-{
     <script src="https://unpkg.com/&#64dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="#FFFFFF" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop controls autoplay></dotlottie-player>
+    
 
+    <script>
+        // Animando as imagens
+        const image1 = document.querySelector("img[src='imagem1.png']");
+        const image2 = document.querySelector("img[src='imagem2.png']");
+
+        image1.style.animationName = "moveImage1";
+        image2.style.animationName = "moveImage2";
+    </script>
 }
