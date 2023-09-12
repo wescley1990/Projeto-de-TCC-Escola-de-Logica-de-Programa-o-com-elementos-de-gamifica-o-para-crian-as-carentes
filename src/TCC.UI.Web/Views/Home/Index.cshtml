@@ -1,3 +1,73 @@
 ﻿@{
     ViewData["Title"] = "LogPlay";
 }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Divertida para Crianças</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        #game-container {
+            margin-top: 20px;
+        }
+
+        #instructions {
+            font-style: italic;
+            color: #555;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à Programação Divertida!</h1>
+    <p>Aprenda lógica de programação de uma forma divertida e emocionante.</p>
+
+    <div id="game-container">
+        <!-- Aqui você pode adicionar elementos interativos de gamificação -->
+        <p><strong>Desafio 1:</strong> Mova o personagem até o ponto final.</p>
+        <button class="button" onclick="moverPersonagem()">Mover</button>
+        <p id="instructions">Dica: Use comandos como 'andarParaFrente()' e 'girarParaEsquerda()'.</p>
+    </div>
+
+    <div id="conquistas">
+        <!-- Aqui você pode exibir as conquistas desbloqueadas pelas crianças -->
+        <h2>Conquistas</h2>
+        <ul>
+            <li>Concluiu o Desafio 1</li>
+            <!-- Adicione mais conquistas à medida que as crianças progridem -->
+        </ul>
+    </div>
+
+    <script>
+        // Função para mover o personagem (exemplo)
+        function moverPersonagem() {
+            // Lógica para mover o personagem aqui
+            alert("Personagem movido com sucesso!");
+            // Você pode adicionar mais lógica e desafios aqui
+        }
+    </script>
+</body>
+</html>
