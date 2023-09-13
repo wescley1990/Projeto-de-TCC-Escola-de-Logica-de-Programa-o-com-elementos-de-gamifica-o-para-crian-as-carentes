@@ -10,13 +10,10 @@
     <style>
         
         body {
-            font-family: Arial, sans-serif;
+            background-color: black;
+            color:white;
             text-align: center;
             
-        }
-
-        h1 {
-            color: #007BFF;
         }
 
         #header {
@@ -35,20 +32,27 @@
 
         #left-dotlottie, #right-dotlottie {
             flex: 1;
-            margin: 10px;
+            margin: 20px;
+
         }
 
         #center-content {
             flex: 2;
-            text-align: left;
+            text-align: center;
             padding: 20px;
-            background-color: #fff;
+            /* background-color: #fff; */
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
+            #center-content h1 {
+                color: #007BFF;
+                /* font-family: "Chakra Petch",sans-serif; */
+            }
+
             #center-content h2 {
                 color: #007BFF;
+                font-family: "Chakra Petch",sans-serif;
             }
 
             #center-content p {
@@ -56,66 +60,70 @@
                 color: white;
             }
 
-        #animation-container {
+        #carrosel-inicial {
             background-color: #fff;
+            color:black;
             margin-top: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        #why-programming {
-            background-color: #fff;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
         }
 
-            #why-programming h2 {
+        #porque-programar {
+            background-color: #fff;
+            /* padding: 20px; */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+            #porque-programar h2 {
                 color: #007BFF;
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             }
 
-            #why-programming p {
-                font-size: 18px;
+        #porque-programar p {
+                font-size: 10px;
+                font-family: "Chakra Petch",sans-serif;
                                 
-            }
+        }
     </style>
 </head>
 <body>
     <div id="content-container">
-        <!-- Dotlottie à esquerda -->
+
+        <!-- animacao esquerda -->
         <div id="left-dotlottie">
             <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay class="dotlottie-player"></dotlottie-player>
         </div>
 
-        <<div id="center-content">
-        <h1>Bem-vindo à Escola Divertida!</h1>
-            <center><h1>LogPlay</h1></center>
+        @* texto central *@
+        <div id="center-content">
+            <center><h1>Bem-vindo à Escola Divertida!</h1></center>
+            <center><h2>LogPlay</h2></center>
         <p>Explore o mundo da programação e descubra por que é importante.</p>
         </div>
 
-
-        <!-- Dotlottie à direita -->
-        <div id="right-dotlottie">
+        <!-- animacao direita -->
+       <div id="right-dotlottie">
             <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay class="dotlottie-player"></dotlottie-player>
         </div>
     </div>
 
-    <div id="animation-container">
+    <div id="carrosel-inicial">
         <!-- Imagens em movimento e animações -->
         <img src="imagem1.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
         <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
     </div>
 
-    <div id="why-programming">
+    <div id="porque-programar">
         <!-- Texto explicativo sobre por que estudar programação -->
         <h2>Por que Estudar Programação?</h2>
         <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
     </div>
-
 </body>
 </html>
 
