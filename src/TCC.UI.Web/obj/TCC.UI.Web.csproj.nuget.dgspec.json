@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj": {}
+    "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.UI.Web\\TCC.UI.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj": {
+    "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj",
+        "projectUniqueName": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj",
         "projectName": "TCC.Application",
-        "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj",
-        "packagesPath": "C:\\Users\\wescl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\obj\\",
+        "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj",
+        "packagesPath": "C:\\Users\\AceleratiGabrielMace\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wescl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AceleratiGabrielMace\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,18 +26,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj"
               },
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj"
               }
             }
           }
@@ -77,20 +76,20 @@
         }
       }
     },
-    "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj": {
+    "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj",
         "projectName": "TCC.Domain",
-        "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj",
-        "packagesPath": "C:\\Users\\wescl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\obj\\",
+        "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj",
+        "packagesPath": "C:\\Users\\AceleratiGabrielMace\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wescl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AceleratiGabrielMace\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -99,7 +98,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -147,20 +145,20 @@
         }
       }
     },
-    "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj": {
+    "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj",
         "projectName": "TCC.Infra.CrossCutting.IoC",
-        "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj",
-        "packagesPath": "C:\\Users\\wescl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\obj\\",
+        "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj",
+        "packagesPath": "C:\\Users\\AceleratiGabrielMace\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.CrossCutting.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wescl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AceleratiGabrielMace\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -169,21 +167,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj"
               },
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj"
               },
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj"
               }
             }
           }
@@ -223,20 +220,20 @@
         }
       }
     },
-    "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj": {
+    "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj",
         "projectName": "TCC.Infra.Data",
-        "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\wescl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.Data\\obj\\",
+        "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\TCC.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\AceleratiGabrielMace\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wescl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AceleratiGabrielMace\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -245,15 +242,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Domain\\TCC.Domain.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Domain\\TCC.Domain.csproj"
               }
             }
           }
@@ -313,20 +309,20 @@
         }
       }
     },
-    "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj": {
+    "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.UI.Web\\TCC.UI.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj",
+        "projectUniqueName": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.UI.Web\\TCC.UI.Web.csproj",
         "projectName": "TCC.UI.Web",
-        "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.UI.Web\\TCC.UI.Web.csproj",
-        "packagesPath": "C:\\Users\\wescl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.UI.Web\\obj\\",
+        "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.UI.Web\\TCC.UI.Web.csproj",
+        "packagesPath": "C:\\Users\\AceleratiGabrielMace\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.UI.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wescl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AceleratiGabrielMace\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -335,18 +331,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Application\\TCC.Application.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Application\\TCC.Application.csproj"
               },
-              "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj": {
-                "projectPath": "C:\\Users\\wescl\\source\\Repos\\TCC\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj"
+              "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj": {
+                "projectPath": "C:\\Users\\AceleratiGabrielMace\\Desktop\\PORJECT\\src\\TCC.Infra.CrossCutting.IoC\\TCC.Infra.CrossCutting.IoC.csproj"
               }
             }
           }
