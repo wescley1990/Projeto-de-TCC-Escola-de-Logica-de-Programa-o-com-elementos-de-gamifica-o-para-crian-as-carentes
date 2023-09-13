@@ -23,8 +23,38 @@
             background-color: #007BFF;
             color: white;
             padding: 20px;
-            border-radius: 10px;
+
         }
+
+        #content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #left-dotlottie, #right-dotlottie {
+            flex: 1;
+            margin: 10px;
+        }
+
+        #center-content {
+            flex: 2;
+            text-align: left;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            #center-content h2 {
+                color: #007BFF;
+            }
+
+            #center-content p {
+                font-size: 18px;
+                color: white;
+            }
 
         #animation-container {
             background-color: #fff;
@@ -43,23 +73,38 @@
 
             #why-programming h2 {
                 color: #007BFF;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             }
 
             #why-programming p {
                 font-size: 18px;
+                                
             }
     </style>
 </head>
 <body>
-    <div id="header">
+    <div id="content-container">
+        <!-- Dotlottie à esquerda -->
+        <div id="left-dotlottie">
+            <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay class="dotlottie-player"></dotlottie-player>
+        </div>
+
+        <<div id="center-content">
         <h1>Bem-vindo à Escola Divertida!</h1>
+            <center><h1>LogPlay</h1></center>
         <p>Explore o mundo da programação e descubra por que é importante.</p>
+        </div>
+
+        <!-- Dotlottie à direita -->
+        <div id="right-dotlottie">
+            <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay class="dotlottie-player"></dotlottie-player>
+        </div>
     </div>
 
     <div id="animation-container">
         <!-- Imagens em movimento e animações -->
-        <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></dotlottie-player>
-        <dotlottie-player src="https://lottie.host/b3201e5f-304c-4912-8dd8-3f02ca095ace/OlOUljltFS.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="-1" mode="bounce" loop autoplay></dotlottie-player>
         <img src="imagem1.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
         <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
     </div>
@@ -87,7 +132,6 @@
 
     <script src="https://unpkg.com/&#64dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     
-
     <script>
         // Animando as imagens
         const image1 = document.querySelector("img[src='imagem1.png']");
