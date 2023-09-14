@@ -145,6 +145,12 @@ _TeamCity*
 .axoCover/*
 !.axoCover/settings.json
 
+#Editor config
+*.editorconfig
+
+#Assembly info
+*AssemblyInfo.cs
+
 # Coverlet is a free, cross platform Code Coverage Tool
 coverage*.json
 coverage*.xml
