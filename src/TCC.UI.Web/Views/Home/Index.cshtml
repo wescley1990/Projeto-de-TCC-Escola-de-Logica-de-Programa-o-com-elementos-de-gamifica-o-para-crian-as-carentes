@@ -70,7 +70,8 @@
         }
 
         #porque-programar {
-            background-color: #fff;
+            background-color:white;
+            color: black;
             /* padding: 20px; */
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
@@ -113,16 +114,23 @@
         </div>
     </div>
 
-    <div id="carrosel-inicial">
+    <!-- <div class="carrosel-inicial">
         <!-- Imagens em movimento e animações -->
-        <img src="imagem1.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
-        <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
-    </div>
-
+        @* <img src="https://blog.dankicode.com/wp-content/uploads/2019/08/logica-de-programac%CC%A7a%CC%83o-para-iniciantes-650x350.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;"> *@
+        @* <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;"> *@
+    <!-- </div> -->
+    
+    
     <div id="porque-programar">
         <!-- Texto explicativo sobre por que estudar programação -->
         <h2>Por que Estudar Programação?</h2>
         <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
+    </div>
+
+    <div class="carrosel-inicial">
+        <!-- Imagens em movimento e animações -->
+        <img src="https://blog.dankicode.com/wp-content/uploads/2019/08/logica-de-programac%CC%A7a%CC%83o-para-iniciantes-650x350.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
+        @* <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;"> *@
     </div>
 </body>
 </html>
@@ -149,4 +157,18 @@
         image1.style.animationName = "moveImage1";
         image2.style.animationName = "moveImage2";
     </script>
+
+
+    <script>
+        // animação carrosel inicial
+        const carrosel = document.querySelector('.carrosel-inicial')
+
+        const myObserver = new IntersectionObserver((informacao) => {
+            console.log(informacao)
+        }   )
+
+        myObserver.observe(carrosel)
+
+    </script>
+
 }
