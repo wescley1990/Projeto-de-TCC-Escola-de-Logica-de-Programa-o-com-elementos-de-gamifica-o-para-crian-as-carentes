@@ -14,7 +14,7 @@ namespace TCC.UI.Web.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("curso-management/list-all")]
+        [HttpGet("Cursos")]
         public async Task<IActionResult> Index()
         {
             return View(await _cursoAppService.GetAll());
