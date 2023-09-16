@@ -9,5 +9,6 @@ public class DomainToViewModelMappingProfile : Profile
     public DomainToViewModelMappingProfile()
     {
         CreateMap<Curso, CursoViewModel>();
+        CreateMap<ItemLoja, ItemLojaViewModel>();
     }
 }
