@@ -13,9 +13,11 @@ public static class NativeInjector
     {
         // Application
         services.AddScoped<ICursoAppService, CursoAppService>();
-        
+        services.AddScoped<IItemLojaAppService, ItemLojaAppService>();
+
         // Infra - Data
         services.AddScoped<ICursoRepository, CursoRepository>();
+        services.AddScoped<IItemLojaRepository, ItemLojaRepository>();
         services.AddScoped<AppDbContext>();
     }
 }

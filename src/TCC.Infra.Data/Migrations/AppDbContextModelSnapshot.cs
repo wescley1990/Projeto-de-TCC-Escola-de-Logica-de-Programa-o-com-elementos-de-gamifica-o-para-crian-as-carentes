@@ -48,6 +48,37 @@ namespace TCC.Infra.Data.Migrations
 
                     b.ToTable("Cursos");
                 });
+
+            modelBuilder.Entity("TCC.Domain.Models.ItemLoja", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("ImagemUrl")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("Preco")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ValidadeFim")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ValidadeInicio")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Itens");
+                });
 #pragma warning restore 612, 618
         }
     }

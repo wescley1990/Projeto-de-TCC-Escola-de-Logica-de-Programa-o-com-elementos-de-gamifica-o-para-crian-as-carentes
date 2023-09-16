@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
 using TCC.Application.Interfaces;
 using TCC.Application.ViewModels;
-using TCC.Domain.Enums;
 using TCC.Domain.Interfaces;
-using TCC.Domain.Models;
 
 namespace TCC.Application.Services;
 

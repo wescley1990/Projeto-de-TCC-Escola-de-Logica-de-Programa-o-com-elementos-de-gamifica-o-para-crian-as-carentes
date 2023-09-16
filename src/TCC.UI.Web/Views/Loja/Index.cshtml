@@ -1,15 +1,70 @@
+@model IEnumerable<TCC.Application.ViewModels.ItemLojaViewModel>
+
 @{
     ViewData["Title"] = "LogPlay - Loja";
 }
 
-<!DOCTYPE html>
+<style>
+    body {
+        background: #eee;
+    }
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <div>
-    </div>
-</body>
-</html>
+    .filter {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .profiles img {
+        margin-right: -6px;
+    }
+
+    .col-md-4 {
+        margin-top: 26px;
+    }
+</style>
+
+<div>
+    <h2>@ViewData["Title"]</h2>
+</div>
+<hr />
+
+
+
+
+
+@* <div class="panel panel-default">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImagemUrl)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Preco)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImagemUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div> *@
+
