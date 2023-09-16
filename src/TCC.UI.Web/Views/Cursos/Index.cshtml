@@ -6,7 +6,21 @@
 
 <style>
     body {
-        background-color: white;
+        background: #eee;
+    }
+
+    .filter {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .profiles img {
+        margin-right: -6px;
+    }
+
+    .col-md-4 {
+        margin-top: 26px;
     }
 </style>
 
@@ -15,7 +29,7 @@
 </div>
 <hr />
 
-<div class="panel panel-default">
+@* <div class="panel panel-default">
     <table class="table table-striped">
         <thead>
         <tr>
@@ -51,4 +65,24 @@
         }
         </tbody>
     </table>
+</div> *@
+
+<div class="container mt-5 mb-5">
+    <div class="row mt-1">
+    @foreach (var curso in Model)
+    {
+        <div class="col-md-4">
+            <div class="p-card bg-white p-2 rounded px-3">
+                <div class="d-flex align-items-center credits"><img src="https://i.imgur.com/hlz6G90.png" width="16px"><span class="text-black-50 ml-2">2 credits</span></div>
+                <h5 class="mt-2">@Html.DisplayFor(t => curso.Nome)</h5><span class="badge badge-primary py-1 mb-2">integrations</span><span class="d-block mb-5">Some kind of short descriptions can go here to better recommend tasks.</span>
+                <div class="d-flex justify-content-between stats">
+                    <div><i class="fa fa-calendar"></i><span class="ml-2">2 days ago</span></div>
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="profiles"><img class="rounded-circle" src="https://i.imgur.com/KcxKRBm.jpg" width="30"><img class="rounded-circle" src="https://i.imgur.com/DukIAef.jpg" width="30"><img class="rounded-circle" src="https://i.imgur.com/UL0GS75.jpg" width="30"></div><span class="ml-3">16</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
 </div>
