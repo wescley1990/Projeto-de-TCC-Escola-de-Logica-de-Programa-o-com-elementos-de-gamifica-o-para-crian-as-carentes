@@ -14,6 +14,7 @@ public class AppDbContext : DbContext, IUnitOfWork
     }
     
     public DbSet<Curso> Cursos { get; set; }
+    public DbSet<ItemLoja> Itens { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -25,6 +26,7 @@ public class AppDbContext : DbContext, IUnitOfWork
             property.SetColumnType("varchar(100)");
 
         modelBuilder.ApplyConfiguration(new CursoMap());
+        modelBuilder.ApplyConfiguration(new ItemLojaMap());
                 
         base.OnModelCreating(modelBuilder);
     }
