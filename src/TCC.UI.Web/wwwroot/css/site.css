@@ -17,3 +17,12 @@ body {
   margin-bottom: 60px;
   background-color: black;
 }
+
+@font-face {
+    font-family: 'TiltNeon';
+    src:url("../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+

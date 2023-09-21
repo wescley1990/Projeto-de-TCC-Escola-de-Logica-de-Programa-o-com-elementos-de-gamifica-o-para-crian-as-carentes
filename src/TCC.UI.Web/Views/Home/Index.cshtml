@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial Divertida da Escola</title>
+    
     <style>
         
         body {
@@ -23,44 +24,32 @@
 
         }
 
-        #content-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-
-        #left-dotlottie, #right-dotlottie {
-            flex: 1;
-            margin: 20px;
+       
+        .apresentacao{
+            color:rgba(255,255,255, .75);
+            padding:20px;
+            margin-top:20px;
 
         }
-
-        #center-content {
-            flex: 2;
-            text-align: center;
-            padding: 20px;
-            /* background-color: #fff; */
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        
+            .apresentacao h1{
+                color: rgba(255,255,255, .75) 
+                font-size: 3em;
+                margin: 0 auto;
         }
 
-            #center-content h1 {
-                color: #007BFF;
-                /* font-family: "Chakra Petch",sans-serif; */
+            .apresentacao h2{
+                color: #013982;
+                font-family: TiltNeon;
+                font-size:3em;
+                margin: 0 auto;
             }
 
-            #center-content h2 {
-                color: #007BFF;
-                font-family: "Chakra Petch",sans-serif;
-            }
+            .apresentacao p{
+                font-size:1em;
 
-            #center-content p {
-                font-size: 18px;
-                color: white;
             }
-
-        #carrosel-inicial {
+        .carrosel-inicial {
             background-color: #fff;
             color:black;
             margin-top: 20px;
@@ -94,31 +83,18 @@
     </style>
 </head>
 <body>
-    <div id="content-container">
 
-        <!-- animacao esquerda -->
-        <div id="left-dotlottie">
-            <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay class="dotlottie-player"></dotlottie-player>
-        </div>
-
-        @* texto central *@
-        <div id="center-content">
-            <center><h1>Bem-vindo à Escola Divertida!</h1></center>
-            <center><h2>LogPlay</h2></center>
+    <div class="apresentacao">
+        <h1>Bem-vindo à Escola Divertida!</h1>
+        <h2>LogPlay</h2>
         <p>Explore o mundo da programação e descubra por que é importante.</p>
-        </div>
-
-        <!-- animacao direita -->
-       <div id="right-dotlottie">
-            <dotlottie-player src="https://lottie.host/df4b894f-dcb8-4eb1-968d-8b989c729fbd/rBc6rIPEhP.json" background="transparent" speed="3" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay class="dotlottie-player"></dotlottie-player>
-        </div>
     </div>
-
-    <!-- <div class="carrosel-inicial">
+    
+    <div class="carrosel-inicial">
         <!-- Imagens em movimento e animações -->
-        @* <img src="https://blog.dankicode.com/wp-content/uploads/2019/08/logica-de-programac%CC%A7a%CC%83o-para-iniciantes-650x350.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;"> *@
-        @* <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;"> *@
-    <!-- </div> -->
+        <img src="" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
+        <img src="" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
+    </div> 
     
     
     <div id="porque-programar">
