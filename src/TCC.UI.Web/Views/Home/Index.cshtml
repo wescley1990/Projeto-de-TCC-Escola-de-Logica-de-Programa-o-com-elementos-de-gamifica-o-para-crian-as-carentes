@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial Divertida da Escola</title>
     
+
+    
     <style>
         
         body {
@@ -26,13 +28,16 @@
 
        
         .apresentacao{
+            
             color:rgba(255,255,255, .75);
+            border-right: 2px solid rgba(255,255,255, .75);
             padding:20px;
             margin-top:20px;
-
+            animation: barra 500ms infinite normal;
         }
         
             .apresentacao h1{
+                font-family: TiltNeon;
                 color: rgba(255,255,255, .75); 
                 font-size: 3em;
                 margin: 0 auto;
@@ -49,6 +54,13 @@
                 font-size:1em;
 
             }
+
+            .typing-animation {
+                animation-name: barra;
+                animation: 500ms infinite normal;
+            }
+            
+        
         .carrosel-inicial {
             background-color: #fff;
             color:black;
@@ -80,11 +92,14 @@
                 font-family: "Chakra Petch",sans-serif;
                                 
         }
+
+        
+      
     </style>
 </head>
 <body>
 
-    <div class="apresentacao">
+    <div class="apresentacao typing-animation">
         <h1>Bem-vindo à Escola Divertida!</h1>
         <h2>LogPlay</h2>
         <p>Explore o mundo da programação e descubra por que é importante.</p>
@@ -110,6 +125,8 @@
     </div>
 </body>
 </html>
+
+
 
 
 @section scripts
@@ -147,4 +164,7 @@
 
     </script>
 
+
+    
 }
+

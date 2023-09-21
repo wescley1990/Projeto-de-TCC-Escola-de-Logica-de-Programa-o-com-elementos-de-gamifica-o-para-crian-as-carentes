@@ -18,11 +18,19 @@ body {
   background-color: black;
 }
 
-@font-face {
+@font-face  {
     font-family: 'TiltNeon';
     src:url("../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
+@keyframes barra {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
 
+    to {
+        border-right-color:transparent;
+    }
+}
