@@ -34,7 +34,17 @@ body {
     }
 }
 
-.typing-animation {
-    animation-name: barra;
-    animation: 500ms infinite normal;
+.typing-animation{
+    /*animation-name: barra;*/
+    animation: barra 300ms infinite normal, typing 4s 1s normal;
+}
+
+@keyframes typing {
+    from {
+        width:0;
+    }
+
+    to {
+        width: 31em;
+    }
 }

@@ -29,11 +29,11 @@
        
         .apresentacao{
             
-            color:rgba(255,255,255, .75);
-            border-right: 2px solid rgba(255,255,255, .75);
+            
             padding:20px;
             margin-top:20px;
-            animation: barra 500ms infinite normal;
+           
+            
         }
         
             .apresentacao h1{
@@ -41,6 +41,7 @@
                 color: rgba(255,255,255, .75); 
                 font-size: 3em;
                 margin: 0 auto;
+                
         }
 
             .apresentacao h2{
@@ -50,10 +51,20 @@
                 margin: 0 auto;
             }
 
-            .apresentacao p{
-                font-size:1em;
+        .apresentacao2 {
+            color: rgba(255,255,255, .75);
+            border-right: 2px solid rgba(255,255,255, .75);
+            text-align:center;
+            font-size: 1.5em;
+            animation: barra 600ms steps(40) infinite normal,
+            typing 6s steps(40) 1s normal both;
 
-            }            
+            margin: 0 auto;
+            white-space:nowrap;
+            overflow:hidden;
+            
+        }
+                         
         
         .carrosel-inicial {
             background-color: #fff;
@@ -93,9 +104,11 @@
 </head>
 <body>
 
-    <div class="apresentacao typing-animation">
+    <div class="apresentacao">
         <h1>Bem-vindo à Escola Divertida!</h1>
         <h2>LogPlay</h2>
+    </div>
+    <div class="apresentacao2 typing-animation">
         <p>Explore o mundo da programação e descubra por que é importante.</p>
     </div>
     
