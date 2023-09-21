@@ -29,8 +29,12 @@ body {
     from {
         border-right-color: rgba(255, 255, 255, .75);
     }
-
     to {
         border-right-color:transparent;
     }
+}
+
+.typing-animation {
+    animation-name: barra;
+    animation: 500ms infinite normal;
 }
