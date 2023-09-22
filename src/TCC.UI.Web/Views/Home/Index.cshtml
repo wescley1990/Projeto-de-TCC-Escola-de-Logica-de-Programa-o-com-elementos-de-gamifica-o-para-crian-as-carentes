@@ -19,6 +19,31 @@
             
         }
 
+        .wrapper{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        main{
+            display:block;
+            background-color: rgba(0,0,0,.95);
+        }
+
+        .container{
+            width:100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section.module p{
+            margin-bottom:0;
+        }
+
+        section.module:last-child{
+            margin-bottom: 0;
+        }
+
         #header {
             background-color: #007BFF;
             color: white;
@@ -68,7 +93,7 @@
         .carrosel-inicial {
             background-color: #fff;
             color:black;
-            margin-top: 20px;
+            margin-top: 40px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             padding: 20px;
@@ -102,33 +127,60 @@
     </style>
 </head>
 <body>
-
-    <div class="apresentacao">
+    <div class="wrapper">        
+    <main>
+        <section class="module parallax parallax-1" >                   
+        <div class="apresentacao">
         <h1>Bem-vindo à Escola Divertida!</h1>
         <h2>LogPlay</h2>
-    </div>
-    <div class="apresentacao2 typing-animation">
+        </div>
+        <div class="apresentacao2 typing-animation">
         <p>Explore o mundo da programação e descubra por que é importante.</p>
+        </div>
+        </section>
+
+        <section class="carrossel">
+            <div class="carrosel-inicial">
+                <!-- Imagens em movimento e animações -->
+                <img src="" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
+                <img src="" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
+            </div>
+        </section>
+
+            <!-- Texto explicativo sobre por que estudar programação -->
+        <section class="module content" >
+            <div class="container">                
+                <h2>Por que Estudar Programação?</h2>
+                <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
+            </div>
+
+        </section>
+
+
+
+    </main>
     </div>
-    
-    <div class="carrosel-inicial">
+
+
+    @* <div class="carrosel-inicial">
         <!-- Imagens em movimento e animações -->
         <img src="" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
         <img src="" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
-    </div> 
+    </div>  *@
     
     
-    <div id="porque-programar">
+    @* <div id="porque-programar">
         <!-- Texto explicativo sobre por que estudar programação -->
         <h2>Por que Estudar Programação?</h2>
         <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
-    </div>
+    </div> *@
 
-    <div class="carrosel-inicial">
+    @* <div class="carrosel-inicial">
         <!-- Imagens em movimento e animações -->
         <img src="https://blog.dankicode.com/wp-content/uploads/2019/08/logica-de-programac%CC%A7a%CC%83o-para-iniciantes-650x350.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
         @* <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;"> *@
-    </div>
+    @* </div> *@ 
+
 
     <button class="btn btn-primary" onclick="displayAlert()">
         Alerta Teste
@@ -164,7 +216,7 @@
         }
     </script>
 
-    <script src="https://unpkg.com/&#64dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    @* <script src="https://unpkg.com/&#64dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> *@
     
     <script>
         // Animando as imagens
@@ -176,18 +228,7 @@
     </script>
 
 
-    <script>
-        // animação carrosel inicial
-        const carrosel = document.querySelector('.carrosel-inicial')
-
-        const myObserver = new IntersectionObserver((informacao) => {
-            console.log(informacao)
-        }   )
-
-        myObserver.observe(carrosel)
-
-    </script>
-
+    
     <script>
     function adjustFontSize() {
         var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
