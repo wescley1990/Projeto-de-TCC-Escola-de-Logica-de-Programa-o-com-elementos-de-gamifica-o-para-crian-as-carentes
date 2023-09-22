@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using TCC.UI.Web.Areas.Identity.Data;
 using TCC.UI.Web.Configurations;
 
@@ -31,6 +32,11 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
+    RequestPath = new PathString("/npm")
+}) ;
 
 app.UseRouting();
 app.UseAuthentication();;

@@ -130,6 +130,10 @@
         <img src="https://blog.dankicode.com/wp-content/uploads/2019/08/logica-de-programac%CC%A7a%CC%83o-para-iniciantes-650x350.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
         @* <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;"> *@
     </div>
+
+    <button class="btn btn-primary" onclick="displayAlert()">
+        Alerta Teste
+    </button>
 </body>
 </html>
 
@@ -142,8 +146,22 @@
         // Função para mover o personagem (exemplo)
         function moverPersonagem() {
             // Lógica para mover o personagem aqui
-            alert("Personagem movido com sucesso!");
+            console.log('Clicou')
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
             // Você pode adicionar mais lógica e desafios aqui
+        }
+
+        function displayAlert() {
+            console.log('Clicou')
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
         }
     </script>
 
@@ -154,8 +172,8 @@
         const image1 = document.querySelector("img[src='imagem1.png']");
         const image2 = document.querySelector("img[src='imagem2.png']");
 
-        image1.style.animationName = "moveImage1";
-        image2.style.animationName = "moveImage2";
+        // image1.style.animationName = "moveImage1";
+        // image2.style.animationName = "moveImage2";
     </script>
 
 
