@@ -52,20 +52,19 @@
             }
 
         .apresentacao2 {
-            color: rgba(255,255,255, .75);
-            border-right: 2px solid rgba(255,255,255, .75);
-            text-align:center;
+            color: rgba(255, 255, 255, 0.75);
+            border-right: 2px solid rgba(255, 255, 255, 0.75);
+            text-align: center;
             font-size: 1.5em;
-            animation: barra 500ms steps(40) infinite normal,
-            typing 6s steps(40) 1s normal both;
+            animation: barra 500ms steps(40) infinite normal, typing 6s steps(40) 1s normal both;
             margin: 0 auto;
-            white-space:nowrap;
-            overflow:hidden;
-            
-            /* animation-iteration-count:initial; */
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%; /* Defina a largura conforme necessário */
         }
 
-           
+                   
         .carrosel-inicial {
             background-color: #fff;
             color:black;
@@ -187,9 +186,23 @@
 
         myObserver.observe(carrosel)
 
-    </script>   
+    </script>
 
+    <script>
+    function adjustFontSize() {
+        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var apresentacao2 = document.querySelector('.apresentacao2');
 
-    
+        if (windowWidth <= 600) {
+            apresentacao2.style.fontSize = '1em'; /* Tamanho da fonte menor para janelas estreitas */
+        } else {
+            apresentacao2.style.fontSize = '1.5em'; /* Tamanho da fonte normal para janelas largas */
+        }
+    }
+
+    // Chame a função quando a página carregar e quando a janela for redimensionada
+    window.addEventListener('load', adjustFontSize);
+    window.addEventListener('resize', adjustFontSize);
+    </script>
+
 }
-
