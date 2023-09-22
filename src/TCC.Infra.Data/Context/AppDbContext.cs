@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NetDevPack.Data;
 using NetDevPack.Messaging;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +8,7 @@ using TCC.Infra.Data.Mappings;
 
 namespace TCC.Infra.Data.Context;
 
-public class AppDbContext : DbContext, IUnitOfWork
+public class AppDbContext : IdentityDbContext, IUnitOfWork
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -15,7 +16,9 @@ public class AppDbContext : DbContext, IUnitOfWork
     
     public DbSet<Curso> Cursos { get; set; }
     public DbSet<ItemLoja> Itens { get; set; }
-    
+
+    public DbSet<Usuario> Usuarios { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Ignore<ValidationResult>();
