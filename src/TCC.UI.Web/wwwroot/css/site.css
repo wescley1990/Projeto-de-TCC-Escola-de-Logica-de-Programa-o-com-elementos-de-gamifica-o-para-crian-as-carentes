@@ -17,3 +17,34 @@ body {
   margin-bottom: 60px;
   background-color: black;
 }
+
+@font-face  {
+    font-family: 'TiltNeon';
+    src:url("../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes barra {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color:transparent;
+    }
+}
+
+.typing-animation{
+    /*animation-name: barra;*/
+    /*animation: barra 300ms infinite normal, typing 4s 1s normal;*/
+}
+
+@keyframes typing {
+    from {
+        width:0;
+    }
+
+    to {
+        width: 31em;
+    }
+}
