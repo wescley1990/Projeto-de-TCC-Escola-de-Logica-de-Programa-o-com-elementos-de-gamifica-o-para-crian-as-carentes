@@ -5,6 +5,7 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  
 }
 
 a {
@@ -40,10 +41,11 @@ button.accept-policy {
 }
 
 .footer {
+    padding: 30px;
     position: absolute;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
     line-height: 50px;
-    background-color: #212529;
+    background: linear-gradient(rgba(33, 37, 41, 0), rgba(33, 37, 41, 1));
 }
