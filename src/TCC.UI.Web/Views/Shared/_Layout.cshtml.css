@@ -41,7 +41,7 @@ button.accept-policy {
 }
 
 .footer {
-    height:5px;
+    height:5px !important;
     padding: 30px;
     position: absolute;
     bottom: 0;
