@@ -80,24 +80,37 @@ section.module.parallax:after {
     width: 100%; /* Defina a largura conforme necessário */
 }
 
-.carousel {
-    max-height: 200px; /* Defina a altura desejada */
+/*.carousel {
+    max-height: 200px;  Defina a altura desejada 
     overflow: hidden;
     margin: 0 auto;
-}
+}*/
 
-
-.carrosel-inicial {
+/*.apresentacaoCarrosel {
+    color: rgba(255, 255, 255, 0.75);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-size: 1.5em;
+    animation: barra 500ms steps(40) infinite normal, typing 6s steps(40) 1s normal both;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}*/
+/*.carrosel-inicial {
     background-color: #fff;
     color: black;
     margin-top: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
+}*/
+/**/
+
+.imagem-menor-altura {
+    height: 200px; /* Defina a altura desejada em pixels ou outra unidade de medida */
 }
-
-
-
 
 
 
