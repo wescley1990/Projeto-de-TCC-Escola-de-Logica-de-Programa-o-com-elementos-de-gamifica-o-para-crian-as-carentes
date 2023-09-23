@@ -19,9 +19,9 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #141414;
+    border-color: #1861ac;
 }
 
 .border-top {
@@ -41,12 +41,13 @@ button.accept-policy {
 }
 
 .footer {
-    height:5px !important;
+    height: 5px !important;
     padding: 30px;
-    position: absolute;
+    position: center;
+    text-align: center;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
     line-height: 50px;
-    background: black;
+    background-color: #141414 !important;
 }
