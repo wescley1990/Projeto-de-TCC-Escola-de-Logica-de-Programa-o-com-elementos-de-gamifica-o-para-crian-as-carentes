@@ -1,0 +1,174 @@
+﻿body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: rgba(0,0,0,.95);
+}
+
+
+
+section.module p {
+    margin-bottom: 0;
+}
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module.content {
+    padding: 40px 0;
+    background: linear-gradient(rgba(33, 37, 41, 0), rgba(33, 37, 41, 1));
+    border-radius: 10px;
+}
+
+section.module.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)40%,#000 100%);
+}
+
+
+
+#header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+}
+
+
+.apresentacao {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+    .apresentacao h1 {
+        font-family: TiltNeon;
+        color: rgba(255,255,255);
+        font-size: 3em;
+        margin: 0 auto;
+    }
+
+    .apresentacao h2 {
+        color:blue;
+        font-family: TiltNeon;
+        font-size: 3em;
+        margin: 0 auto;
+    }
+
+.apresentacao2 {
+    color: rgba(255, 255, 255, 0.75);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-size: 1.5em;
+    animation: barra 500ms steps(40) infinite normal, typing 6s steps(40) 1s normal both;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%; /* Defina a largura conforme necessário */
+}
+
+/*.carousel {
+    max-height: 200px;  Defina a altura desejada 
+    overflow: hidden;
+    margin: 0 auto;
+}*/
+
+/*.apresentacaoCarrosel {
+    color: rgba(255, 255, 255, 0.75);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    text-align: center;
+    font-size: 1.5em;
+    animation: barra 500ms steps(40) infinite normal, typing 6s steps(40) 1s normal both;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}*/
+/*.carrosel-inicial {
+    background-color: #fff;
+    color: black;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}*/
+/**/
+
+.imagem-menor-altura {
+    height: 200px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+}
+
+
+
+
+
+
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important;
+    justify-content: center;
+    width: 100% !important;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax-1 {
+    background-image: url("../assets/img/Home/fundoParallax.jpg");
+    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+}
+
+section.module.parallax-2 {
+    background-image: url("../assets/img/Home/fundoParallax.jpg");
+    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+}
+
+section.module.parallax-3 {
+    background-image: url("../assets/img/Home/fundoParallax.jpg");
+    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+}
+
+
+@keyframes barra {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.typing-animation {
+    animation-name: barra;
+    animation: barra 300ms infinite normal, typing 4s 1s normal;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 31em;
+    }
+}

@@ -4,7 +4,7 @@ using TCC.Application.Interfaces;
 
 namespace TCC.UI.Web.Controllers
 {
-    public class CursosController : Controller
+    public class CursosController : BaseController
     {
         private readonly ICursoAppService _cursoAppService;
 

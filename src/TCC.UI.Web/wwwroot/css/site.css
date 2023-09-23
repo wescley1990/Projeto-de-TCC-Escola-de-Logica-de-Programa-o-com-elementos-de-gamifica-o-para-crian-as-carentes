@@ -16,6 +16,22 @@ html {
 body {
   margin-bottom: 60px;
   background-color: black;
+  color:white;
+}
+
+
+.navbar  .navbar-brand {
+    font-size: 20px;
+
+}
+
+.background-grey{
+    background-color: #141414
+}
+
+.footer {
+    height: 100px;
+    position: center;
 }
 
 @font-face  {
@@ -25,26 +41,3 @@ body {
     font-style: normal;
 }
 
-@keyframes barra {
-    from {
-        border-right-color: rgba(255, 255, 255, .75);
-    }
-    to {
-        border-right-color:transparent;
-    }
-}
-
-.typing-animation{
-    /*animation-name: barra;*/
-    /*animation: barra 300ms infinite normal, typing 4s 1s normal;*/
-}
-
-@keyframes typing {
-    from {
-        width:0;
-    }
-
-    to {
-        width: 31em;
-    }
-}

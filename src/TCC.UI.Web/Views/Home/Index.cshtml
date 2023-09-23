@@ -6,167 +6,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
     <title>Página Inicial Divertida da Escola</title>
     
-
+        
     
-    <style>
-        
-        body {
-            background-color: black;
-            color:white;
-            text-align: center;
-            
-        }
-
-        #header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px;
-
-        }
-
-       
-        .apresentacao{
-            
-            
-            padding:20px;
-            margin-top:20px;
-           
-            
-        }
-        
-            .apresentacao h1{
-                font-family: TiltNeon;
-                color: rgba(255,255,255, .75); 
-                font-size: 3em;
-                margin: 0 auto;
-                
-        }
-
-            .apresentacao h2{
-                color: #013982;
-                font-family: TiltNeon;
-                font-size:3em;
-                margin: 0 auto;
-            }
-
-        .apresentacao2 {
-            color: rgba(255,255,255, .75);
-            border-right: 2px solid rgba(255,255,255, .75);
-            text-align:center;
-            font-size: 1.5em;
-            animation: barra 500ms steps(40) infinite normal,
-            typing 6s steps(40) 1s normal both;
-            margin: 0 auto;
-            white-space:nowrap;
-            overflow:hidden;
-            
-            /* animation-iteration-count:initial; */
-        }
-
-           
-        .carrosel-inicial {
-            background-color: #fff;
-            color:black;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-        }
-
-        #porque-programar {
-            background-color:white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
-            margin-top: 20px;
-            padding: 20px;
-        }
-
-            #porque-programar h2 {
-                color: #007BFF;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            }
-
-        #porque-programar p {
-                font-size: 10px;
-                font-family: "Chakra Petch",sans-serif;
-                                
-        }
-
-        
-      
-    </style>
 </head>
 <body>
+    <div class="wrapper">        
+    <main>
+            <!-- Paralax da imagem -->
+        <section class="module parallax parallax-1" >                   
+            <div class="apresentacao">
+                <h1>Bem-vindo à Escola Divertida!</h1>
+                <h2>LogPlay</h2>
+            </div>
+            <div class="apresentacao2 typing-animation">
+                <p>Explore o mundo da programação e descubra por que é importante.</p>
+            </div>
+        </section>
 
-    <div class="apresentacao">
-        <h1>Bem-vindo à Escola Divertida!</h1>
-        <h2>LogPlay</h2>
-    </div>
-    <div class="apresentacao2 typing-animation">
-        <p>Explore o mundo da programação e descubra por que é importante.</p>
-    </div>
-    
-    <div class="carrosel-inicial">
-        <!-- Imagens em movimento e animações -->
-        <img src="" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
-        <img src="" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;">
-    </div> 
-    
-    
-    <div id="porque-programar">
+            <!-- Carrosel -->
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/assets/img/Home/fundoParallax.jpg" class="d-block w-100 imagem-menor-altura" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Por que Estudar Programação?</h2>
+                            <p>
+                                A programação é uma habilidade essencial no mundo digital de hoje.
+                                Ela permite que você crie sites, aplicativos e jogos incríveis.
+                                Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade.
+                                Com a programação, você pode transformar suas ideias em realidade!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+        
         <!-- Texto explicativo sobre por que estudar programação -->
-        <h2>Por que Estudar Programação?</h2>
-        <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
+        <section class="module content" >
+            <div class="container">                
+                <h2>Por que Estudar Programação?</h2>
+                <p>A programação é uma habilidade essencial no mundo digital de hoje. Ela permite que você crie sites, aplicativos e jogos incríveis. Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. Com a programação, você pode transformar suas ideias em realidade!</p>
+                
+            
+            </div>
+
+        </section>
+
+        
+
+
+    </main>
     </div>
 
-    <div class="carrosel-inicial">
-        <!-- Imagens em movimento e animações -->
-        <img src="https://blog.dankicode.com/wp-content/uploads/2019/08/logica-de-programac%CC%A7a%CC%83o-para-iniciantes-650x350.png" alt="Imagem 1" style="animation: moveImage1 4s linear infinite;">
-        @* <img src="imagem2.png" alt="Imagem 2" style="animation: moveImage2 5s linear infinite;"> *@
-    </div>
-
-    <button class="btn btn-primary" onclick="displayAlert()">
-        Alerta Teste
-    </button>
 </body>
 </html>
 
 
-
-
 @section scripts
 {
-    <script>
-        // Função para mover o personagem (exemplo)
-        function moverPersonagem() {
-            // Lógica para mover o personagem aqui
-            console.log('Clicou')
-            Swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-            )
-            // Você pode adicionar mais lógica e desafios aqui
-        }
-
-        function displayAlert() {
-            console.log('Clicou')
-            Swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-            )
-        }
-    </script>
-
-    <script src="https://unpkg.com/&#64dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     
+        
     <script>
         // Animando as imagens
         const image1 = document.querySelector("img[src='imagem1.png']");
@@ -177,19 +109,22 @@
     </script>
 
 
-    <script>
-        // animação carrosel inicial
-        const carrosel = document.querySelector('.carrosel-inicial')
-
-        const myObserver = new IntersectionObserver((informacao) => {
-            console.log(informacao)
-        }   )
-
-        myObserver.observe(carrosel)
-
-    </script>   
-
-
     
-}
+    <script>
+    function adjustFontSize() {
+        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var apresentacao2 = document.querySelector('.apresentacao2');
 
+        if (windowWidth <= 600) {
+            apresentacao2.style.fontSize = '1em'; /* Tamanho da fonte menor para janelas estreitas */
+        } else {
+            apresentacao2.style.fontSize = '1.5em'; /* Tamanho da fonte normal para janelas largas */
+        }
+    }
+
+    // Chame a função quando a página carregar e quando a janela for redimensionada
+    window.addEventListener('load', adjustFontSize);
+    window.addEventListener('resize', adjustFontSize);
+    </script>
+
+}
