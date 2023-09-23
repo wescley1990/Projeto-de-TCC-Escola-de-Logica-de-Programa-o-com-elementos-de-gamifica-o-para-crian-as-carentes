@@ -159,8 +159,8 @@ section.module.parallax-3 {
 }
 
 .typing-animation {
-animation-name: barra;
-animation: barra 300ms infinite normal, typing 4s 1s normal;
+    animation-name: barra;
+    animation: barra 300ms infinite normal, typing 4s 1s normal;
 }
 
 @keyframes typing {
