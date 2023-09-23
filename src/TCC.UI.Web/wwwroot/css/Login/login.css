@@ -2,8 +2,9 @@
     color: white;
 }
 
-h2 {
+.title-login {
     font-family: TiltNeon;
+    color: #14BDEE;
 }
 
 .container-login{
@@ -14,4 +15,23 @@ h2 {
 
 .row{
     width: 100%
+}
+
+.form-control:valid {
+    background-color: #141414 !important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
+    -webkit-text-fill-color: white;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
+    -webkit-text-fill-color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none
 }
