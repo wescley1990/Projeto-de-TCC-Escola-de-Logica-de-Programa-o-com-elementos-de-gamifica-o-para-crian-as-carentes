@@ -3,6 +3,14 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
+<style>
+    .btn-success{
+        background-color: green;
+        padding: 6px;
+    }
+   
+</style>
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
@@ -21,7 +29,7 @@ else
         <a class="nav-link text-white" id="register" asp-area="Identity" asp-page="/Login/Registrar">Matricule-se</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" id="login" asp-area="Identity" asp-page="/Login/Entrar">Entrar</a>
+        <a class="nav-link text-white btn btn-success" id="login" asp-area="Identity" asp-page="/Login/Entrar">Entrar</a>
     </li>
 }
 </ul>
