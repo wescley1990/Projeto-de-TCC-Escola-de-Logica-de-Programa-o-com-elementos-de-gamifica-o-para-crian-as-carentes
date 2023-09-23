@@ -14,7 +14,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.AddDatabaseConfiguration(builder.Configuration);
-
+builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/Identity/Login/Entrar");
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapperConfiguration();

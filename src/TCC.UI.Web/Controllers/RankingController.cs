@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TCC.UI.Web.Controllers
@@ -10,6 +11,7 @@ namespace TCC.UI.Web.Controllers
             
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
