@@ -109,7 +109,8 @@ section.module.parallax:after {
 /**/
 
 .imagem-menor-altura {
-    height: 200px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    height: 600px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    width: 100px;
 }
 
 

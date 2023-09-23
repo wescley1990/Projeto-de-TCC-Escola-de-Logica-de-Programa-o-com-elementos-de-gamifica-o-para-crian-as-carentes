@@ -30,6 +30,7 @@ body {
 }
 
 .footer {
+    padding: 20px;
     height: 100px;
     position: center;
 }
