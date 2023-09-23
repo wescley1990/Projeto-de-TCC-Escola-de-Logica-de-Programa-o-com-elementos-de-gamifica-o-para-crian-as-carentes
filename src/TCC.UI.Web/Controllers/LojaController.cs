@@ -4,7 +4,7 @@ using TCC.Application.Interfaces;
 
 namespace TCC.UI.Web.Controllers
 {
-    public class LojaController : Controller
+    public class LojaController : BaseController
     {
         private readonly IItemLojaAppService _lojaAppService;
 

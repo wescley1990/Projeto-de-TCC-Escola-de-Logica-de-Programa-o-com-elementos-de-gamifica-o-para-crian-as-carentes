@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TCC.UI.Web.Controllers
 {
-    public class RankingController : Controller
+    public class RankingController : BaseController
     {
         public RankingController()
         {
