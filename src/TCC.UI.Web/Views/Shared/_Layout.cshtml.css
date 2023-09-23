@@ -45,7 +45,6 @@ button.accept-policy {
 }
 
 .footer {
-    height:5px !important;
     padding: 30px;
     position: absolute;
     bottom: 0;
@@ -53,4 +52,13 @@ button.accept-policy {
     white-space: nowrap;
     line-height: 50px;
     background: black;
+    text-align: center;
+    background-color: #141414
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    padding: 0 0;
 }
