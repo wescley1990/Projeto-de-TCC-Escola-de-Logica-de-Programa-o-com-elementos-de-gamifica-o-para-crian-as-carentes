@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TCC.Application.ViewModels;
+using TCC.Domain.Models;
 
 namespace TCC.Application.Interfaces
 {

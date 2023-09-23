@@ -1,3 +1,5 @@
+@model IEnumerable<TCC.Application.ViewModels.UsuarioViewModel>
+
 @{
     ViewData["Title"] = "LogPlay - Ranking";
 }
@@ -87,23 +89,16 @@
                     <th>Pontuação</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Alan</td>
-                    <td>95</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Wescley</td>
-                    <td>90</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Matheus</td>
-                    <td>88</td>
-                </tr>
             
+            <tbody>
+                @foreach (var aluno in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(a => aluno.Id)</td>
+                        <td>@Html.DisplayFor(a => aluno.Id)</td>
+                        <td>@Html.DisplayFor(a => aluno.Id)</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </main>

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using TCC.Application.ViewModels;
 using TCC.Domain.Models;
 
@@ -10,5 +11,6 @@ public class DomainToViewModelMappingProfile : Profile
     {
         CreateMap<Curso, CursoViewModel>();
         CreateMap<ItemLoja, ItemLojaViewModel>();
+        CreateMap<IdentityUser, UsuarioViewModel>();
     }
 }

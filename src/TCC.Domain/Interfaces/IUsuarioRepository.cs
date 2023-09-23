@@ -5,5 +5,6 @@ namespace TCC.Domain.Interfaces
 {
     public interface IUsuarioRepository : IRepository<Usuario>
     {
+        Task<IEnumerable<Usuario>> GetAll();
     }
 }
