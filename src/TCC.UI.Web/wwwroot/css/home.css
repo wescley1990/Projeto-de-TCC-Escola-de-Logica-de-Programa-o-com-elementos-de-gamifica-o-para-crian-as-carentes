@@ -1,0 +1,55 @@
+﻿
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important;
+    justify-content: center;
+    width: 100% !important;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax-1 {
+    background-image: url("../assets/img/fundoParallax.jpg");
+    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+}
+
+section.module.parallax-2 {
+    background-image: url("../assets/img/fundoParallax.jpg");
+    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+}
+
+section.module.parallax-3 {
+    background-image: url("../assets/img/fundoParallax.jpg");
+    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+}
+
+
+@keyframes barra {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.typing-animation {
+animation-name: barra;
+animation: barra 300ms infinite normal, typing 4s 1s normal;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 31em;
+    }
+}
