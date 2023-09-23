@@ -4,7 +4,7 @@ using TCC.UI.Web.Models;
 
 namespace TCC.UI.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public HomeController()
         {

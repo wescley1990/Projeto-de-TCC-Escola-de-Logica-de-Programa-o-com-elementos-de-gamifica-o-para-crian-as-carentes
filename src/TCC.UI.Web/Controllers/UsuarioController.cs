@@ -6,7 +6,7 @@ using TCC.Domain.Models;
 
 namespace TCC.UI.Web.Controllers
 {
-    public class UsuarioController : Controller
+    public class UsuarioController : BaseController
     {
         private readonly IUsuarioAppService _usuarioAppService;
 
