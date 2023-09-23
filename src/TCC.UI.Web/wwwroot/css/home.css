@@ -113,11 +113,6 @@ section.module.parallax:after {
 }
 
 
-
-
-
-
-
 section.module.parallax {
     display: flex;
     flex-direction: column;
