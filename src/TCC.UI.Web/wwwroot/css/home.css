@@ -128,7 +128,8 @@ section.module.parallax {
 }
 
 section.module.parallax-1 {
-    background-image: url("../assets/img/Home/fundoParallax.jpg");
+    background-image: url();
+    
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
 }
 
