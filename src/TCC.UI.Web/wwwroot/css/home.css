@@ -55,13 +55,13 @@ section.module.parallax:after {
 
     .apresentacao h1 {
         font-family: TiltNeon;
-        color: rgba(255,255,255, .75);
+        color: rgba(255,255,255);
         font-size: 3em;
         margin: 0 auto;
     }
 
     .apresentacao h2 {
-        color: #013983;
+        color:blue;
         font-family: TiltNeon;
         font-size: 3em;
         margin: 0 auto;
