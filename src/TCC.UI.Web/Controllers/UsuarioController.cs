@@ -1,12 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using TCC.Application.Interfaces;
+using TCC.Domain.Models;
 
 namespace TCC.UI.Web.Controllers
 {
     public class UsuarioController : Controller
     {
-        public IActionResult Index()
+        private readonly IUsuarioAppService _usuarioAppService;
+
+        public UsuarioController(IUsuarioAppService usuarioAppService, UserManager<IdentityUser> userManager)
         {
-            return View();
+            _usuarioAppService = usuarioAppService;
+        }
+
+        [Authorize]
+        [HttpGet("Usuarios")]
+        public async Task<IActionResult> Index()
+        {
+            var result = await _usuarioAppService.GetAll();
+            return View("/Views/Ranking/Index.cshtml", result);
         }
     }
 }
