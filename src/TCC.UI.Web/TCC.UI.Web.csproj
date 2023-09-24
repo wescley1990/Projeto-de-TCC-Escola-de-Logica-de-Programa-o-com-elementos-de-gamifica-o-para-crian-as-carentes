@@ -35,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\assets\img\Login\" />
     <Folder Include="wwwroot\assets\video\" />
   </ItemGroup>
 

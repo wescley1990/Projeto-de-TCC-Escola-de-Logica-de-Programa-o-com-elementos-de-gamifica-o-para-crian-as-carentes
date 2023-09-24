@@ -2,16 +2,23 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Entrar";
+}
+
+@{
+    Layout = "";
 }
 
 <head>
     <link rel="stylesheet" href="~/css/Login/login.css" asp-append-version="true" />
+@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+ *@    <title>@ViewData["Title"]</title>
+
 </head>
 
 
-<h1>@ViewData["Title"]</h1>
-<body>
+@* <h1>@ViewData["Title"]</h1> *@
+@* <body>
     <div class="container container-login">
         <div class="row background-grey rounded-3">
             <div class="col-md-5 mx-auto">
@@ -59,8 +66,34 @@
             </div>
         </div>
     </div>
+</body> *@
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login<br>E entre para o jogo!</h1>
+            <img src="~/assets/img/Login/loginImg.svg" class="left-login-img">
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="text-field">
+                    <label>Email</label>
+                    <input asp-for="Input.Email" autocomplete="off" aria-required="true" autofocus />
+                </div>
+                <div class="text-field">
+                    <label>Senha</label>
+                    <input asp-for="Input.Password" autocomplete="off" aria-required="true" />
+                </div>
+                <button class="botao-login">Entrar</button>
+            </div>
+        </div>
+    </div>
 </body>
+
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 }
