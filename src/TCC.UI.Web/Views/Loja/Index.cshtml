@@ -1,34 +1,57 @@
 @model IEnumerable<TCC.Application.ViewModels.ItemLojaViewModel>
 
 @{
-    ViewData["Title"] = "LogPlay - Loja";
+	ViewData["Title"] = "LogPlay - Loja";
 }
 
+<h1>Seja bem-vindo à Loja</h1>
+
 <style>
-    body {
-        background: #eee;
-    }
+	body {
+		background: #eee;
+	}
 
-    .filter {
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
+	.filter {
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
 
-    .profiles img {
-        margin-right: -6px;
-    }
+	.profiles img {
+		margin-right: -6px;
+	}
 
-    .col-md-4 {
-        margin-top: 26px;
-    }
+	.col-md-4 {
+		margin-top: 26px;
+	}
 </style>
 
-<div>
-    <h2>@ViewData["Title"]</h2>
-</div>
-<hr />
+<script>
 
+
+</script>
+
+<form class="form-horizontal" id="form01" name="form01">
+	<div class="form-group">
+		<div class="input-group input-group-sm mb-3">
+			<span class="input-group-text" id="inputGroup-sizing-sm">Moedas</span>
+			<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-4" style="padding-right: 10px">
+				<span class="input-group-text" id="qtd" name="qtd">Informe a quantidade desejada:</span>
+				<div class="form-group">
+					<div class="input-group mb-3">
+						<span class="input-group-text">$</span>						
+						<input type="number" id="qtd" class="form-control" aria-label="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
 
 
 
