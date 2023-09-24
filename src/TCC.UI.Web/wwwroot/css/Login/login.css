@@ -1,10 +1,12 @@
 ﻿body {
     margin: 0;
+    font-family: TiltNeon;
+    overflow: hidden;
 }
 
-/*body * {
+body * {
     box-sizing: border-box;
-}*/
+}
 
 .main-login {
     width: 100vw;
@@ -20,26 +22,30 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 
 .left-login > h1 {
     color: #77ffc0;
-    font-family: TiltNeon;
 }
 
-.rigth-login {
+.left-login-img {
+    width: 35vw;
+}
+
+
+.right-login {
+    display: flex;
     width: 50vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .card-login {
-    width: 90%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +61,6 @@
         font-weight: 800;
         margin: 0;
         font-size: 3vw;
-        font-family: TiltNeon;
     }
 
 .text-field {
@@ -106,17 +111,15 @@
     font-size: 16pt;
 }
 
-.left-login-img {
-    width: 35vw;
-}
+
 
 @media only screen and (max-width: 950px) {
     .card-login {
-        width: 85%;
+        width: 85%
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     .main-login {
         flex-direction: column;
     }
