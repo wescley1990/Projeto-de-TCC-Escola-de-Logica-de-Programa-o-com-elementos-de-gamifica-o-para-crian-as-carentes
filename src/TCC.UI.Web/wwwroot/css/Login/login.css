@@ -2,9 +2,9 @@
     margin: 0;
 }
 
-body * {
+/*body * {
     box-sizing: border-box;
-}
+}*/
 
 .main-login {
     width: 100vw;
@@ -20,12 +20,13 @@ body * {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 
 .left-login > h1 {
     color: #77ffc0;
+    font-family: TiltNeon;
 }
 
 .rigth-login {
@@ -38,7 +39,7 @@ body * {
 }
 
 .card-login {
-    width: 60%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +77,6 @@ body * {
         font-size: 12pt;
         box-shadow: 0px 10px 40px #00000056;
         outline: none;
-        box-sizing: border-box;
     }
 
     .text-field > label {
@@ -100,9 +100,10 @@ body * {
     letter-spacing: 3px;
     color: #2b134b;
     background: #00ff88;
-    box-sizing: border-box;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
+    font-family: TiltNeon;
+    font-size: 16pt;
 }
 
 .left-login-img {
@@ -115,7 +116,7 @@ body * {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .main-login {
         flex-direction: column;
     }
