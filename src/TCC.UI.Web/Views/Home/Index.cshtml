@@ -1,19 +1,13 @@
 ﻿@{
     ViewData["Title"] = "LogPlay";
 }
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
 
-    <title>Página Inicial Divertida da Escola</title>
-    
-        
-    
+<head>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
 </head>
-<body>
+
+<div class="body-home">
     <div class="wrapper">        
     <main>
             <!-- Paralax da imagem -->
@@ -98,14 +92,7 @@
             </div>
         </section>
     </div>
-
-
-
-
-    
-</body>
-</html>
-
+</div>
 
 @section scripts
 {    

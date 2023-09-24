@@ -1,7 +1,8 @@
-﻿body {
+﻿.body-home {
     background-color: black;
     color: white;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .wrapper {
@@ -78,6 +79,10 @@ section.module.parallax:after {
     overflow: hidden;
     display: inline-block;
     width: 100%; /* Defina a largura conforme necessário */
+}
+
+.text_scroll2 {
+    overflow: hidden;
 }
 
 /*.carousel {

@@ -11,8 +11,8 @@
 
 <head>
     <link rel="stylesheet" href="~/css/Login/login.css" asp-append-version="true" />
-@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
- *@    <title>@ViewData["Title"]</title>
+@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@    
+<title>@ViewData["Title"]</title>
 
 </head>
 
@@ -79,11 +79,11 @@
                 <h1>LOGIN</h1>
                 <div class="text-field">
                     <label>Email</label>
-                    <input asp-for="Input.Email" autocomplete="off" aria-required="true" autofocus />
+                    <input autocomplete="off" aria-required="true" autofocus />
                 </div>
                 <div class="text-field">
                     <label>Senha</label>
-                    <input asp-for="Input.Password" autocomplete="off" aria-required="true" />
+                    <input autocomplete="off" aria-required="true" />
                 </div>
                 <button class="botao-login">Entrar</button>
             </div>

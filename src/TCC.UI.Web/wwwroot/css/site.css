@@ -29,11 +29,6 @@ body {
     background-color: #141414
 }
 
-.footer {
-    padding: 20px;
-    height: 100px;
-    position: center;
-}
 
 @font-face  {
     font-family: 'TiltNeon';
