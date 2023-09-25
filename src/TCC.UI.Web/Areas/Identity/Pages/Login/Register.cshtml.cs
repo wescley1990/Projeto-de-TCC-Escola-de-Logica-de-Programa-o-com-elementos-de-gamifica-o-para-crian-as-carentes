@@ -72,7 +72,6 @@ namespace TCC.UI.Web.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
             [Display(Name = "Nome")]
             public string Nome { get; set; }
 
@@ -118,8 +117,12 @@ namespace TCC.UI.Web.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
-                user.Nome = Input.Nome;
+                var user = new Usuario
+                {
+                    Nome = Input.Nome,
+                    Email = Input.Email,
+                    UserName = Input.Email,
+                };
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
