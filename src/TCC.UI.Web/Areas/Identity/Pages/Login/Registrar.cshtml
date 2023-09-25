@@ -1,10 +1,66 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Matricule-se";
 }
 
-<h1>@ViewData["Title"]</h1>
+
+@{
+    Layout = "";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Login/login.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Matricule-se<br>E inicie sua jornada!</h1>
+            <img src="~/assets/img/Login/registrarImage.svg" class="left-login-img">
+        </div>
+
+        <div class="right-login">
+            <form asp-route-returnUrl="@Model.ReturnUrl" method="post" class="card-login">
+                <h1>REGISTRO</h1>
+                <div class="text-field">
+                    <label>Nome</label>
+                    <input asp-for="Input.Nome" autocomplete="off" aria-required="true" autofocus />
+                </div>
+                <div class="text-field">
+                    <label>Email</label>
+                    <input asp-for="Input.Email" autocomplete="off" aria-required="true" autofocus />
+                </div>
+                <div class="text-field">
+                    <label>Senha</label>
+                    <input asp-for="Input.Password" autocomplete="off" aria-required="true" />
+                </div>
+                <div class="text-field">
+                    <label>Confirmar senha</label>
+                    <input asp-for="Input.ConfirmPassword" autocomplete="off" aria-required="true" />
+                </div>
+                <button id="login-submit" type="submit" class="botao-login">Registrar</button>
+                <div class="register-link">
+                    <a asp-page="./Home/Index">Voltar para a home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+@* <h1>@ViewData["Title"]</h1>
 
 <div class="row">
     <div class="col-md-4">
@@ -30,7 +86,7 @@
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Matricule-se</button>
         </form>
     </div>
-</div>
+</div> *@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
