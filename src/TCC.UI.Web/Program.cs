@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using TCC.Infra.Data.Context;
 using TCC.UI.Web.Configurations;
