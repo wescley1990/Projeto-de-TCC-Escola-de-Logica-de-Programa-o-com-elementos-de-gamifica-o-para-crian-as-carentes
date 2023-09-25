@@ -85,6 +85,10 @@
                     <input asp-for="Input.Password" autocomplete="off" aria-required="true" />
                 </div>
                 <button id="login-submit" type="submit" class="botao-login">Entrar</button>
+                <div class="register-link">
+                    <a asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                    <a asp-page="./Registrar" asp-route-returnUrl="@Model.ReturnUrl">Criar uma nova conta</a>
+                </div>
             </form>
         </div>
     </div>

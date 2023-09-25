@@ -96,7 +96,7 @@ body * {
 .botao-login {
     width: 100%;
     padding: 16px 0;
-    margin: 25px;
+    margin: 25px 25px 10px 25px;
     border: none;
     border-radius: 8px;
     outline: none;
@@ -152,4 +152,28 @@ body * {
     src: url("../../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
     font-weight: normal;
     font-style: normal;
+}
+
+.register-link {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    
+}
+
+.register-link > p {
+    color: #f0ffff94;
+}
+
+.register-link > a {
+    color: #f0ffff94;
+    text-decoration: none;
+    margin: 5px
+}
+
+.register-link > a:hover {
+    color: #00ff88;
 }
