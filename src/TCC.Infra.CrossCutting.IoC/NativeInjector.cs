@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.DependencyInjection;
 using TCC.Application.Interfaces;
 using TCC.Application.Services;
 using TCC.Domain.Interfaces;
@@ -15,6 +16,7 @@ public static class NativeInjector
         services.AddScoped<ICursoAppService, CursoAppService>();
         services.AddScoped<IItemLojaAppService, ItemLojaAppService>();
         services.AddScoped<IUsuarioAppService, UsuarioAppService>();
+        //services.AddTransient<IEmailSender, EmailSender>();
 
         // Infra - Data
         services.AddScoped<ICursoRepository, CursoRepository>();
