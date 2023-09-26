@@ -129,7 +129,7 @@ namespace TCC.UI.Web.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Usuário ou senha inválidos.");
+                    ModelState.AddModelError(string.Empty, "Email ou senha inválidos.");
                     return Page();
                 }
             }
