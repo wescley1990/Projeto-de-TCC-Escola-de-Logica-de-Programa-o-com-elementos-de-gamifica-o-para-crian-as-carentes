@@ -62,7 +62,13 @@ body {
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
-    background-color: #141414 !important;
+    background-color: #2f2841 !important;
+    color: white;
+}
+
+.footer > a{
+    color: white;
+    text-decoration: none;
 }
 
 .container {
