@@ -10,7 +10,7 @@ namespace TCC.UI.Web.Controllers
     {
         private readonly IUsuarioAppService _usuarioAppService;
 
-        public UsuarioController(IUsuarioAppService usuarioAppService, UserManager<IdentityUser> userManager)
+        public UsuarioController(IUsuarioAppService usuarioAppService)
         {
             _usuarioAppService = usuarioAppService;
         }
