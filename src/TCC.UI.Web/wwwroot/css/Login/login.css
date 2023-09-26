@@ -177,3 +177,20 @@ body * {
 .register-link > a:hover {
     color: #00ff88;
 }
+
+.text-danger {
+    color: red;
+    margin-top: 10px;
+}
+
+.validation-summary-errors {
+    margin: 0;
+    padding-left: 0
+}
+
+    .validation-summary-errors > ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0px;
+        list-style-type: none;
+    }
