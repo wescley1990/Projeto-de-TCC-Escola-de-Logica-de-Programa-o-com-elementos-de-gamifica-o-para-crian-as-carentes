@@ -11,10 +11,10 @@
 }
 
 main {
-    display: block;
+    display: flex;
+    /*display: block;*/
     background-color: rgba(0,0,0,.95);
 }
-
 
 
 section.module p {
@@ -27,9 +27,45 @@ section.module:last-child {
 
 section.module.content {
     padding: 40px 0;
-    background: linear-gradient(rgba(33, 37, 41, 0), rgba(33, 37, 41, 1));
+    background-color: white;
     border-radius: 10px;
+    text-align:center;
+
 }
+
+.imagem-texto {
+    justify-content:space-evenly;        ;
+    display: flex;
+    background-color: #514869;
+    align-items:center;
+    
+}
+
+.imagem1{
+    height:25%;
+    width:25%;
+}
+
+.texto1 {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    text-justify: auto;
+}
+section.module.content1 {
+    padding: 40px 0;
+    background-color: #514869;
+    border-radius: 10px;
+    text-align: center;
+}
+
+section.module.content2 {
+    padding: 40px 0;
+    background-color: blue;
+    border-radius: 10px;
+    text-align: center;
+}
+
 
 section.module.parallax:after {
     content: "";
@@ -37,9 +73,8 @@ section.module.parallax:after {
     width: 100%;
     position: absolute;
     z-index: 8;
-    /*background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)40%,#000 100%);*/
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)40%,#000 100%);
 }
-
 
 
 #header {
@@ -81,43 +116,16 @@ section.module.parallax:after {
     width: 100%; /* Defina a largura conforme necessário */
 }
 
-.text_scroll2 {
-    overflow: hidden;
-}
-
-/*.carousel {
-    max-height: 200px;  Defina a altura desejada 
-    overflow: hidden;
-    margin: 0 auto;
-}*/
-
-/*.apresentacaoCarrosel {
-    color: rgba(255, 255, 255, 0.75);
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    text-align: center;
-    font-size: 1.5em;
-    animation: barra 500ms steps(40) infinite normal, typing 6s steps(40) 1s normal both;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    width: 100%;
-}*/
-/*.carrosel-inicial {
-    background-color: #fff;
-    color: black;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-}*/
-/**/
 
 .imagem-menor-altura {
-    height: 600px; /* Defina a altura desejada em pixels ou outra unidade de medida */
-    width: 100px;
+    height: 150px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    width: 100%;
 }
 
+.carousel-caption p,h2 {
+   font-size:15px;
+
+}
 
 section.module.parallax {
     display: flex;
@@ -131,10 +139,12 @@ section.module.parallax {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: var(--roxo-escuro);
 }
 
 section.module.parallax-1 {
-    background-color: var(--roxo-escuro);
+
+    /*background-color: var(--roxo-escuro);*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
 }
 
