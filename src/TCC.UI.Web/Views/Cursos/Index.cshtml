@@ -4,40 +4,6 @@
     ViewData["Title"] = "LogPlay - Cursos";
 }
 
-<style>
-    body {
-        background: black;
-    }
-
-    h2{
-        color: white;
-    }
-
-    .filter {
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-
-    .profiles img {
-        margin-right: -6px;
-    }
-
-    .col-md-4 {
-        margin-top: 26px;
-        
-        
-    }
-
-    .bg-azul{
-        background: #092d5d;
-    }
-</style>
-
-<div>
-    <h2>@ViewData["Title"]</h2>
-</div>
-<hr />
 
 <div class="container mt-5 mb-5">
     <div class="row mt-1">
@@ -54,3 +20,7 @@
     }
     </div>
 </div>
+
+@section Styles {
+    <link href="~/css/Cursos/cursos.css" rel="stylesheet" type="text/css" />
+}
