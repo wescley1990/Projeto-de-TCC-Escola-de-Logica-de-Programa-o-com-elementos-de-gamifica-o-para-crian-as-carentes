@@ -47,6 +47,7 @@ section.module.content {
 }
 
 .imagem-texto {
+    visibility: hidden;
     justify-content: space-evenly;
     display: flex;
     background-color: #514869;
