@@ -261,8 +261,8 @@ align-items: center;
 text-align: center;
 }
 
-.service-container .service-item .service-item-card:hover {
-/*border: 1px solid #0FFF50;*/
+.service-container .service-item .service-item-card/*:hover*/ {
+border: 0.5px solid #0FFF50;
 }
 
 .service-container .service-item .service-item-card .service-item-card-icon {
@@ -277,7 +277,7 @@ justify-content: center;
 }
 
 .service-container .service-item .service-item-card .service-item-card-icon:hover {
-    border: 1px solid #0FFF50;
+    /*border: 1px solid #0FFF50;*/
 }
 
 .service-container .service-item .service-item-card .service-item-card-icon i {
