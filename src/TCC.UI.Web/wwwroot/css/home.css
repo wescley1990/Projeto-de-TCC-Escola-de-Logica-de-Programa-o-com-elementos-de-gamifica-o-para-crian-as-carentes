@@ -253,7 +253,7 @@ section.module.parallax-3 {
 background-color:var(--roxo-claro1);
 border: 1px solid #0e0f10;
 border-radius: 16px;
-min-height: 380px;
+min-height: 300px;
 padding: 40px;
 display: flex;
 flex-direction: column;
@@ -310,7 +310,7 @@ align-items: center;
     }
 
     .service-container .service-item .service-item-card {
-        min-height: 400px
+        min-height: 300px
     }
 
     .botao-cursos a{
