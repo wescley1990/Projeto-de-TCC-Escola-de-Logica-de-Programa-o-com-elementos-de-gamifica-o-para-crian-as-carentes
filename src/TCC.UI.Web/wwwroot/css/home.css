@@ -171,16 +171,17 @@ section.module.parallax {
 
 section.module.parallax-1 {
 
-    /*background-color: var(--roxo-escuro);*/
+    /*background-color: var(--roxo-claro1);*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
 }
 
 section.module.parallax-2 {
-    background-image: url("../assets/img/Home/4046104.jpg");
-   }
+    background-color: var(--roxo-claro1);
+}
 
 section.module.parallax-3 {
-    background-image: url("../assets/img/Home/fundo.jpg");
+    background-color: var(--roxo-escuro);
+    /*background-image: url("../assets/img/Home/fundo.jpg");*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
 }
 
@@ -206,7 +207,7 @@ section.module.parallax-3 {
     }
 
     to {
-        width: 16em;
+        width: 17em;
     }
 }
 
