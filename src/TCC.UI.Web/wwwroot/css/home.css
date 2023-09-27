@@ -61,11 +61,20 @@ section.module.content {
 }
 
 .texto1 {
+    font-size:1em;
     height: 50%;
     width: 50%;
     text-align: center;
     text-justify: auto;
 }
+
+.texto1 h2{
+    font-size: 2em;
+    text-align: center;
+    text-justify: auto;
+}
+
+
 section.module.content1 {
     padding: 40px 0;
     background-color: #514869;
@@ -278,10 +287,17 @@ justify-content: center;
 .service-container .service-item .service-item-card .service-item-card-title {
 margin-top: 16px;
 margin-bottom: 16px;
+align-items: center;
 }
 
-.service-container .service-item .service-item-card .service-item-card-description {
-text-align: center;
+.service-item-card-descrition ul {
+    padding-left: 20px;
+    list-style-type: disc; 
+}
+
+.service-item-card-descrition li {
+    text-align: left; 
+    margin-left: 5px; 
 }
 
 @media only screen and (max-width:600px) {
