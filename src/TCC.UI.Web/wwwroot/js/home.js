@@ -10,5 +10,5 @@ sr.reveal('.apresentacao h2', {
 
 
 sr.reveal('.service-item', {
-    duration: 3000
+    duration: 2000
 });
