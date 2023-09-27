@@ -241,6 +241,7 @@ section.module.parallax-3 {
 
 .service-item {
     box-shadow: 0px 20px 40px #00000056;
+    visibility: hidden;
 }
 
 .service-container .service-item {

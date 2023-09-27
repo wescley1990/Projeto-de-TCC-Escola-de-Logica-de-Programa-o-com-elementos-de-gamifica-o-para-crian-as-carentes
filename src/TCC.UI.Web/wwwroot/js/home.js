@@ -4,6 +4,7 @@ sr.reveal('.imagem1', {
     duration: 3000
 });
 
-sr.reveal('.apresentacao h2', {
+
+sr.reveal('.service-item', {
     duration: 2000
-}); 
+});
