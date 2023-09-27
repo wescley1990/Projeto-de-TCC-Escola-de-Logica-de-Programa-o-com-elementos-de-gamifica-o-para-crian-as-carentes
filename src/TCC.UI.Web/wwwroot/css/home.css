@@ -130,6 +130,20 @@ section.module.parallax:after {
         margin: 0 auto;
     }
 
+.apresentacao-2 > h2 {
+    color: var(--verde-destaque);
+    font-family: TiltNeon;
+    font-size: 3em;
+    margin: 0 auto;
+}
+
+.apresentacao-3 > h2 {
+    color: var(--verde-destaque);
+    font-family: TiltNeon;
+    font-size: 3em;
+    margin: 0 auto;
+}
+
 .apresentacao2 {
     color: rgba(255, 255, 255, 0.75);
     border-right: 2px solid rgba(255, 255, 255, 0.75);
