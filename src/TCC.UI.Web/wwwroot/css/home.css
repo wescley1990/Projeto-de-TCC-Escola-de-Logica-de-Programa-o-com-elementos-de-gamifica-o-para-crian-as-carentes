@@ -47,16 +47,17 @@ section.module.content {
 }
 
 .imagem-texto {
-    visibility: hidden;
+    /*visibility: hidden;*/
     justify-content: space-evenly;
     display: flex;
     background-color: #514869;
     align-items: center;
 }
 
-.imagem1{
-    height:25%;
-    width:25%;
+.imagem1 {
+    visibility: hidden;
+    height: 25%;
+    width: 25%;
 }
 
 .texto1 {
@@ -99,18 +100,21 @@ section.module.parallax:after {
 
 
 .apresentacao {
+    
     padding: 20px;
     margin-top: 20px;
 }
 
-    .apresentacao h1 {
+    .apresentacao > h1 {
         font-family: TiltNeon;
         color: rgba(255,255,255);
         font-size: 3em;
         margin: 0 auto;
     }
 
-    .apresentacao h2 {
+
+    .apresentacao > h2 {
+        visibility: hidden;
         color: var(--verde-destaque);
         font-family: TiltNeon;
         font-size: 3em;
@@ -193,6 +197,111 @@ section.module.parallax-3 {
     }
 
     to {
-        width: 31em;
+        width: 16em;
     }
 }
+
+.titulo-cursos > h2 {
+    margin-top:20px;
+    color: var(--verde-destaque);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: TiltNeon;
+}
+
+
+    .content {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+    }
+
+    .service-container {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+.service-item {
+    box-shadow: 0px 20px 40px #00000056;
+}
+
+.service-container .service-item {
+    width: calc(33.33% - 32px);
+    margin: 16px;
+    
+}
+
+.service-container .service-item .service-item-card {
+background-color:var(--roxo-claro1);
+border: 1px solid #0e0f10;
+border-radius: 16px;
+min-height: 380px;
+padding: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.service-container .service-item .service-item-card:hover {
+/*border: 1px solid #0FFF50;*/
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon {
+background-color: #0e0f10;
+height: 80px;
+border: 1px solid #0e0f10;
+width: 80px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon:hover {
+    border: 1px solid #0FFF50;
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon i {
+    font-size: 30px;
+}
+
+.service-container .service-item .service-item-card .service-item-card-title {
+margin-top: 16px;
+margin-bottom: 16px;
+}
+
+.service-container .service-item .service-item-card .service-item-card-description {
+text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+    .service-container {
+        flex-direction: column
+    }
+
+    .service-container .service-item {
+        width: calc(70% - 32px);
+    }
+
+    .service-container .service-item .service-item-card {
+        min-height: 400px
+    }
+
+    .botao-cursos a{
+        background-color: var(--verde-destaque);
+    }
+
+
+}
+
+

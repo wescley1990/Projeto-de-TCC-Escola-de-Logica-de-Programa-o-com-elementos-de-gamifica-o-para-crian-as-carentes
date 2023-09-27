@@ -1,3 +1,9 @@
-ScrollReveal({reset: true}).reveal('.imagem-texto', {
-    duration: 1200
+const sr = ScrollReveal({ reset: true })
+
+sr.reveal('.imagem1', {
+    duration: 3000
 });
+
+sr.reveal('.apresentacao h2', {
+    duration: 2000
+}); 
