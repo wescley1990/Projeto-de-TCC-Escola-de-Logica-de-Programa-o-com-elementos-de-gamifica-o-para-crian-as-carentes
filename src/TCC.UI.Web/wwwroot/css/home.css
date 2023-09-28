@@ -262,7 +262,7 @@ section.module.parallax-3 {
 }
 
 .service-container .service-item {
-    width: calc(33.33% - 32px);
+    width: calc(30.33% - 32px);
     margin: 16px;
     
 }
@@ -318,6 +318,16 @@ align-items: center;
     margin-left: 5px; 
 }
 
+.botao-matricule-se{
+    margin-top: 4% ;
+}
+
+.botao-cursos a {
+    margin-top: 3%;
+    outline-color:transparent;
+    /*background-color: var(--verde-destaque);*/
+}
+
 @media only screen and (max-width:600px) {
     .service-container {
         flex-direction: column
@@ -331,9 +341,10 @@ align-items: center;
         min-height: 300px
     }
 
-    .botao-cursos a{
+    /*.botao-cursos a{
+        margin-top:3%;
         background-color: var(--verde-destaque);
-    }
+    }*/
 
 
 }
