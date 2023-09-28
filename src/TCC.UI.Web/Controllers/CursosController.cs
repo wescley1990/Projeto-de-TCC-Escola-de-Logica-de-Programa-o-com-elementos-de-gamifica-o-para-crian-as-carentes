@@ -21,15 +21,15 @@ namespace TCC.UI.Web.Controllers
         }
 
         [Authorize]
-        [HttpGet("Cursos/{id:guid}")]
-        public async Task<IActionResult> Detalhes(Guid? id)
+        [HttpGet("Cursos/{name}")]
+        public async Task<IActionResult> Detalhes(string name)
         {
-            if (id is null) 
+            if (string.IsNullOrEmpty(name)) 
             {
                 return NotFound();
             }
 
-            var cursoViewModel = await _cursoAppService.GetById(id.Value);
+            var cursoViewModel = await _cursoAppService.GetByName(name);
 
             if (cursoViewModel is null)
             {

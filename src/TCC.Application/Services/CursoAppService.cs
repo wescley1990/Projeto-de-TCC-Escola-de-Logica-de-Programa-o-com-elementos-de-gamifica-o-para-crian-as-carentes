@@ -33,4 +33,9 @@ public class CursoAppService : ICursoAppService
     {
         return _mapper.Map<CursoViewModel>(await _cursoRepository.GetById(id));
     }
+
+    public async Task<CursoViewModel> GetByName(string name)
+    {
+        return _mapper.Map<CursoViewModel>(await _cursoRepository.GetByName(name));
+    }
 }
