@@ -20,6 +20,7 @@ namespace TCC.UI.Web.Controllers
             return View(await _cursoAppService.GetAll());
         }
 
+        [Authorize]
         [HttpGet("Cursos/{id:guid}")]
         public async Task<IActionResult> Detalhes(Guid? id)
         {
