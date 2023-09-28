@@ -28,4 +28,9 @@ public class CursoAppService : ICursoAppService
     {
         GC.SuppressFinalize(this);
     }
+
+    public async Task<CursoViewModel> GetById(Guid id)
+    {
+        return _mapper.Map<CursoViewModel>(await _cursoRepository.GetById(id));
+    }
 }

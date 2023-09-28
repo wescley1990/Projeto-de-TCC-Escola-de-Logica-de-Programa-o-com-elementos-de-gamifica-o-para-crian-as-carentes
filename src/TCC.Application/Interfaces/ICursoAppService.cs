@@ -5,4 +5,5 @@ namespace TCC.Application.Interfaces;
 public interface ICursoAppService : IDisposable
 {
     Task<IEnumerable<CursoViewModel>> GetAll();
+    Task<CursoViewModel> GetById(Guid id);
 }
