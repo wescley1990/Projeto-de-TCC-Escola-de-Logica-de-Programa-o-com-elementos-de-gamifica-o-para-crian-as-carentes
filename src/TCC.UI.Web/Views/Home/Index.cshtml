@@ -8,60 +8,62 @@
 </head>
 
 <div class="body-home">
-    <div class="wrapper">        
-    <main>
+    <div class="wrapper">
+        <main>
             <!-- Paralax da imagem -->
-        
-        <section class="module parallax parallax-1" >                   
-            <div class="apresentacao">
-                <h1>Bem-vindo à Escola Divertida!</h1>
-                <h2>LogPlay</h2>
-            </div>
-                <section class="teste">
-                <div class="apresentacao2 ">
-                <p>Explore o mundo da programação. </p>
-            </div>
-                </section>
-        </section>
 
-        
-    </main>
+            <section class="module parallax parallax-1">
+                <div class="apresentacao">
+                    <h1>Bem-vindo à Escola Divertida!</h1>
+                    <h2>LogPlay</h2>
+                </div>
+                <section class="teste">
+                    <div class="apresentacao2 ">
+                        <p>Explore o mundo da programação. </p>
+                    </div>
+                </section>
+            </section>
+
+
+        </main>
     </div>
-            
-        <!-- Texto explicativo sobre por que estudar programação -->
+
+    <!-- Texto explicativo sobre por que estudar programação -->
     <div class="imagem-texto">
 
-        
-            <div class="imagem1" >
-                               
-                    <img src="~/assets/img/Home/playing-with-dreidels-animate.svg" alt="Minha Figura">
-   
-            </div>
-            
-          
-            <div class="texto1">
-                
-                    <h2>Por que Estudar Programação?</h2>
-                    <p>A programação é uma habilidade essencial no mundo digital de hoje. 
-                        Ela permite que você crie sites, aplicativos e jogos incríveis. 
-                        Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. 
-                        Com a programação, você pode transformar suas ideias em realidade!</p>
-               
-            </div>
 
-            <div class="imagem1">
+        <div class="imagem1">
 
-                    <img src="~/assets/img/Home/playing-with-dreidels-animate.svg" alt="Minha Figura">
+            <img src="~/assets/img/Home/playing-with-dreidels-animate.svg" alt="Minha Figura">
 
-            </div>
+        </div>
+
+
+        <div class="texto1">
+
+            <h2>Por que Estudar Programação?</h2>
+            <p>
+                A programação é uma habilidade essencial no mundo digital de hoje.
+                Ela permite que você crie sites, aplicativos e jogos incríveis.
+                Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade.
+                Com a programação, você pode transformar suas ideias em realidade!
+            </p>
+
+        </div>
+
+        <div class="imagem1">
+
+            <img src="~/assets/img/Home/playing-with-dreidels-animate.svg" alt="Minha Figura">
+
+        </div>
     </div>
     <div class="titulo-cursos">
 
         <h2 class="titulo-item">
             O que voce quer aprender hoje?
         </h2>
-       </div>
-    <div class="service-container">             
+    </div>
+    <div class="service-container">
         <div class="service-item">
             <div class="service-item-card card">
                 <div class="service-item-card-icon">
@@ -78,11 +80,11 @@
                             <li>Escopo de variáveis.</li>
                             <li>Exercícios práticos </li>
                         </ul>
-                    </span>                    
+                    </span>
                 </div>
             </div>
         </div>
-        
+
         <div class="service-item">
             <div class="service-item-card card">
                 <div class="service-item-card-icon">
@@ -143,7 +145,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="service-item">
             <div class="service-item-card card">
                 <div class="service-item-card-icon">
@@ -188,28 +190,26 @@
     <div class="botao-cursos">
         <a class="btn btn-primary" asp-area="" asp-controller="Cursos" asp-action="Index">
             Conheça Todos os Cursos
-        </a> 
+        </a>
     </div>
 
 
 
-       @*  <div class="store-banner">
-            <div class="banner-content">
-                <h2>Visite Nossa Loja Online</h2>
-                <p>Encontre os melhores cursos de programação!</p>
-                <a href="/loja" class="btn btn-primary">Explorar Agora</a>
-            </div>
-        </div> *@
+    @*  <div class="store-banner">
+    <div class="banner-content">
+    <h2>Visite Nossa Loja Online</h2>
+    <p>Encontre os melhores cursos de programação!</p>
+    <a href="/loja" class="btn btn-primary">Explorar Agora</a>
+    </div>
+    </div> *@
 
-
-    <div id="meuCarrossel1" class="carousel slide" data-bs-ride="carousel">
-        
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-target="#meuCarrossel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-target="#meuCarrossel" data-bs-slide-to="1"></button>
-            <button type="button" data-target="#meuCarrossel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <!-- Slides do Carrossel -->
+
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="imagem-texto">
@@ -226,24 +226,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Repita o bloco semelhante para o segundo slide -->
-            <div class="carousel-item">                
-                <div class="imagem-texto">
-                    <div class="imagem1">
-                        <img src="~/assets/img/Home/rapaz-mobile.svg" alt="Moça no celular">
-                    </div>
-                    <div class="texto1">
-                        <h2>Visite Nossa Loja Online</h2>
-                        <p>Encontre os melhores cursos de programação!</p>
-                        <a href="/loja" class="btn btn-primary">Explorar Agora</a>
-                    </div>
-                    <div class="imagem1">
-                        <img src="~/assets/img/Home/rapaz-mobile.svg" alt="Minha Figura">
-                    </div>
-                </div>
-            </div>
-            <!-- Repita o bloco semelhante para o segundo slide -->
-
             <div class="carousel-item">
                 <div class="imagem-texto">
                     <div class="imagem1">
@@ -255,30 +237,42 @@
                         <a href="/loja" class="btn btn-primary">Explorar Agora</a>
                     </div>
                     <div class="imagem1">
+                        <img src="~/assets/img/Home/rapaz-mobile.svg" alt="Moça no celular">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="imagem-texto">
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/moca-mobile.svg" alt="Moça no celular">
+                    </div>
+                    <div class="texto1">
+                        <h2>Visite Nossa Loja Online</h2>
+                        <p>Encontre os melhores cursos de programação!</p>
+                        <a href="/loja" class="btn btn-primary">Explorar Agora</a>
+                    </div>
+                    <div class="imagem1">
                         <img src="~/assets/img/Home/moca-mobile.svg" alt="Minha Figura">
                     </div>
                 </div>
-            </div>                  
+            </div>
         </div>
 
-        <!-- Controles do Carrossel -->
-        <a class="carousel-control-prev" href="#meuCarrossel1" role="button" data-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#meuCarrossel1" role="button" data-slide="next">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-
-
 
     <section class="module parallax parallax-2">
         <div class="apresentacao-2">
 
             <h2>Construa Seu Futuro Com Nossa Comunidade</h2>
-           
+
         </div>
         <div class="botao-matricule-se">
             <a class="btn btn-primary" asp-area="" asp-controller="Cursos" asp-action="Index">
@@ -291,10 +285,10 @@
 </div>
 
 @section Scripts
-{
+    {
     <script src="~/npm/scrollreveal/dist/scrollreveal.min.js" asp-append-version="true"></script>
     <script src="~/js/home.js"></script>
 
-  
 
-}
+
+    }
