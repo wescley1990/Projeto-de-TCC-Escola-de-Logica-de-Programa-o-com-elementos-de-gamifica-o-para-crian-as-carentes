@@ -54,6 +54,7 @@ section.module.content {
     align-items: center;
 }
 
+
 .imagem1 {
     visibility: hidden;
     height: 15%;
@@ -102,10 +103,12 @@ section.module.parallax:after {
 
 
 #header {
-    background-color: #007BFF;
+   /* background-color: #007BFF;*/
     color: white;
     padding: 20px;
 }
+
+
 
 
 .apresentacao {
@@ -180,7 +183,7 @@ section.module.parallax {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: var(--roxo-escuro);
+    background: /*linear-gradient(#201b2c,#514869,#2f2841);*/  var(--roxo-escuro);
 }
 
 section.module.parallax-1 {
@@ -318,35 +321,59 @@ align-items: center;
     margin-left: 5px; 
 }
 
-.botao-matricule-se{
-    margin-top: 4% ;
+.botao-matricule-se a {
+    margin-bottom: 0px;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
 }
 
 .botao-cursos a {
-    margin-top: 3%;
-    outline-color:transparent;
-    /*background-color: var(--verde-destaque);*/
+    margin-bottom: 18px;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
 }
 
-@media only screen and (max-width:600px) {
+    .botao-cursos a:hover {
+        background-color: darkgreen;
+        border: 2px solid white;
+    }
+
+
+    @media only screen and (max-width:600px) {
     .service-container {
-        flex-direction: column
+    flex-direction: column
     }
 
     .service-container .service-item {
-        width: calc(70% - 32px);
+    width: calc(70% - 32px);
     }
 
     .service-container .service-item .service-item-card {
         min-height: 300px
     }
 
-    /*.botao-cursos a{
+            /*.botao-cursos a{
         margin-top:3%;
         background-color: var(--verde-destaque);
     }*/
 
 
-}
+        }
 
 

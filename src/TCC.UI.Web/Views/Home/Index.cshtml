@@ -191,58 +191,101 @@
         </a> 
     </div>
 
+
+
+       @*  <div class="store-banner">
+            <div class="banner-content">
+                <h2>Visite Nossa Loja Online</h2>
+                <p>Encontre os melhores cursos de programação!</p>
+                <a href="/loja" class="btn btn-primary">Explorar Agora</a>
+            </div>
+        </div> *@
+
+
+    <div id="meuCarrossel1" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-target="#meuCarrossel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-target="#meuCarrossel" data-bs-slide-to="1"></button>
+            <button type="button" data-target="#meuCarrossel" data-bs-slide-to="2"></button>
+        </div>
+        <!-- Slides do Carrossel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="imagem-texto">
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/moca-mobile.svg" alt="Moça no celular">
+                    </div>
+                    <div class="texto1">
+                        <h2>Visite Nossa Loja Online</h2>
+                        <p>Encontre os melhores cursos de programação!</p>
+                        <a href="/loja" class="btn btn-primary">Explorar Agora</a>
+                    </div>
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/moca-mobile.svg" alt="Minha Figura">
+                    </div>
+                </div>
+            </div>
+            <!-- Repita o bloco semelhante para o segundo slide -->
+            <div class="carousel-item">                
+                <div class="imagem-texto">
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/rapaz-mobile.svg" alt="Moça no celular">
+                    </div>
+                    <div class="texto1">
+                        <h2>Visite Nossa Loja Online</h2>
+                        <p>Encontre os melhores cursos de programação!</p>
+                        <a href="/loja" class="btn btn-primary">Explorar Agora</a>
+                    </div>
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/rapaz-mobile.svg" alt="Minha Figura">
+                    </div>
+                </div>
+            </div>
+            <!-- Repita o bloco semelhante para o segundo slide -->
+
+            <div class="carousel-item">
+                <div class="imagem-texto">
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/rapaz-mobile.svg" alt="Moça no celular">
+                    </div>
+                    <div class="texto1">
+                        <h2>Visite Nossa Loja Online</h2>
+                        <p>Encontre os melhores cursos de programação!</p>
+                        <a href="/loja" class="btn btn-primary">Explorar Agora</a>
+                    </div>
+                    <div class="imagem1">
+                        <img src="~/assets/img/Home/moca-mobile.svg" alt="Minha Figura">
+                    </div>
+                </div>
+            </div>                  
+        </div>
+
+        <!-- Controles do Carrossel -->
+        <a class="carousel-control-prev" href="#meuCarrossel1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#meuCarrossel1" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+
+
     <section class="module parallax parallax-2">
         <div class="apresentacao-2">
-            
+
             <h2>Construa Seu Futuro Com Nossa Comunidade</h2>
-            
-            <div class="botao-matricule-se">
-                <a class="btn btn-primary" asp-area="" asp-controller="Cursos" asp-action="Index">
-                    Matricule-se
-                </a>
-            </div>
-        </div>        
-    </section>
-    
-
-    <div class="imagem-texto">
-
-        
-            <div class="imagem1" >
-                               
-                    <img src="~/assets/img/Home/moca-mobile.svg" alt="Moça no celular">
-   
-            </div>
-            
-          
-            <div class="texto1">
-                
-                    <h2>Por que Estudar Programação?</h2>
-                    <p>A programação é uma habilidade essencial no mundo digital de hoje. 
-                        Ela permite que você crie sites, aplicativos e jogos incríveis. 
-                        Além disso, a programação ajuda a desenvolver o pensamento lógico, resolução de problemas e criatividade. 
-                        Com a programação, você pode transformar suas ideias em realidade!</p>
-               
-            </div>
-
-            <div class="imagem1">
-
-                    <img src="~/assets/img/Home/moca-mobile.svg" alt="Minha Figura">
-
-            </div>
-    </div>
-    <section class="module parallax parallax-3">
-        <div class="apresentacao-3">
-            <h2>Desafie-se e Alcance Novas Alturas</h2>
-            
+           
         </div>
-
-        <div class="apresentacao2 ">
-            <p>Ganhe conquistas ao concluir cursos.</p>
+        <div class="botao-matricule-se">
+            <a class="btn btn-primary" asp-area="" asp-controller="Cursos" asp-action="Index">
+                Matricule-se
+            </a>
         </div>
     </section>
-
-
 
 
 </div>
@@ -250,23 +293,8 @@
 @section Scripts
 {
     <script src="~/npm/scrollreveal/dist/scrollreveal.min.js" asp-append-version="true"></script>
-    <script src="~/js/home.js"></script>   
+    <script src="~/js/home.js"></script>
 
-    <script>
-    function adjustFontSize() {
-        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var apresentacao2 = document.querySelector('.apresentacao2');
-
-        if (windowWidth <= 600) {
-            apresentacao2.style.fontSize = '1em'; /* Tamanho da fonte menor para janelas estreitas */
-        } else {
-            apresentacao2.style.fontSize = '1.5em'; /* Tamanho da fonte normal para janelas largas */
-        }
-    }
-
-    // Chame a função quando a página carregar e quando a janela for redimensionada
-    window.addEventListener('load', adjustFontSize);
-    window.addEventListener('resize', adjustFontSize);
-    </script>
+  
 
 }
