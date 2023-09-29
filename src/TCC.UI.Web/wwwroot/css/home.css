@@ -73,18 +73,20 @@ section.module.content {
 }
 
 .texto1 {
-    font-size:1em;
+    font-family: TiltNeon;
+    font-size: 1em;
     height: 50%;
     width: 50%;
     text-align: center;
     text-justify: auto;
 }
 
-.texto1 h2{
-    font-size: 2em;
-    text-align: center;
-    text-justify: auto;
-}
+    .texto1 h2 {
+        font-family: TiltNeon;
+        font-size: 2em;
+        text-align: center;
+        text-justify: auto;
+    }
 
 
 section.module.content1 {
@@ -123,7 +125,7 @@ section.module.parallax:after {
 
 
 .apresentacao {
-    
+    font-family: TiltNeon;
     padding: 20px;
     margin-top: 20px;
 }
@@ -145,13 +147,14 @@ section.module.parallax:after {
     }
 
 .apresentacao-2 > h2 {
-    color: var(--verde-destaque);
     font-family: TiltNeon;
+    color: var(--verde-destaque);
     font-size: 3em;
     margin: 0 auto;
 }
 
 .apresentacao-3 > h2 {
+    font-family: TiltNeon;
     color: var(--verde-destaque);
     font-family: TiltNeon;
     font-size: 3em;
@@ -159,6 +162,11 @@ section.module.parallax:after {
 }
 
 .apresentacao2 {
+    
+    font-family: TiltNeon;
+    color: var(--verde-destaque);
+    font-size: 3em;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.75);
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     text-align: center;
@@ -177,10 +185,10 @@ section.module.parallax:after {
     width: 100%;
 }
 
-.carousel-caption p,h2 {
+/*.carousel-caption p,h2 {
    font-size:15px;
 
-}
+}*/
 
 section.module.parallax {
     display: flex;
@@ -197,22 +205,22 @@ section.module.parallax {
     background: /*linear-gradient(#201b2c,#514869,#2f2841);*/  var(--roxo-escuro);
 }
 
-section.module.parallax-1 {
+/*section.module.parallax-1 {*/
 
     /*background-color: var(--roxo-claro1);*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
-}
+/*}*/
 
-section.module.parallax-2 {
+/*section.module.parallax-2 {
     background-color: var(--roxo-claro1);
     height: 50vh;
 }
 
 section.module.parallax-3 {
-    background-color: var(--roxo-escuro);
+    background-color: var(--roxo-escuro);*/
     /*background-image: url("../assets/img/Home/fundo.jpg");*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
-}
+/*}*/
 
 
 @keyframes barra {
@@ -236,7 +244,7 @@ section.module.parallax-3 {
     }
 
     to {
-        width: 16.4em;
+        width: 15.8em;
     }
 }
 
@@ -332,12 +340,44 @@ align-items: center;
     margin-left: 5px; 
 }
 
-.botao-matricule-se a {
-    margin-bottom: 0px;
+.carouselExampleIndicators{
+    padding-top:2px;
+}
+
+.botao-matricule-se{
+    padding: 20px;
+
+}
+
+.botao-matricula a{
+    font-family: TiltNeon;
+    margin-bottom: 1px;
     outline-color: transparent;
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+.botao-matricula a:hover {
+    background-color: darkgreen;
+    border: 2px solid white;
+}
+
+.botao-cursos{
+    padding-bottom:20px;
+}
+
+.botao-cursos a {
+    font-family: TiltNeon;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.3em;
     background-color: transparent; /* Cor de fundo do botão */
     color: #00ff88;
     text-decoration: none;
@@ -346,24 +386,41 @@ align-items: center;
     transition: background-color 0.5s ease;
 }
 
-.botao-cursos a {
-    margin-bottom: 18px;
-    outline-color: transparent;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: transparent; /* Cor de fundo do botão */
-    color: #00ff88;
-    text-decoration: none;
-    border: 2px solid #00ff88; /* Cor da borda vermelha */
-    border-radius: 8px;
-    transition: background-color 0.5s ease;
-}
+
 
     .botao-cursos a:hover {
         background-color: darkgreen;
         border: 2px solid white;
     }
+
+.botao-ranking a {
+    font-family: TiltNeon;
+    margin-bottom: 1px;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 1em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+.botao-ranking a:hover {
+    background-color: darkgreen;
+    border: 2px solid white;
+}
+
+.matricula {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 55vh;
+    padding-bottom: 10px;
+}
+
+
 
 
     @media only screen and (max-width:600px) {
