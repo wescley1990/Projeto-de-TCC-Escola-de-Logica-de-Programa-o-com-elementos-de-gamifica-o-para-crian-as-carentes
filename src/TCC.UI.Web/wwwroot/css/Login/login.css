@@ -165,62 +165,69 @@ body * {
         margin: 10px;
     }
 
-    .register-link > a{
+    .register-link > a {
         font-size: 10pt;
     }
 
-    .card-login > h1{
+    .card-login > h1 {
         font-size: 4vw;
     }
 
     .text-field {
         margin: 6px;
     }
-
-@font-face {
-    font-family: 'TiltNeon';
-    src: url("../../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
-    font-weight: normal;
-    font-style: normal;
 }
 
-.register-link {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 0;
-    
-}
-
-.register-link > p {
-    color: #f0ffff94;
-}
-
-.register-link > a {
-    color: #f0ffff94;
-    text-decoration: none;
-    margin: 5px
-}
-
-.register-link > a:hover {
-    color: #00ff88;
-}
-
-.text-danger {
-    color: red;
-    margin-top: 10px;
-}
-
-.validation-summary-errors {
-    margin: 0;
-    padding-left: 0
-}
-
-    .validation-summary-errors > ul {
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-start: 0px;
-        list-style-type: none;
+@media only screen and (max-width:375px) {
+    .text-field > label {
+        font-size: 10pt;
     }
+}
+
+
+    @font-face {
+        font-family: 'TiltNeon';
+        src: url("../../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .register-link {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0;
+    }
+
+        .register-link > p {
+            color: #f0ffff94;
+        }
+
+        .register-link > a {
+            color: #f0ffff94;
+            text-decoration: none;
+            margin: 5px
+        }
+
+            .register-link > a:hover {
+                color: #00ff88;
+            }
+
+    .text-danger {
+        color: red;
+        margin-top: 10px;
+    }
+
+    .validation-summary-errors {
+        margin: 0;
+        padding-left: 0
+    }
+
+        .validation-summary-errors > ul {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0px;
+            list-style-type: none;
+        }
