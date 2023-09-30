@@ -32,8 +32,8 @@
                 @foreach (var aluno in Model)
                 {
                     <tr>
-                        <td>@Html.DisplayFor(a => aluno.Id)</td>
-                        <td>@Html.DisplayFor(a => aluno.Id)</td>
+                        <td>@(Model.ToList().IndexOf(aluno)+1)</td>
+                        <td>@Html.DisplayFor(a => aluno.Nome)</td>
                         <td>@Html.DisplayFor(a => aluno.Id)</td>
                     </tr>
                 }
