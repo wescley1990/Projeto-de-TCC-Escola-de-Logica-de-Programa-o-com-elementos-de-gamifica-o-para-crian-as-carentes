@@ -49,6 +49,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\video\" />
+    <Folder Include="wwwroot\js\Login\" />
   </ItemGroup>
 
   <ItemGroup>
