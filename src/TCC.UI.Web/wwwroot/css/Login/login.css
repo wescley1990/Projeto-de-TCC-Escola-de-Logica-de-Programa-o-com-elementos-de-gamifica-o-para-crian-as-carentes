@@ -132,21 +132,50 @@ body * {
     .left-login {
         width: 60%;
         height: auto;
+        background: #201b2c;
     }
 
     .right-login {
-        width: 60%;
+        width: 70%;
         height: auto;
     }
 
     .left-login-img {
-        width: 50vh;
+        width: 35vh;
     }
 
     .card-login {
         width: 90%;
+        padding: 20px 25px;
     }
-}
+
+    .text-field > label {
+        font-size: 12pt;
+    }
+
+    .text-field > input {
+        padding: 10px;
+        font-size: 10pt;
+    }
+
+    .botao-login {
+        padding: 8px;
+        letter-spacing: 0px;
+        font-size: 12pt;
+        margin: 10px;
+    }
+
+    .register-link > a{
+        font-size: 10pt;
+    }
+
+    .card-login > h1{
+        font-size: 4vw;
+    }
+
+    .text-field {
+        margin: 6px;
+    }
 
 @font-face {
     font-family: 'TiltNeon';
