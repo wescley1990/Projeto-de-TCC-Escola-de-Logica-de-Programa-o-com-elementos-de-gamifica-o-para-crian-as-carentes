@@ -17,12 +17,12 @@ namespace TCC.Application.Services
     {
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IMapper _mapper;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<Usuario> _userManager;
 
         public UsuarioAppService(
             IUsuarioRepository usuarioRepository,
             IMapper mapper,
-            UserManager<IdentityUser> userManager
+            UserManager<Usuario> userManager
             )
         {
             _usuarioRepository = usuarioRepository;

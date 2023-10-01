@@ -46,4 +46,7 @@ public class CursoRepository : ICursoRepository
     {
         Db.Dispose();
     }
+
+    public async Task<Curso> GetByName(string name) => 
+        DbSet.FirstOrDefault(t => t.Nome.Contains(name));
 }

@@ -11,5 +11,7 @@ namespace TCC.Domain.Interfaces
         void Add(Curso curso);
         void Update(Curso curso);
         void Remove(Curso curso);
+
+        Task<Curso> GetByName(string name);
     }
 }

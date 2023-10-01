@@ -19,5 +19,24 @@ namespace TCC.UI.Web.Controllers
         {
             return View(await _cursoAppService.GetAll());
         }
+
+        [Authorize]
+        [HttpGet("Cursos/{name}")]
+        public async Task<IActionResult> Detalhes(string name)
+        {
+            if (string.IsNullOrEmpty(name)) 
+            {
+                return NotFound();
+            }
+
+            var cursoViewModel = await _cursoAppService.GetByName(name);
+
+            if (cursoViewModel is null)
+            {
+                return NotFound();
+            }
+
+            return View(cursoViewModel);
+        }
     }
 }

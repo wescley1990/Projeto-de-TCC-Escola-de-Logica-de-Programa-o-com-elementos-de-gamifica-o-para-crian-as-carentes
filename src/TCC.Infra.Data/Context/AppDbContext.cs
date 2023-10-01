@@ -8,7 +8,7 @@ using TCC.Infra.Data.Mappings;
 
 namespace TCC.Infra.Data.Context;
 
-public class AppDbContext : IdentityDbContext, IUnitOfWork
+public class AppDbContext : IdentityDbContext<Usuario>, IUnitOfWork
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -32,6 +32,12 @@ public class AppDbContext : IdentityDbContext, IUnitOfWork
         modelBuilder.ApplyConfiguration(new ItemLojaMap());
                 
         base.OnModelCreating(modelBuilder);
+
+        #region Usuario map
+        modelBuilder.Entity<Usuario>()
+                .Property(e => e.Nome)
+                .HasMaxLength(250);
+        #endregion
     }
     
     public async Task<bool> Commit()

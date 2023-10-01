@@ -2,33 +2,40 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Entrar";
+}
+
+@{
+    Layout = "";
 }
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/css/Login/login.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
+
 </head>
 
 
-<h1>@ViewData["Title"]</h1>
-<body>
+@* <h1>@ViewData["Title"]</h1> *@
+@* <body>
     <div class="container container-login">
         <div class="row background-grey rounded-3">
             <div class="col-md-5 mx-auto">
                 <section class="container-login">
                     <form id="account" method="post">
-                        <h2>Entrar</h2>
+                        <h2 class="title-login">Entrar</h2>
                         <hr />
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <h5>Email</h5>
                         <div class="form-floating">
-                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                            <input asp-for="Input.Email" class="form-control" autocomplete="off" aria-required="true" />
                             <label asp-for="Input.Email" class="form-label"></label>
                             <span asp-validation-for="Input.Email" class="text-danger"></span>
                         </div>
                         <h5>Senha</h5>
                         <div class="form-floating">
-                            <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                            <input asp-for="Input.Password" class="form-control" autocomplete="off" aria-required="true" />
                             <label asp-for="Input.Password" class="form-label"></label>
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
                         </div>
@@ -59,8 +66,40 @@
             </div>
         </div>
     </div>
+</body> *@
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login<br>E entre para o jogo!</h1>
+            <img src="~/assets/img/Login/loginImg.svg" class="left-login-img">
+        </div>
+
+        <div class="right-login">
+            <form id="UserLoginModal" class="card-login" method="post">
+                <h1>LOGIN</h1>
+                <div class="text-field">
+                    <label>Email</label>
+                    <input asp-for="Input.Email" autocomplete="off" aria-required="true" autofocus />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="text-field">
+                    <label>Senha</label>
+                    <input asp-for="Input.Password" autocomplete="off" aria-required="true" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <button id="login-submit" type="submit" name="login-button" class="botao-login">Entrar</button>
+                <div class="register-link">
+                    <a asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                    <a asp-page="./Registrar" asp-route-returnUrl="@Model.ReturnUrl">Criar uma nova conta</a>
+                    <a asp-page="./Home/Index">Voltar para a home</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
-@section Scripts {
+<script>
     <partial name="_ValidationScriptsPartial" />
-}
+</script>

@@ -13,7 +13,7 @@ namespace TCC.UI.Web.Controllers
             _lojaAppService = lojaAppservice;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet("Loja")]
         public async Task<IActionResult> Index()
         {

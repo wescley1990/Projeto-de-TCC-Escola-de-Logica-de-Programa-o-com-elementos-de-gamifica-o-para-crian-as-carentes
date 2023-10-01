@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TCC.Domain\TCC.Domain.csproj" />
+    <ProjectReference Include="..\TCC.Infra.CrossCutting.Identity\TCC.Infra.CrossCutting.Identity.csproj" />
     <ProjectReference Include="..\TCC.Infra.Data\TCC.Infra.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.21" />
   </ItemGroup>
 
 </Project>

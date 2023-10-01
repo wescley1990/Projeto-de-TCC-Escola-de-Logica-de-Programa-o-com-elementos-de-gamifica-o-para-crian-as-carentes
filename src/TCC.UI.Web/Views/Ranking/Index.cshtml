@@ -10,71 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking de Estudantes</title>
-    <style>
-
-        
-        body, h1, h2, p, table {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        header {
-            background-color: rgba(51, 51, 51, 0.8); 
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); 
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
-        }
-
-        thead {
-            background-color: rgba(51, 51, 51, 0.8); 
-            color: #fff;
-        }
-
-        tfoot {
-            background-color: rgba(221, 221, 221, 0.8); 
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: rgba(51, 51, 51, 0.8); 
-            color: #fff;
-        }
-
-
-    </style>
-
+    <link rel="stylesheet" href="~/css/ranking/ranking.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
+  
 </head>
 <body>
     <header>
@@ -86,7 +24,7 @@
                 <tr>
                     <th>Posição</th>
                     <th>Nome do Aluno</th>
-                    <th>Pontuação</th>
+                    <th>XP</th>
                 </tr>
             </thead>
             
@@ -94,8 +32,8 @@
                 @foreach (var aluno in Model)
                 {
                     <tr>
-                        <td>@Html.DisplayFor(a => aluno.Id)</td>
-                        <td>@Html.DisplayFor(a => aluno.Id)</td>
+                        <td>@(Model.ToList().IndexOf(aluno)+1)</td>
+                        <td>@Html.DisplayFor(a => aluno.Nome)</td>
                         <td>@Html.DisplayFor(a => aluno.Id)</td>
                     </tr>
                 }

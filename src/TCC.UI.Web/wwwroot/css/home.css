@@ -1,7 +1,8 @@
-﻿body {
-    background-color: black;
+﻿.body-home {
+    background-color: var(--roxo-escuro);
     color: white;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .wrapper {
@@ -10,8 +11,21 @@
 }
 
 main {
-    display: block;
+    display: flex;
+    /*display: block;*/
     background-color: rgba(0,0,0,.95);
+}
+
+.parallax-imagem1 {
+    height: 25%;
+    width: 25%;
+}
+
+
+
+.parallax-imagem2 {
+    height: 25%;
+    width: 25%;
 }
 
 
@@ -26,9 +40,69 @@ section.module:last-child {
 
 section.module.content {
     padding: 40px 0;
-    background: linear-gradient(rgba(33, 37, 41, 0), rgba(33, 37, 41, 1));
+    background-color: white;
     border-radius: 10px;
+    text-align:center;
+
 }
+
+.imagem-texto {
+    /*visibility: hidden;*/
+    justify-content: space-evenly;
+    display: flex;
+    background-color: #514869;
+    align-items: center;
+}
+
+
+.imagem1 {
+    /*visibility: hidden;*/
+    height: 15%;
+    width: 15%;
+}
+
+.imagem2 {
+    /*visibility: hidden;*/
+    height: 15%;
+    width: 15%;
+}
+.imagem3 {
+    /*visibility: hidden;*/
+    height: 15%;
+    width: 15%;
+}
+
+.texto1 {
+    font-family: TiltNeon;
+    font-size: 1em;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    text-justify: auto;
+}
+
+    .texto1 h2 {
+        font-family: TiltNeon;
+        font-size: 2em;
+        text-align: center;
+        text-justify: auto;
+    }
+
+
+section.module.content1 {
+    padding: 40px 0;
+    background-color: #514869;
+    border-radius: 10px;
+    text-align: center;
+}
+
+section.module.content2 {
+    padding: 40px 0;
+    background-color: blue;
+    border-radius: 10px;
+    text-align: center;
+}
+
 
 section.module.parallax:after {
     content: "";
@@ -42,32 +116,57 @@ section.module.parallax:after {
 
 
 #header {
-    background-color: #007BFF;
+   /* background-color: #007BFF;*/
     color: white;
     padding: 20px;
 }
 
 
+
+
 .apresentacao {
+    font-family: TiltNeon;
     padding: 20px;
     margin-top: 20px;
 }
 
-    .apresentacao h1 {
+    .apresentacao > h1 {
         font-family: TiltNeon;
         color: rgba(255,255,255);
         font-size: 3em;
         margin: 0 auto;
     }
 
-    .apresentacao h2 {
-        color:blue;
+
+    .apresentacao > h2 {
+        visibility: hidden;
+        color: var(--verde-destaque);
         font-family: TiltNeon;
         font-size: 3em;
         margin: 0 auto;
     }
 
+.apresentacao-2 > h2 {
+    font-family: TiltNeon;
+    color: var(--verde-destaque);
+    font-size: 3em;
+    margin: 0 auto;
+}
+
+.apresentacao-3 > h2 {
+    font-family: TiltNeon;
+    color: var(--verde-destaque);
+    font-family: TiltNeon;
+    font-size: 3em;
+    margin: 0 auto;
+}
+
 .apresentacao2 {
+    
+    font-family: TiltNeon;
+    color: var(--verde-destaque);
+    font-size: 3em;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.75);
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     text-align: center;
@@ -76,52 +175,25 @@ section.module.parallax:after {
     margin: 0 auto;
     white-space: nowrap;
     overflow: hidden;
-    display: inline-block;
+    display: flex;
     width: 100%; /* Defina a largura conforme necessário */
 }
 
-/*.carousel {
-    max-height: 200px;  Defina a altura desejada 
-    overflow: hidden;
-    margin: 0 auto;
-}*/
-
-/*.apresentacaoCarrosel {
-    color: rgba(255, 255, 255, 0.75);
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    text-align: center;
-    font-size: 1.5em;
-    animation: barra 500ms steps(40) infinite normal, typing 6s steps(40) 1s normal both;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    width: 100%;
-}*/
-/*.carrosel-inicial {
-    background-color: #fff;
-    color: black;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-}*/
-/**/
 
 .imagem-menor-altura {
-    height: 200px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    height: 150px; /* Defina a altura desejada em pixels ou outra unidade de medida */
+    width: 100%;
 }
 
+/*.carousel-caption p,h2 {
+   font-size:15px;
 
-
-
-
-
+}*/
 
 section.module.parallax {
     display: flex;
     flex-direction: column;
-    height: 100vh !important;
+    height: 100vh; /*!important;*/
     justify-content: center;
     width: 100% !important;
     position: relative;
@@ -130,22 +202,25 @@ section.module.parallax {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background: /*linear-gradient(#201b2c,#514869,#2f2841);*/  var(--roxo-escuro);
 }
 
-section.module.parallax-1 {
-    background-image: url("../assets/img/Home/fundoParallax.jpg");
-    /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
-}
+/*section.module.parallax-1 {*/
 
-section.module.parallax-2 {
-    background-image: url("../assets/img/Home/fundoParallax.jpg");
+    /*background-color: var(--roxo-claro1);*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
+/*}*/
+
+/*section.module.parallax-2 {
+    background-color: var(--roxo-claro1);
+    height: 50vh;
 }
 
 section.module.parallax-3 {
-    background-image: url("../assets/img/Home/fundoParallax.jpg");
+    background-color: var(--roxo-escuro);*/
+    /*background-image: url("../assets/img/Home/fundo.jpg");*/
     /* background: linear-gradient(rgba(33, 37, 41, 0), rgba(255, 255, 255, .3)); */
-}
+/*}*/
 
 
 @keyframes barra {
@@ -169,6 +244,204 @@ section.module.parallax-3 {
     }
 
     to {
-        width: 31em;
+        width: 15.8em;
     }
 }
+
+.titulo-cursos > h2 {
+    text-shadow: 20px 20px 20px rgba(0,0,0,0.389);
+    margin-top: 20px;
+    color: var(--verde-destaque);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: TiltNeon;
+}
+
+
+    .content {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10%;
+    }
+
+    .service-container {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+.service-item {
+    box-shadow: 20px 20px 20px rgba(0,0,0,0.389);
+    /*visibility: hidden;*/
+}
+
+.service-container .service-item {
+    width: calc(30.33% - 32px);
+    margin: 16px;
+    
+}
+
+.service-container .service-item .service-item-card {
+background-color:var(--roxo-claro1);
+border: 1px solid #0e0f10;
+border-radius: 16px;
+min-height: 300px;
+padding: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.service-container .service-item .service-item-card/*:hover*/ {
+/*border: 0.5px solid #0FFF50;*/
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon {
+background-color: #0e0f10;
+height: 80px;
+border: 1px solid #0e0f10;
+width: 80px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon:hover {
+    /*border: 1px solid #0FFF50;*/
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon i {
+    font-size: 30px;
+}
+
+.service-container .service-item .service-item-card .service-item-card-title {
+margin-top: 16px;
+margin-bottom: 16px;
+align-items: center;
+}
+
+.service-item-card-descrition ul {
+    padding-left: 20px;
+    list-style-type: disc; 
+}
+
+.service-item-card-descrition li {
+    text-align: left; 
+    margin-left: 5px; 
+}
+
+.carouselExampleIndicators{
+    padding-top:2px;
+}
+
+.botao-matricule-se{
+    padding: 20px;
+
+}
+
+.botao-matricula a{
+    font-family: TiltNeon;
+    margin-bottom: 1px;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+.botao-matricula a:hover {
+    background-color: darkgreen;
+    border: 2px solid white;
+}
+
+.botao-cursos{
+    padding-bottom:20px;
+}
+
+.botao-cursos a {
+    font-family: TiltNeon;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.3em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+
+
+    .botao-cursos a:hover {
+        background-color: darkgreen;
+        border: 2px solid white;
+    }
+
+.botao-ranking a {
+    font-family: TiltNeon;
+    margin-bottom: 1px;
+    outline-color: transparent;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 1em;
+    background-color: transparent; /* Cor de fundo do botão */
+    color: #00ff88;
+    text-decoration: none;
+    border: 2px solid #00ff88; /* Cor da borda vermelha */
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+.botao-ranking a:hover {
+    background-color: darkgreen;
+    border: 2px solid white;
+}
+
+.matricula {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 55vh;
+    padding-bottom: 10px;
+}
+
+
+
+
+    @media only screen and (max-width:600px) {
+    .service-container {
+    flex-direction: column
+    }
+
+    .service-container .service-item {
+    width: calc(70% - 32px);
+    }
+
+    .service-container .service-item .service-item-card {
+        min-height: 300px
+    }
+
+            /*.botao-cursos a{
+        margin-top:3%;
+        background-color: var(--verde-destaque);
+    }*/
+
+
+        }
+
+
