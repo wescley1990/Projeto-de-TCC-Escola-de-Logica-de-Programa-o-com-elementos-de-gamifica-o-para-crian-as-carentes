@@ -25,13 +25,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCC.Application", "src\TCC.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCC.Infra.CrossCutting.IoC", "src\TCC.Infra.CrossCutting.IoC\TCC.Infra.CrossCutting.IoC.csproj", "{BD9A928C-3AA8-4BCC-B7E1-3BE03F7A8EB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Infra.CrossCutting.Identity", "src\TCC.Infra.CrossCutting.Identity\TCC.Infra.CrossCutting.Identity.csproj", "{E4F5B383-D547-453A-AC41-EABD17BC3EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCC.Infra.CrossCutting.Identity", "src\TCC.Infra.CrossCutting.Identity\TCC.Infra.CrossCutting.Identity.csproj", "{E4F5B383-D547-453A-AC41-EABD17BC3EDF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{13C8F4B3-9147-46D3-8D27-3828C96C1CB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Tests.Unit", "src\TCC.Tests.Unit\TCC.Tests.Unit.csproj", "{0A7206E3-683A-46BE-BD48-A627D0F84E7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCC.Tests.Unit", "src\TCC.Tests.Unit\TCC.Tests.Unit.csproj", "{0A7206E3-683A-46BE-BD48-A627D0F84E7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC.Tests.Integration", "src\TCC.Tests.Integration\TCC.Tests.Integration.csproj", "{F96531C2-EB26-44F0-8CBC-6CC25C249297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCC.Tests.Integration", "src\TCC.Tests.Integration\TCC.Tests.Integration.csproj", "{F96531C2-EB26-44F0-8CBC-6CC25C249297}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3AF0A3A5-DDFB-4B3F-A2BC-7A9D8FF632BB}"
+	ProjectSection(SolutionItems) = preProject
+		cloudbuild.yaml = cloudbuild.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
