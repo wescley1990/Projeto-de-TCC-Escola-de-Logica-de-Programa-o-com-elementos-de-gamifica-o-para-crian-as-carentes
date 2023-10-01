@@ -20,7 +20,6 @@ COPY ["src/TCC.Infra.CrossCutting.IoC/TCC.Infra.CrossCutting.IoC.csproj", "src/T
 COPY ["src/TCC.Tests.Integration/TCC.Tests.Integration.csproj", "src/TCC.Tests.Integration/"]
 COPY ["src/TCC.Tests.Unit/TCC.Tests.Unit.csproj", "src/TCC.Tests.Unit/"]
 COPY ["src/TCC.UI.Web/package.json", "src/TCC.UI.Web/"]
-COPY *.config .
 
 WORKDIR "/src/src/TCC.UI.Web"
 RUN npm install
