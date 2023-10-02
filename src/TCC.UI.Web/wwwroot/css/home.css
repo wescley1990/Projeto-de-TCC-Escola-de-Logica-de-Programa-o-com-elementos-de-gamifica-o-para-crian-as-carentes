@@ -181,6 +181,7 @@ section.module.parallax:after {
     font-family: TiltNeon;
     font-size: 3em;
     margin: 0 auto;
+    
 }
 
 .apresentacao2 {
@@ -362,9 +363,6 @@ align-items: center;
     margin-left: 5px; 
 }
 
-.carouselExampleIndicators{
-    padding-top:2px;
-}
 
 .botao-matricule-se{
     padding: 20px;
@@ -436,6 +434,7 @@ align-items: center;
 }
 
 .matricula {
+
     justify-content: space-evenly;
     align-items: center;
     height: 55vh;
@@ -446,35 +445,41 @@ align-items: center;
 
 
     @media only screen and (max-width:600px) {
+    .imagem-texto {
+       min-height:47vh;
+       
+    }
+
 
     .texto0 h2 {
-        width: 55vw;
+
+        min-width: 50vw;
         font-size: 1.5em;
         padding-bottom: 10px;
     }
 
     .texto0 p{
-        width:55vw;
+        min-width:50vw;
         text-align:justify;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
-    .imagem0 {
-        visibility: hidden;
-       /* height: 35%;
+        .imagem0 {
+            display: none;
+            /* height: 35%;
         width: 35%;*/
-    }
+        }
 
 
     .imagem1{
-        visibility:hidden;
+        display:none;
     }
-    .imagem2 {
-        visibility: hidden;
-    }
-    .imagem3 {
-        visibility: hidden;
-    }
+        .imagem2 {
+            display: none;
+        }
+        .imagem3 {
+            display: none;
+        }
 
 
     .service-container {
