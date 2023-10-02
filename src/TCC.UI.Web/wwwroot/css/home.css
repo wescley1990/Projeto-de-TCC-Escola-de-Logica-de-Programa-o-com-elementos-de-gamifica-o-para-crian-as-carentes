@@ -54,6 +54,11 @@ section.module.content {
     align-items: center;
 }
 
+.imagem0 {
+    /*visibility: hidden;*/
+    height: 15%;
+    width: 15%;
+}
 
 .imagem1 {
     /*visibility: hidden;*/
@@ -71,6 +76,23 @@ section.module.content {
     height: 15%;
     width: 15%;
 }
+
+.texto0 {
+    font-family: TiltNeon;
+    font-size: 1em;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    text-justify: auto;
+}
+
+    .texto0 h2 {
+        font-family: TiltNeon;
+        font-size: 2em;
+        text-align: center;
+        text-justify: auto;
+    }
+
 
 .texto1 {
     font-family: TiltNeon;
@@ -424,6 +446,37 @@ align-items: center;
 
 
     @media only screen and (max-width:600px) {
+
+    .texto0 h2 {
+        width: 55vw;
+        font-size: 1.5em;
+        padding-bottom: 10px;
+    }
+
+    .texto0 p{
+        width:55vw;
+        text-align:justify;
+        font-size: 1.2em;
+    }
+
+    .imagem0 {
+        visibility: hidden;
+       /* height: 35%;
+        width: 35%;*/
+    }
+
+
+    .imagem1{
+        visibility:hidden;
+    }
+    .imagem2 {
+        visibility: hidden;
+    }
+    .imagem3 {
+        visibility: hidden;
+    }
+
+
     .service-container {
     flex-direction: column
     }
