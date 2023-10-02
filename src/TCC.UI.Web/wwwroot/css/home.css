@@ -168,19 +168,12 @@ section.module.parallax:after {
         margin: 0 auto;
     }
 
-.apresentacao-2 > h2 {
-    font-family: TiltNeon;
-    color: var(--verde-destaque);
-    font-size: 3em;
-    margin: 0 auto;
-}
-
-.apresentacao-3 > h2 {
-    font-family: TiltNeon;
+.apresentacao-2 h2 {
     color: var(--verde-destaque);
     font-family: TiltNeon;
     font-size: 3em;
-    margin: 0 auto;
+    text-align:center;
+    align-items:center;
     
 }
 
@@ -364,17 +357,12 @@ align-items: center;
 }
 
 
-.botao-matricule-se{
-    padding: 20px;
-
-}
-
 .botao-matricula a{
     font-family: TiltNeon;
     margin-bottom: 1px;
     outline-color: transparent;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 1.2em;
     background-color: transparent; /* Cor de fundo do botão */
     color: #00ff88;
@@ -434,11 +422,11 @@ align-items: center;
 }
 
 .matricula {
-
-    justify-content: space-evenly;
+    display:block;
     align-items: center;
-    height: 55vh;
-    padding-bottom: 10px;
+    margin-top:100px;
+    margin-bottom:80px;
+    
 }
 
 
