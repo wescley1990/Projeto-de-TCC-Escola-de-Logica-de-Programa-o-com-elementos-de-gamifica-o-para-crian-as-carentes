@@ -1,4 +1,67 @@
-﻿body {
+﻿
+.body-curso{
+    display:flex;
+    margin-top:50px;
+}
+
+.container {
+   
+        
+}
+.titulo{
+    text-align:center;
+    
+}
+
+    .titulo h1 {
+        font-family: TiltNeon;
+        color: var(--verde-destaque);
+        font-size:3em;
+    }
+
+    .titulo p {
+        font-family: TiltNeon;
+        font-size: 1.2em;
+    }
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px); 
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius:20px;
+    box-shadow: 10px 10px 10px rgb(10, 3, 3)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
     background: black;
 }
 
@@ -26,4 +89,4 @@ h2 {
 
 a{
     text-decoration: none;
-}
+}*/

@@ -1,11 +1,73 @@
-﻿@model IEnumerable<TCC.Application.ViewModels.CursoViewModel>
-
-@{
+﻿@{
     ViewData["Title"] = "LogPlay - Cursos";
 }
+<head>
+    <link href="~/css/cursos/cursos.css" rel="stylesheet" />
+    <title>@ViewData["Title"]</title>
+</head>
+<div class="body-curso">
 
 
-<div class="container mt-5 mb-5">
+    <div class="container">    
+        <div class="titulo">
+            <h1>Cursos</h1>
+            <p>Desvende a Lógica da Programação com Nossos Cursos</p>
+        </div>
+    
+
+        <div class="cards-container">
+
+            <div class="card">
+
+                <img src="" alt="Curso de Variáveis">
+                <h2>Curso de Variáveis</h2>
+                <p>Aprenda sobre variáveis em programação.</p>
+                <p class="nivel">Nível: Iniciante</p>
+                <button>Increva-se</button>
+            </div>
+
+            <div class="card">
+                <img src="" alt="Curso de Matrizes">
+                <h2>Curso de Matrizes</h2>
+                <p>Explore matrizes e arrays em programação.</p>
+                <p class="nivel">Nível: Intermediário</p>
+                <button>Increva-se</button>
+            </div>
+
+            <div class="card">
+                <img src="" alt="Curso de Estrutura de Dados">
+                <h2>Curso de Estrutura de Dados</h2>
+                <p>Aprenda sobre estruturas de dados em programação.</p>
+                <p class="nivel">Nível: Avançado</p>
+                <button>Increva-se</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <div class="container mt-5 mb-5">
     <div class="row mt-1">
         @foreach (var curso in Model)
         {
@@ -23,6 +85,9 @@
     </div>
 </div>
 
+
+
+
 @section Styles {
     <link href="~/css/Cursos/cursos.css" rel="stylesheet" type="text/css" />
-}
+} *@
