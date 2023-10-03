@@ -322,7 +322,7 @@ text-align: center;
 }
 
 .service-container .service-item .service-item-card .service-item-card-icon {
-background-color: #0e0f10;
+/*background-color: #0e0f10;*/
 height: 80px;
 border: 1px solid #0e0f10;
 width: 80px;
@@ -332,6 +332,10 @@ align-items: center;
 justify-content: center;
 }
 
+.icone{
+    width:60px;
+}
+
 .service-container .service-item .service-item-card .service-item-card-icon:hover {
     /*border: 1px solid #0FFF50;*/
 }
@@ -339,6 +343,7 @@ justify-content: center;
 .service-container .service-item .service-item-card .service-item-card-icon i {
     font-size: 30px;
 }
+    
 
 .service-container .service-item .service-item-card .service-item-card-title {
 margin-top: 16px;
