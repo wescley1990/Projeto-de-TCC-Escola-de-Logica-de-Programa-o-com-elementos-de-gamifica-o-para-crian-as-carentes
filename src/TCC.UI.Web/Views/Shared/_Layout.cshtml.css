@@ -5,12 +5,17 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  font-family:'Tilt Neon'!important;
   
 }
-
-a {
-  color: #0077cc;
+.navbar-brand span{
+    color:var(--verde-destaque);
 }
+
+.navbar-brand:hover{
+    color: var(--verde-destaque)!important;
+}
+
 
 .btn-primary {
   color: #fff;
@@ -55,6 +60,7 @@ body {
 }
 
 .footer {
+    
     padding: 30px;
     position: absolute;
     bottom: 0;
@@ -76,4 +82,11 @@ body {
     max-width: 100%;
     margin: 0 0;
     padding: 0 0;
+}
+
+@font-face {
+    font-family: 'TiltNeon';
+    src: url("../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
+    font-weight: normal;
+    font-style: normal;
 }
