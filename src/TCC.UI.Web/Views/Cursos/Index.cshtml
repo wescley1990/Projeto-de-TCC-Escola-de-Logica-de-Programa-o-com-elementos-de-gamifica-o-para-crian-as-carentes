@@ -20,7 +20,7 @@
             <div class="cards-container">
                 @foreach (var curso in Model)
                 {
-                    <div class="card">
+                    <a class="card" asp-controller="Cursos" asp-action="Detalhes" asp-route-name="@curso.Nome">
 
                         <img src="~/assets/img/Home/moca-mobile.svg" alt="Curso de Variáveis">
                         <h2>Curso de Variáveis</h2>
@@ -28,7 +28,7 @@
                         @*                     <p> Aprenda sobre variáveis em programação.</p>
                     *@  <p class="nivel">Nível: Iniciante</p>
 
-                    </div>
+                    </a>
                 }
             </div>
         </div>

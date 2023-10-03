@@ -32,7 +32,7 @@ body{
 }
 
 .card {
-    padding-bottom:40px;
+    padding-bottom: 40px;
     background-color: var(--roxo-claro1);
     width: calc(33.33% - 20px);
     border: 1px solid #0e0f10;
@@ -44,6 +44,8 @@ body{
     align-items: center;
     text-align: center;
     box-shadow: 10px 10px 10px rgb(10, 3, 3);
+    text-decoration: none;
+    color: white;
 }
     .card img{
         width:60%;
@@ -52,7 +54,7 @@ body{
 
     .card:hover {
         border: 2px solid var(--verde-destaque);
-        
+        color: white;
     }
 
 .card h2{
