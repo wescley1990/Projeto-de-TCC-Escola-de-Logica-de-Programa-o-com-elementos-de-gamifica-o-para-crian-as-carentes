@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'TiltNeon', sans-serif;
     background-color: var(--roxo-escuro);
 }
 
@@ -55,4 +55,11 @@ footer {
     padding: 10px 0;
     background-color: var(--roxo-escuro);
     color: #fff;
+}
+
+@font-face {
+    font-family: 'TiltNeon';
+    src: url("../../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
+    font-weight: normal;
+    font-style: normal;
 }

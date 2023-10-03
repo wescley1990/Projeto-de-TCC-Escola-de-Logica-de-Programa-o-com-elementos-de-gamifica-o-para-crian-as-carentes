@@ -17,6 +17,7 @@ body {
     margin-bottom: 60px;
     background-color: var(--roxo-escuro);
     color: white;
+    font-family: 'TiltNeon';
 }
 
 .navbar {
