@@ -9,8 +9,8 @@ sr.reveal('.apresentacao h2', {
 });
 
 
-//sr.reveal('.service-item', {
-//    duration: 2000
-//});
+sr.reveal('.service-container .service-item', {
+    duration: 3000
+});
 
 
