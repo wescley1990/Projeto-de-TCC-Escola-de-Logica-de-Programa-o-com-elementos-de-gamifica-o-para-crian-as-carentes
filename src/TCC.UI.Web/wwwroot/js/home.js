@@ -4,13 +4,15 @@ const sr = ScrollReveal({ reset: true })
 ////    duration: 2000
 ////});
 
+sr.reveal('.service-item', {
+    duration: 2000
+});
+
 sr.reveal('.apresentacao h2', {
     duration: 3000
 });
 
 
-//sr.reveal('.service-item', {
-//    duration: 2000
-//});
+
 
 
