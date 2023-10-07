@@ -25,5 +25,7 @@ public class Curso : Entity, IAggregateRoot
     public long Duracao { get; set; }
     public IEnumerable<Aula> Aulas { get; set; }
     public int Xp { get; set; }
-    public int QtdMoeda { get; set; }   
+    public int QtdMoeda { get; set; }
+
+    public string IconUrl { get; set; }
 }
