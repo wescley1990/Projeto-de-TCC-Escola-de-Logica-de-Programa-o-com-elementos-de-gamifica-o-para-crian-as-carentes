@@ -18,6 +18,7 @@ header {
 
 h1 {
     font-size: 36px;
+    color: var(--verde-destaque);
 }
 
 main {
