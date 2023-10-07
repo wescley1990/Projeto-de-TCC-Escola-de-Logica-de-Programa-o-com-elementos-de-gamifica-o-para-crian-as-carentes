@@ -23,5 +23,6 @@ namespace TCC.Application.ViewModels
         public Nivel NivelCurso { get; set; }
         
         public long Duracao { get; set; }
+
     }
 }
