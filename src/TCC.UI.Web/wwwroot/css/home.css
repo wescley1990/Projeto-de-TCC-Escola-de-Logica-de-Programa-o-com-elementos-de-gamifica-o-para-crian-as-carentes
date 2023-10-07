@@ -285,6 +285,7 @@ section.module.parallax-3 {
     }
 
     .service-container {
+        /*visibility:hidden;*/
         max-width: 1200px;
         display: flex;
         flex-wrap: wrap;
@@ -300,9 +301,9 @@ section.module.parallax-3 {
 }
 
 .service-container .service-item {
+    visibility: hidden;
     width: calc(30.33% - 32px);
     margin: 16px;
-    
 }
 
 .service-container .service-item .service-item-card {
