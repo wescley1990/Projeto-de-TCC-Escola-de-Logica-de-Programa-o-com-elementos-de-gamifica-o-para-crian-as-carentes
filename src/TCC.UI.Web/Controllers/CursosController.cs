@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TCC.Application.Interfaces;
+using TCC.Domain.Models;
 
 namespace TCC.UI.Web.Controllers
 {
@@ -37,6 +38,24 @@ namespace TCC.UI.Web.Controllers
             }
 
             return View(cursoViewModel);
+        }
+
+        [HttpPost("Cursos/load")]
+        public async Task<IActionResult> Load() 
+        {
+            var curso = new Curso(
+                Guid.NewGuid(),
+                "Variáveis",
+                "Aprenda os fundamentos essenciais para utilizar variáveis",
+                Domain.Enums.Nivel.Iniciante
+                )
+            {
+                
+            };
+
+            _cursoAppService.Add(curso);
+
+            return Ok(curso);
         }
     }
 }

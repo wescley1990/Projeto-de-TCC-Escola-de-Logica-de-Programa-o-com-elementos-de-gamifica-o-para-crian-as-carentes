@@ -23,8 +23,7 @@ public class Curso : Entity, IAggregateRoot
     public string Descricao { get; set; }
     public Nivel NivelCurso { get; set; }
     public long Duracao { get; set; }
-    IEnumerable<Aula> Aulas { get; set; }
-
-    //public int Xp { get; set; }
-    //public int QtdMoeda { get; set; }   
+    public IEnumerable<Aula> Aulas { get; set; }
+    public int Xp { get; set; }
+    public int QtdMoeda { get; set; }   
 }

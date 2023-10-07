@@ -1,4 +1,5 @@
 ﻿using TCC.Application.ViewModels;
+using TCC.Domain.Models;
 
 namespace TCC.Application.Interfaces;
 
@@ -8,4 +9,6 @@ public interface ICursoAppService : IDisposable
     Task<CursoViewModel> GetById(Guid id);
 
     Task<CursoViewModel> GetByName(string name);
+
+    void Add(Curso curso);
 }
