@@ -9,20 +9,23 @@
     }
 }
 
-<h1>Gerencie sua conta</h1>
+<div class="perfil-container">
+    <h1>Gerencie sua conta</h1>
 
-<div>
-    <h2>Alterar configurações da conta</h2>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
-            <partial name="_ManageNav" />
-        </div>
-        <div class="col-md-9">
-            @RenderBody()
+    <div>
+        <h2>Alterar configurações da conta</h2>
+        <hr />
+        <div class="row">
+            <div class="col-md-3">
+                <partial name="_ManageNav" />
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
         </div>
     </div>
 </div>
+
 
 @section Scripts {
     @RenderSection("Scripts", required: false)
