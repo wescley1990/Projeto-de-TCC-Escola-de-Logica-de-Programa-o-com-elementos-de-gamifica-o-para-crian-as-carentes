@@ -20,6 +20,8 @@ h1 {
 .scrollable-content {
     max-height: 70vh; 
     overflow-y: auto; 
+    overflow-x: scroll; 
+
 }
 
     .scrollable-content::-webkit-scrollbar {
@@ -32,15 +34,16 @@ h1 {
         border-radius: 5px; 
     }
 
-        .scrollable-content::-webkit-scrollbar-thumb:hover {
+    .scrollable-content::-webkit-scrollbar-thumb:hover {
             background-color: #00ff88; 
-        }
+    }
 
 
 .item-table {
     width: 100%; 
     table-layout: auto; 
     border-collapse: collapse;
+
 }
 
 
@@ -51,21 +54,24 @@ h1 {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-    min-width: 250px; 
-    margin-right: 20px; 
+    min-width: 250px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border-color: var(--roxo-escuro);
+  
 }
 
    
-    .item:last-child {
-        margin-right: 0;
-    }
+.item:last-child {
+    margin-right: 0;
+}
 
    
-    .item img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
+.item img {
+   max-width: 100%;
+   height: auto;
+   margin-bottom: 10px;
+}
 
 
 button {
