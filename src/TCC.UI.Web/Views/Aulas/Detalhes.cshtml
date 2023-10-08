@@ -6,5 +6,11 @@
 }
 
 <body>
-    <embed src="~/assets/pdf/@Html.DisplayFor(m => m.ContentUrl)" width="500" height="375" type="application/pdf" />
+    <div class="aula-main-container">
+        <embed src="~/assets/pdf/@Html.DisplayFor(m => m.ContentUrl)" width="80%" height="80%" type="application/pdf" />
+    </div>
 </body>
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/Aulas/detalhes.css" asp-append-version="true" />
+}
