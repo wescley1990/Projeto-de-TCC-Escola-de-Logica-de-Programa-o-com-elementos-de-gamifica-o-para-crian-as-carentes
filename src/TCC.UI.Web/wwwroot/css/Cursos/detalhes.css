@@ -12,7 +12,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .banner-curso {
@@ -24,7 +24,7 @@
     justify-content: center;
     width: 100%;
     height: 50vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)40%,#000 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)30%,#000 100%);
 }
 
 .titulo-curso{
@@ -32,6 +32,19 @@
     font-size: 4em;
 }
 
+.titulo-curso2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+    .titulo-curso2 > h2 {
+        font-size: 2em;
+        color: var(--verde-destaque);
+    }
+    
 .descricao-curso {
     color: white;
     text-transform: uppercase;
@@ -67,8 +80,51 @@
 }
 
 .curso-aulas {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    box-shadow: 0px 10px 40px #00000056;
+    border-radius: 10px;
 }
+
+.lista-aulas {
+    width: 100%;
+}
+
+    .curso-aulas .lista-aulas > ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        width: 100%;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+    }
+}
+
+.curso-aulas .lista-aulas > ul > li {
+    width: 100%;
+}
+
+.curso-aulas .lista-aulas > ul > a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--roxo-claro1);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px
+}
+
+    .curso-aulas .lista-aulas > ul > a:hover {
+        text-decoration: none;
+        color: var(--verde-destaque);
+        background-color: var(--roxo-escuro);
+    }
 
 .curso-sidebar {
     display: flex;
@@ -110,4 +166,5 @@
     justify-content: center;
     width: 100%;
     height: 30vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)30%,#000 100%);
 }
