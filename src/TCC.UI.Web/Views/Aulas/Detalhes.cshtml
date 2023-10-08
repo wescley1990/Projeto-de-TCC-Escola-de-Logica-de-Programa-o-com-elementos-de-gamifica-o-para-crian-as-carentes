@@ -4,3 +4,7 @@
 @{
     ViewData["Title"] = "LogPlay - Aulas";
 }
+
+<body>
+    <embed src="~/assets/pdf/@Html.DisplayFor(m => m.ContentUrl)" width="500" height="375" type="application/pdf" />
+</body>

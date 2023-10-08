@@ -57,7 +57,7 @@ namespace TCC.UI.Web.Controllers
                     {
                         Id = Guid.NewGuid(),
                         Descricao = "Aula 1",
-                        ContentUrl = "~/assets/pdf/Variaveis/Variaveis1.pdf",
+                        ContentUrl = "Variaveis/Variaveis1.pdf",
                         Nome = "Introdução às Variáveis",
                         QtdMoedas = 10,
                         Xp = 1000,
@@ -91,7 +91,7 @@ namespace TCC.UI.Web.Controllers
                     {
                          Id = Guid.NewGuid(),
                         Descricao = "Aula 2",
-                        ContentUrl = "~/assets/pdf/Variaveis/Variaveis1.pdf",
+                        ContentUrl = "Variaveis/Variaveis1.pdf",
                         Nome = "Introdução às Variáveis",
                         QtdMoedas = 10,
                         Xp = 1100,
@@ -125,7 +125,7 @@ namespace TCC.UI.Web.Controllers
                     {
                          Id = Guid.NewGuid(),
                         Descricao = "Aula 3",
-                        ContentUrl = "~/assets/pdf/Variaveis/Variaveis1.pdf",
+                        ContentUrl = "Variaveis/Variaveis1.pdf",
                         Nome = "Introdução às Variáveis",
                         QtdMoedas = 10,
                         Xp = 1200,
