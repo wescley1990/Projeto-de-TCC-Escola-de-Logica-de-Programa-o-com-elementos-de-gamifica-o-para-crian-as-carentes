@@ -168,5 +168,18 @@ namespace TCC.UI.Web.Controllers
 
             return Json(curso);
         }
+
+        [HttpGet("Cursos/deleteAll")]
+        public async Task<IActionResult> DeleteAll()
+        {
+            var cursos = await _cursoAppService.GetAll();
+
+            foreach (var curso in cursos)
+            {
+                await _cursoAppService.Remove(curso);
+            }
+
+            return Ok();
+        }
     }
 }

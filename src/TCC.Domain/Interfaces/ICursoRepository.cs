@@ -10,7 +10,7 @@ namespace TCC.Domain.Interfaces
 
         Task<bool> Add(Curso curso);
         void Update(Curso curso);
-        void Remove(Curso curso);
+        Task<bool> Remove(Curso curso);
 
         Task<Curso> GetByName(string name);
     }

@@ -11,4 +11,6 @@ public interface ICursoAppService : IDisposable
     Task<CursoViewModel> GetByName(string name);
 
     Task<bool> Add(Curso curso);
+
+    Task<bool> Remove(CursoViewModel curso);
 }

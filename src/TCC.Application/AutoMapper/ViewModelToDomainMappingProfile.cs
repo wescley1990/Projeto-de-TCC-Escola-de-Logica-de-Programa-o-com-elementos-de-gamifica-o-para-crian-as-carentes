@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TCC.Application.ViewModels;
+using TCC.Domain.Models;
 
 namespace TCC.Application.AutoMapper;
 
@@ -7,9 +8,10 @@ public class ViewModelToDomainMappingProfile : Profile
 {
     public ViewModelToDomainMappingProfile()
     {
-        // CreateMap<CursoViewModel, RegisterNewCustomerCommand>()
-        //     .ConstructUsing(c => new RegisterNewCustomerCommand(c.Name, c.Email, c.BirthDate));
-        // CreateMap<CursoViewModel, UpdateCustomerCommand>()
-        //     .ConstructUsing(c => new UpdateCustomerCommand(c.Id, c.Name, c.Email, c.BirthDate));
+        CreateMap<CursoViewModel, Curso>();
+        CreateMap<AulaViewModel, Aula>();
+        CreateMap<ExercicioViewModel, Exercicio>();
+        CreateMap<ItemLojaViewModel, ItemLoja>();
+        CreateMap<UsuarioViewModel, Usuario>();
     }
 }

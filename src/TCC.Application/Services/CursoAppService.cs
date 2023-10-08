@@ -44,4 +44,11 @@ public class CursoAppService : ICursoAppService
     {
         return await _cursoRepository.Add(curso);
     }
+
+    public async Task<bool> Remove(CursoViewModel curso)
+    {
+        var cursoDomain = _mapper.Map<Curso>(curso);
+
+        return await _cursoRepository.Remove(cursoDomain);
+    }
 }
