@@ -32,12 +32,14 @@
     font-size: 4em;
 }
 
-.titulo-curso2{
+.titulo-curso2 {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    border-radius: 10px;
 }
 
     .titulo-curso2 > h2 {
@@ -87,7 +89,7 @@
     width: 40%;
     height: 100%;
     box-shadow: 0px 10px 40px #00000056;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .lista-aulas {
@@ -97,6 +99,8 @@
     .curso-aulas .lista-aulas > ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         list-style-type: none;
         width: 100%;
         margin-block-start: 0px;
@@ -108,7 +112,9 @@
 }
 
 .curso-aulas .lista-aulas > ul > li {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .curso-aulas .lista-aulas > ul > a {
@@ -117,7 +123,8 @@
     background-color: var(--roxo-claro1);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: 20px
+    padding: 20px;
+    width: 100%;
 }
 
     .curso-aulas .lista-aulas > ul > a:hover {
