@@ -16,12 +16,15 @@ public static class NativeInjector
         services.AddScoped<ICursoAppService, CursoAppService>();
         services.AddScoped<IItemLojaAppService, ItemLojaAppService>();
         services.AddScoped<IUsuarioAppService, UsuarioAppService>();
+        services.AddScoped<IAulaAppService, AulaAppService>();
         //services.AddTransient<IEmailSender, EmailSender>();
 
         // Infra - Data
         services.AddScoped<ICursoRepository, CursoRepository>();
         services.AddScoped<IItemLojaRepository, ItemLojaRepository>();
         services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+        services.AddScoped<IAulaRepository, AulaRepository>();
+
         services.AddScoped<AppDbContext>();
     }
 }

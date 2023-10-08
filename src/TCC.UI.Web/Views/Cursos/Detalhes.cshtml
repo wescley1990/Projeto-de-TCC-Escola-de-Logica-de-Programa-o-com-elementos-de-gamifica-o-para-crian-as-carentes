@@ -1,4 +1,5 @@
-﻿@model TCC.Application.ViewModels.CursoViewModel
+﻿@using TCC.Domain.Enums;
+@model TCC.Application.ViewModels.CursoViewModel
 
 @{
     ViewData["Title"] = "LogPlay - Cursos";
@@ -7,8 +8,8 @@
 <body>
     <div class="curso-main-container">
         <div class="banner-curso">
-            <h1 class="titulo-curso">Variáveis</h1>
-            <p class="descricao-curso">Aprenda os fundamentos essenciais para utilizar variáveis</p>
+            <h1 class="titulo-curso">@Html.DisplayFor(m => m.Nome)</h1>
+            <p class="descricao-curso">@Html.DisplayFor(m => m.Descricao)</p>
             <div class="botao-iniciar">
                 <a class="btn btn-primary" asp-area="Identity" asp-page="/Login/Registrar">
                     Iniciar curso
@@ -17,9 +18,16 @@
         </div>
         <div class="curso-container">
             <div class="curso-aulas">
-                <h2>Variáveis</h2>
+                <h2>@Html.DisplayFor(m => m.Nome)</h2>
                 <div class="">
-
+                    <ul>
+                        @foreach (var aula in Model.Aulas)
+                        {
+                            <a asp-controller="Aulas" asp-action="Detalhes" asp-route-name="@aula.Nome">
+                            <li>@Html.DisplayFor(a => aula.Nome)</li>
+                            </a>
+                        }
+                    </ul>
                 </div>
             </div>
             <div class="curso-sidebar">
@@ -28,15 +36,19 @@
                 </div>
                 <div>
                     <span>Duração:</span> 
+                    <div>@Html.DisplayFor(m => m.Duracao)</div>
                 </div>
                 <div>
                     <span>Aulas:</span>
+                    <div>@Model.Aulas.Count</div>
                 </div>
                 <div>
                     <span>Exercícios:</span>   
+                    <div>@Model.Aulas.SelectMany(a => a.Exercicios).Count()</div>
                 </div>
                 <div>
                     <span>Nível:</span>
+                    <div>@Html.DisplayFor(m => m.NivelCurso)</div>
                 </div>
             </div>
         </div>

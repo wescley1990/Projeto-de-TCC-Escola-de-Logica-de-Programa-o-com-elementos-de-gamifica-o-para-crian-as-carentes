@@ -19,7 +19,6 @@ namespace TCC.Application.ViewModels
         [DisplayName("Descrição")]
         public string Descricao { get; set; }
         
-        [DisplayName("Nível Curso")]
         public Nivel NivelCurso { get; set; }
         
         public long Duracao { get; set; }
