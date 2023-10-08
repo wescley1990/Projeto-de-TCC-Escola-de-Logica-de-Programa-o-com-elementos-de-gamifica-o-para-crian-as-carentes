@@ -1,25 +1,18 @@
-﻿/*body *{
-    box-sizing: border-box;
-}*/
-
-@font-face {
+﻿@font-face {
     font-family: 'TiltNeon';
     src: url("../../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
-body {
-    font-family: TiltNeon;
-}
-
 .curso-main-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 60px;
 }
 
 .banner-curso {
@@ -30,7 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 40%;
+    height: 50vh;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0)40%,#000 100%);
 }
 
@@ -67,7 +60,7 @@ body {
 
 .curso-container {
     width: 100%;
-    height: 40vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -79,13 +72,36 @@ body {
 
 .curso-sidebar {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
-    width: 30%;
+    width: 20%;
     background: #2f2841;
     border-radius: 10px;
     box-shadow: 0px 10px 40px #00000056;
     padding: 30px 35px;
+    margin-top: 30px
+}
+
+.sidebar-title {
+    color: var(--verde-destaque);
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.info-item {
+    width: 100%;
+    margin: 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.model-data {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-left: auto;
 }
 
 .matricular-section {
@@ -93,5 +109,5 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 40%;
+    height: 30vh;
 }

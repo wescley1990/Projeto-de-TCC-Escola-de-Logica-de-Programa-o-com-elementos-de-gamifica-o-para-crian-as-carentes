@@ -5,7 +5,6 @@
     ViewData["Title"] = "LogPlay - Cursos";
 }
 
-<body>
     <div class="curso-main-container">
         <div class="banner-curso">
             <h1 class="titulo-curso">@Html.DisplayFor(m => m.Nome)</h1>
@@ -34,21 +33,29 @@
                 <div class="sidebar-title">
                     Informações Gerais
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Duração:</span> 
-                    <div>@Html.DisplayFor(m => m.Duracao)</div>
+                    <span class="model-data">@Html.DisplayFor(m => m.Duracao) horas</span>
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Aulas:</span>
-                    <div>@Model.Aulas.Count</div>
+                    <span class="model-data">@Model.Aulas.Count</span>
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Exercícios:</span>   
-                    <div>@Model.Aulas.SelectMany(a => a.Exercicios).Count()</div>
+                    <span class="model-data">@Model.Aulas.SelectMany(a => a.Exercicios).Count()</span>
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Nível:</span>
-                    <div>@Html.DisplayFor(m => m.NivelCurso)</div>
+                    <span class="model-data">@Html.DisplayFor(m => m.NivelCurso)</span>
+                </div>
+                <div class="info-item">
+                    <span>Moedas:</span>
+                    <span class="model-data">@Html.DisplayFor(m => m.QtdMoeda)</span>
+                </div>
+                <div class="info-item">
+                    <span>XP:</span>
+                    <span class="model-data">@Html.DisplayFor(m => m.Xp)</span>
                 </div>
             </div>
         </div>
@@ -60,8 +67,6 @@
             </div>
         </div>
     </div>
-</body>
-
 
 
 @section Styles{
