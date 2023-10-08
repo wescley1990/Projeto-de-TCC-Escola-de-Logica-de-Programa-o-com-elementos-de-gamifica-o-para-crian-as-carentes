@@ -4,22 +4,19 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TCC.Domain.Models;
 
 namespace TCC.Application.ViewModels
 {
-    public class AulaViewModel
+    public class ExercicioViewModel
     {
         [Key]
         public Guid Id { get; set; }
-
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-
-        public string ContentUrl { get; set; }
-
-        public IEnumerable<Exercicio> Exercicios { get; set; }
-
+        public string Enunciado { get; set; }
+        public string AlternativaA { get; set; }
+        public string AlternativaB { get; set; }
+        public string AlternativaC { get; set; }
+        public string AlternativaD { get; set; }
+        public string Resposta { get; set; }
         public int Xp { get; set; }
         public int QtdMoedas { get; set; }
     }

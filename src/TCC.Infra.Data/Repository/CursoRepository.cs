@@ -27,9 +27,10 @@ public class CursoRepository : ICursoRepository
         return await DbSet.ToListAsync();
     }
     
-    public void Add(Curso curso)
+    public async Task<bool> Add(Curso curso)
     {
-        DbSet.Add(curso);
+       DbSet.Add(curso);
+       return await Db.Commit();
     }
 
     public void Update(Curso curso)
@@ -48,5 +49,8 @@ public class CursoRepository : ICursoRepository
     }
 
     public async Task<Curso> GetByName(string name) => 
-        DbSet.FirstOrDefault(t => t.Nome.Contains(name));
+        DbSet
+        .Include(t => t.Aulas)
+        .ThenInclude(a => a.Exercicios)
+        .FirstOrDefault(t => t.Nome.Contains(name));
 }

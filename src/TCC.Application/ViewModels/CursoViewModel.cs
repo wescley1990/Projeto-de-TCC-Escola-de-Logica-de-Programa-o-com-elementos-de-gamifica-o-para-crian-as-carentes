@@ -24,5 +24,7 @@ namespace TCC.Application.ViewModels
         
         public long Duracao { get; set; }
 
+        public List<AulaViewModel> Aulas { get; set; }
+
     }
 }

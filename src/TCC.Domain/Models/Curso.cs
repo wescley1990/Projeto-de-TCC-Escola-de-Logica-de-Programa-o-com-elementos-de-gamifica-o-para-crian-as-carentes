@@ -8,13 +8,15 @@ public class Curso : Entity, IAggregateRoot
         Guid id, 
         string nome,
         string descricao,
-        Nivel nivel
+        Nivel nivel,
+        string iconUrl
         )
     {
         Id = id;
         Nome = nome;
         Descricao = descricao;
         NivelCurso = nivel;
+        IconUrl = iconUrl;
     }
     
     protected Curso() { }

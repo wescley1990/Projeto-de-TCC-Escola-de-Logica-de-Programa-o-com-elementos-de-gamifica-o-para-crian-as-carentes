@@ -40,8 +40,8 @@ public class CursoAppService : ICursoAppService
         return _mapper.Map<CursoViewModel>(await _cursoRepository.GetByName(name));
     }
 
-    public void Add(Curso curso)
+    public async Task<bool> Add(Curso curso)
     {
-        _cursoRepository.Add(curso);
+        return await _cursoRepository.Add(curso);
     }
 }
