@@ -41,7 +41,7 @@ namespace TCC.UI.Web.Controllers
         }
 
         [HttpPost("Cursos/load")]
-        public async Task<IActionResult> Load() 
+        public IActionResult Load() 
         {
             var curso = new Curso(
                 Guid.NewGuid(),
@@ -50,7 +50,51 @@ namespace TCC.UI.Web.Controllers
                 Domain.Enums.Nivel.Iniciante
                 )
             {
-                
+                Aulas = new List<Aula>()
+                {
+                    new Aula()
+                    {
+                        Id = Guid.NewGuid(),
+                        Descricao = "",
+                        ContentUrl = "pdf/Variaveis/Variaveis1.pdf",
+                        Nome = "Introdução às Variáveis",
+                        QtdMoedas = 10,
+                        Xp = 1000,
+                        Exercicios = new List<Exercicio>()
+                        {
+                            new Exercicio()
+                            {
+                                Enunciado = "Por que as variáveis são usadas na programação?",
+                                AlternativaA = "",
+                                AlternativaB = "",
+                                AlternativaC = "",
+                                AlternativaD = "Para evitar o uso de números.",
+                                Resposta = "B) Para armazenar e manipular informações."
+                            }
+                        }
+                    },
+                    new Aula()
+                    {
+                         Id = Guid.NewGuid(),
+                        Descricao = "",
+                        ContentUrl = "pdf/Variaveis/Variaveis1.pdf",
+                        Nome = "Introdução às Variáveis",
+                        QtdMoedas = 10,
+                        Xp = 1000
+                    },
+                    new Aula()
+                    {
+                         Id = Guid.NewGuid(),
+                        Descricao = "",
+                        ContentUrl = "pdf/Variaveis/Variaveis1.pdf",
+                        Nome = "Introdução às Variáveis",
+                        QtdMoedas = 10,
+                        Xp = 1000
+                    }
+                },
+                Duracao = 200,
+                QtdMoeda = 30,
+                Xp = 5000
             };
 
             _cursoAppService.Add(curso);
