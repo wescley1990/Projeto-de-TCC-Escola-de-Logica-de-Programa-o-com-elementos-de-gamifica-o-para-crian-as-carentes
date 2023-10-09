@@ -22,7 +22,7 @@
                 </div>
                 <div class="lista-aulas">
                     <ul>
-                        @foreach (var aula in Model.Aulas)
+                        @foreach (var aula in Model.Aulas.OrderBy(a => a.Number))
                         {
                             <a asp-controller="Aulas" asp-action="Detalhes" asp-route-name="@aula.Nome">
                             <li>@Html.DisplayFor(a => aula.Nome)</li>

@@ -67,10 +67,11 @@ namespace TCC.UI.Web.Controllers
                 {
                     new Aula()
                     {
+                        Number = 1,
                         Id = Guid.NewGuid(),
                         Descricao = "Aula 1",
                         ContentUrl = "Variaveis/Variaveis1.pdf",
-                        Nome = "Introdução às Variáveis",
+                        Nome = "Aula 1: Introdução às Variáveis",
                         QtdMoedas = 10,
                         Xp = 1000,
                         Exercicios = new List<Exercicio>()
@@ -101,10 +102,11 @@ namespace TCC.UI.Web.Controllers
                     },
                     new Aula()
                     {
-                         Id = Guid.NewGuid(),
+                        Number = 2,
+                        Id = Guid.NewGuid(),
                         Descricao = "Aula 2",
-                        ContentUrl = "Variaveis/Variaveis1.pdf",
-                        Nome = "Introdução às Variáveis",
+                        ContentUrl = "Variaveis/Variaveis2.pdf",
+                        Nome = "Aula 2: Declaração e Atribuição de Variáveis",
                         QtdMoedas = 10,
                         Xp = 1100,
                         Exercicios = new List<Exercicio>()
@@ -135,10 +137,11 @@ namespace TCC.UI.Web.Controllers
                     },
                     new Aula()
                     {
+                        Number = 3,
                          Id = Guid.NewGuid(),
                         Descricao = "Aula 3",
-                        ContentUrl = "Variaveis/Variaveis1.pdf",
-                        Nome = "Introdução às Variáveis",
+                        ContentUrl = "Variaveis/Variaveis3.pdf",
+                        Nome = "Aula 3: Escopo de Variáveis e Variáveis Estáticas",
                         QtdMoedas = 10,
                         Xp = 1200,
                         Exercicios = new List<Exercicio>()
