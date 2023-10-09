@@ -43,12 +43,24 @@ namespace TCC.UI.Web.Controllers
         [HttpGet("Cursos/load")]
         public IActionResult Load() 
         {
+            Curso curso = GetVariavelCurso();
+
+            for (int i = 1; i <= 3; i++)
+            {
+                _cursoAppService.Add(curso);
+            }
+
+            return Json(curso);
+        }
+
+        private Curso GetVariavelCurso()
+        {
             var curso = new Curso(
                 Guid.NewGuid(),
                 "Variáveis",
                 "Aprenda os fundamentos essenciais para utilizar variáveis",
                 Domain.Enums.Nivel.Iniciante,
-                iconUrl: "~/assets/img/Icons/variaveis.png"
+                iconUrl: "Variaveis.png"
                 )
             {
                 Aulas = new List<Aula>()
@@ -161,12 +173,7 @@ namespace TCC.UI.Web.Controllers
                 Xp = 5000
             };
 
-            for (int i = 1; i <= 3; i++)
-            {
-                _cursoAppService.Add(curso);
-            }
-
-            return Json(curso);
+            return curso;
         }
 
         [HttpGet("Cursos/deleteAll")]
