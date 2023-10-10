@@ -31,7 +31,7 @@
                     <h2>Bônus de XP</h2>
                     <p>Bônus de XP de 75%</p>
                     <p>500 moedas</p>
-                    <button>Comprar</button>
+                    <button id="comprar">Comprar</button>
                 </td>
 
                 <td class="item">
@@ -40,7 +40,7 @@
                     <h2>Bônus de XP</h2>
                     <p>Bônus de XP de 50%</p>
                     <p>400 moedas</p>
-                    <button>Comprar</button>
+                    <button id="comprar2">Comprar</button>
                 </td>
 
                 <td class="item">
@@ -48,7 +48,7 @@
                     <h2>Bônus de XP</h2>
                     <p>Bônus de XP de 25%</p>
                     <p>300 moedas</p>
-                    <button>Comprar</button>
+                    <button id="comprar3">Comprar</button>
                 </td>
 
                 
@@ -68,7 +68,7 @@
                     <h2>Pacote de XP</h2>
                     <p>Receba 250 em XP</p>
                     <p>450 moedas</p>
-                    <button>Comprar</button>
+                    <button id="comprar4">Comprar</button>
                 </td>
 
                 <td class="item">
@@ -76,7 +76,7 @@
                     <h2>Pacote de XP</h2>
                     <p>Receba 500 em XP</p>
                     <p>900 moedas</p>
-                    <button>Comprar</button>
+                    <button id="comprar5">Comprar</button>
                 </td>
 
                 <td class="item">
@@ -84,13 +84,25 @@
                     <h2>Pacote de XP</h2>
                     <p>Receba 1000 em XP</p>
                     <p>1,800 moedas</p>
-                    <button>Comprar</button>
+                    <button id="comprar6">Comprar</button>
                 </td>
 
                
         </table>
         
     </div>
+
+    <div class="modal-container" id="myModal">
+        <div class="modal-content" id="myModal2">
+            <p>Deseja confirmar a compra deste item?</p>
+            <div class="button-container">
+                <button class="button-modal" id="confirmButton">Sim</button>
+                <button class="button-modal" id="cancelButton">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/Loja/loja.js"></script>
 
 </body>
 
