@@ -1,14 +1,14 @@
-﻿@model TCC.Application.ViewModels.CursoViewModel
+﻿@using TCC.Domain.Enums;
+@model TCC.Application.ViewModels.CursoViewModel
 
 @{
     ViewData["Title"] = "LogPlay - Cursos";
 }
 
-<body>
     <div class="curso-main-container">
         <div class="banner-curso">
-            <h1 class="titulo-curso">Variáveis</h1>
-            <p class="descricao-curso">Aprenda os fundamentos essenciais para utilizar variáveis</p>
+            <h1 class="titulo-curso">@Html.DisplayFor(m => m.Nome)</h1>
+            <p class="descricao-curso">@Html.DisplayFor(m => m.Descricao)</p>
             <div class="botao-iniciar">
                 <a class="btn btn-primary" asp-area="Identity" asp-page="/Login/Registrar">
                     Iniciar curso
@@ -17,26 +17,47 @@
         </div>
         <div class="curso-container">
             <div class="curso-aulas">
-                <h2>Variáveis</h2>
-                <div class="">
-
+                <div class="titulo-curso2">
+                    <h2>@Html.DisplayFor(m => m.Nome)</h2>
+                </div>
+                <div class="lista-aulas">
+                    <ul>
+                        @foreach (var aula in Model.Aulas.OrderBy(a => a.Number))
+                        {
+                            <a asp-controller="Aulas" asp-action="Detalhes" asp-route-name="@aula.Nome">
+                            <li>@Html.DisplayFor(a => aula.Nome)</li>
+                            </a>
+                        }
+                    </ul>
                 </div>
             </div>
             <div class="curso-sidebar">
                 <div class="sidebar-title">
                     Informações Gerais
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Duração:</span> 
+                    <span class="model-data">@Html.DisplayFor(m => m.Duracao) horas</span>
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Aulas:</span>
+                    <span class="model-data">@Model.Aulas.Count</span>
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Exercícios:</span>   
+                    <span class="model-data">@Model.Aulas.SelectMany(a => a.Exercicios).Count()</span>
                 </div>
-                <div>
+                <div class="info-item">
                     <span>Nível:</span>
+                    <span class="model-data">@Html.DisplayFor(m => m.NivelCurso)</span>
+                </div>
+                <div class="info-item">
+                    <span>Moedas:</span>
+                    <span class="model-data">@Html.DisplayFor(m => m.QtdMoeda)</span>
+                </div>
+                <div class="info-item">
+                    <span>XP:</span>
+                    <span class="model-data">@Html.DisplayFor(m => m.Xp)</span>
                 </div>
             </div>
         </div>
@@ -48,10 +69,8 @@
             </div>
         </div>
     </div>
-</body>
-
 
 
 @section Styles{
-    <link rel="stylesheet" href="~/css/Cursos/cursos.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Cursos/detalhes.css" asp-append-version="true" />
 }

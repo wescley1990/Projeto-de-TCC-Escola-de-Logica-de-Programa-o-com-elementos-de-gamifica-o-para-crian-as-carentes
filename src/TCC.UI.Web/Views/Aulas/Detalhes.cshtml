@@ -1,0 +1,16 @@
+﻿@using TCC.Domain.Enums;
+@model TCC.Application.ViewModels.AulaViewModel
+
+@{
+    ViewData["Title"] = "LogPlay - Aulas";
+}
+
+<body>
+    <div class="aula-main-container">
+        <embed src="~/assets/pdf/@Html.DisplayFor(m => m.ContentUrl)" width="80%" height="80%" type="application/pdf" />
+    </div>
+</body>
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/Aulas/detalhes.css" asp-append-version="true" />
+}

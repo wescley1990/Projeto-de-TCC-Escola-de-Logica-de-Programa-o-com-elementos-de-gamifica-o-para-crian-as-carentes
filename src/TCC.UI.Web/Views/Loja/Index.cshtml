@@ -1,3 +1,4 @@
+@model IEnumerable<TCC.Application.ViewModels.ItemLojaViewModel>
 @{
 	ViewData["Title"] = "LogPlay - Loja";
 }
@@ -5,227 +6,92 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Seja bem-vindo à Loja Digital</title>
 
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="~/css/Loja/loja.css">
+       
+        <title>@ViewData["Title"]</title>
+    </head>
 
 <body>
+    <header>
+        <h1>Loja de Itens</h1>
+        <div class="moedas">Suas Moedas: <span id="moedas-usuario">1000</span></div>
+    </header>
 
-	<p>
-		Bem-vindo à nossa loja digital especializada em moedas.
-		Aqui, você encontrará uma seleção exclusiva de ofertas para aprimorar sua experiência em jogos,
-		aplicativos e serviços online. Explore nossa variedade de pacotes e moedas premium para desbloquear recursos exclusivos,
-		avançar mais rapidamente e aproveitar ao máximo seu entretenimento digital. Transforme sua jornada digital conosco!
-	</p>
+    
+    <div class="scrollable-content">
+        
+        <table class="item-table">
+            <tr>
+                <td class="item">
+                    <img src="~/assets/img/Loja/75-XP.png" alt="Item 1">
+                    <h2>Bônus de XP</h2>
+                    <p>Bônus de XP de 75%</p>
+                    <p>500 moedas</p>
+                    <button>Comprar</button>
+                </td>
 
-	<br />
+                <td class="item">
+                    
+                    <img src="~/assets/img/Loja/50-XP.png" alt="Item 2">
+                    <h2>Bônus de XP</h2>
+                    <p>Bônus de XP de 50%</p>
+                    <p>400 moedas</p>
+                    <button>Comprar</button>
+                </td>
 
+                <td class="item">
+                    <img src="~/assets/img/Loja/25-XP.png" alt="Item 3">
+                    <h2>Bônus de XP</h2>
+                    <p>Bônus de XP de 25%</p>
+                    <p>300 moedas</p>
+                    <button>Comprar</button>
+                </td>
 
+                
+               
+        </table>
+        
+    </div>
+    
+
+   
+    <div class="scrollable-content">
+        
+        <table class="item-table">
+            <tr>
+                <td class="item">
+                    <img src="~/assets/img/Loja/250-XP.png" alt="Item 1">
+                    <h2>Pacote de XP</h2>
+                    <p>Receba 250 em XP</p>
+                    <p>450 moedas</p>
+                    <button>Comprar</button>
+                </td>
+
+                <td class="item">
+                    <img src="~/assets/img/Loja/500-XP.png" alt="Item 2">
+                    <h2>Pacote de XP</h2>
+                    <p>Receba 500 em XP</p>
+                    <p>900 moedas</p>
+                    <button>Comprar</button>
+                </td>
+
+                <td class="item">
+                    <img src="~/assets/img/Loja/1000-XP.png" alt="Item 3">
+                    <h2>Pacote de XP</h2>
+                    <p>Receba 1000 em XP</p>
+                    <p>1,800 moedas</p>
+                    <button>Comprar</button>
+                </td>
+
+               
+        </table>
+        
+    </div>
 
 </body>
 
-
 </html>
-
-
-<style>
-	body {
-		background: #eee;
-	}
-
-	.filter {
-		border-top-right-radius: 10px;
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
-	}
-
-	.profiles img {
-		margin-right: -6px;
-	}
-
-	.col-md-4 {
-		margin-top: 26px;
-	}
-
-</style>
-
-
-<form class="form-horizontal" id="form01" name="form01" style="align-content: center">
-	<div class="card" style="position: absolute; padding-bottom: 5px; margin-top:2px">
-		<img src="/assets/img/tcc.jpg" alt="Compras">
-		<div class="card-body">
-			<!-- Conteúdo do card -->
-			@*Inputs*@
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="form-group">
-							<label for="moedas">Escreva a opção de compra desejada:</label>
-							<input type="text" class="form-control" id="moedas" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-						</div>
-					</div>
-					@*Quantidade*@
-					<div class="col-lg-6">
-						<div class="form-group">
-							<label for="qtd">Informe a quantidade desejada ($):</label>
-							<input type="number" class="form-control" id="qtd" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	@*Catalogo*@
-	<p>
-		Uma loja online deve ter um catálogo de produtos bem organizado,
-		com descrições detalhadas, imagens de alta qualidade e preços
-	</p>
-
-	<div class="outra_card">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title_container text-center">
-						<h2 class="titulo_card modern-font">Clique aqui para se informar sobre nosso Catálogo!</h2>
-						<img src="/assets/img/brown-wood-bookshelf-png.webp" width="300" height="200" alt="Compras">
-					</div>
-				</div>
-			</div>
-			<!-- Outro conteúdo da segunda div card -->
-		</div>
-	</div>
-
-	<div class="row courses_row">
-		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 course_col" itemscope="" itemtype="">
-			<a title="Opções" href="">
-				<div class="course">
-					<div style="background-image: linear-gradient(192deg,#8e1ddd,#1b0220);" class="card_curso course_image">
-					</div>
-					<div class="course_body">
-						<h3 class="titulo-home-free modern-font" style="font-size: 17px !important;" itemprop="name">
-							Escreva
-						</h3>
-						<br>
-						<img align="left" class="img" alt="NomeDFerramenta" src="">
-						<div class="course_teacher">NomeDescricao</div>
-					</div>
-					<div class="course_footer">
-						<div class="card-curso-footer-content d-flex flex-row">
-							<div itemprop="offers" itemscope="" itemtype="">
-								<span itemprop="priceCurrency" content="BRL">
-									<span itemprop="price" content="curso.Valor"><h5 class="modern-font" style="opacity: .6"></h5></span>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 course_col" itemscope="" itemtype="">
-			<a title="Introdução ao Entity Framework Core" href="/curso-online-introducao-entity-framework-core">
-				<div class="course">
-					<div style="background-image: linear-gradient(192deg,#1dbbdd,#001b4d);" class="card_curso course_image">
-						<img style="width: 50%; height: 50%;" itemprop="image" src="" alt="Introdução ao Entity Framework Core">
-					</div>
-					<div class="course_body">
-						<h3 class="titulo-home-free modern-font" style="font-size: 17px !important;" itemprop="name">
-							Confirmação para a página oficial
-						</h3>
-						<br>
-						<img align="left" class="img-instrutor-circle" alt="valor" src=""><div class="course_teacher">valorValor</div>
-					</div>
-					<div class="course_footer">
-						<div class="card-curso-footer-content d-flex flex-row">
-							<div itemprop="offers" itemscope="" itemtype="">
-								<span itemprop="priceCurrency" content="BRL">
-									<span itemprop="price" content="curso.Valor"><h5 class="modern-font" style="opacity: .6"></h5></span>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 course_col" itemscope="" itemtype="">
-			<a title="Introdução ao " href="">
-				<div class="course">
-					<div style="background-image: linear-gradient(192deg,#568dea,#2531c6);" class="card_curso course_image">
-						<img style="width: 50%; height: 50%;" itemprop="image" src="" alt="">
-					</div>
-					<div class="course_body">
-						<h3 class="titulo-home-free modern-font" style="font-size: 17px !important;" itemprop="name">
-
-							<br><br>
-						</h3>
-						<br>
-						<img align="left" class="img-instrutor-circle" alt="" src=""><div class="course_teacher">valor</div>
-					</div>
-
-					<div class="course_footer">
-						<div class="card-curso-footer-content d-flex flex-row">
-							<div itemprop="offers" itemscope="" itemtype="">
-								<span itemprop="priceCurrency" content="BRL">
-									<span itemprop="price" content="curso.Valor"><h5 class="modern-font" style="opacity: .6">Efoda</h5></span>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="col-lg-3" sstyle="margin-top: 50px">
-			<a title="Olha só" href="">
-				<div class="course">
-					<div style="background-image: linear-gradient(192deg,#e79e1e,#201902);" class="card_curso course_image">
-						<img align="left" class="img-instrutor-circle" style="width: 50px; height: 20px" src="/assets/img/dollar-money-bag-with-coins-free-png.webp">
-						<div class="col-md-4">Moedas</div>alt="Sacola Premium de $">
-					</div>
-					<div class="course_body">
-						<h3 class="titulo-home-free modern-font" style="font-size: 17px !important;" itemprop="name">
-						</h3>
-						<br>
-					</div>
-
-					<div class="course_footer">
-						<div class="card-curso-footer-content d-flex flex-row">
-							<div itemprop="offers" itemscope="" itemtype="">
-								<span itemprop="offers" content="BRL">
-									<span itemprop="price" content="catalogo.Valor"><h5 class="modern-font" style="opacity: .6"></h5></span>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>
-
-</form>
-
-<form class="align-content-lg-center" id="destaques">
-	<div class="l-cards">
-		<article class="c-card">
-			<div class="c-card__image">
-				<img src="https://image.flaticon.com/icons/svg/1206/1206451.svg"
-					 width="30px"
-					 alt="image placeholder">
-			</div>
-	</div>
-	</article class>
-
-
-	<div class="c-card__content">
-		<span class="u-text-placeholder" style="width:30%"></span>
-		<span class="u-text-placeholder" style="width:85%"></span>
-		<span class="u-text-placeholder" style="width:60%"></span>
-	</div>
-
-
-</form>

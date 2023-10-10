@@ -1,0 +1,119 @@
+﻿
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'TiltNeon', sans-serif;
+    background-color: var(--roxo-escuro);
+}
+
+header {
+    background-color: var(--roxo-escuro);
+    text-align: center;
+    padding: 25px 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--verde-destaque);
+}
+
+.scrollable-content {
+    overflow-x: auto;
+    
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 10px; 
+}
+
+   
+.scrollable-content::-webkit-scrollbar-thumb {
+    background-color: var(--roxo-claro1); 
+    border-radius: 5px; 
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+        background-color: #00ff88; 
+}
+
+
+.item-table {
+    
+    table-layout: auto;
+    border-collapse: collapse;
+    border-bottom: 40px;
+    width: 100%;
+}
+
+
+.item {
+    background-color: var(--roxo-claro1);
+    border: 10px solid #201b2c;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    min-width: 150px;
+    margin-right: 20px;
+    border-radius: 30px;
+    border-color: var(--roxo-escuro);
+    
+}
+
+   
+.item:last-child {
+    margin-right: 0;
+}
+
+   
+.item img {
+   max-width: 20% !important;
+   height: auto;
+   margin-bottom: 10px;
+}
+
+
+button {
+    background-color: var(--roxo-escuro);
+    color: #fff;
+    border-radius: 5px;
+    border-color: var(--roxo-escuro);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'TiltNeon', sans-serif;
+}
+
+button:hover {
+    background-color: #00ff88; 
+}
+
+
+.moedas {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px; 
+}
+
+#moedas-usuario {
+    color: #00ff88; 
+    background-color: #2f2841; 
+    padding: 4px 8px; 
+    border-radius: 4px; 
+}
+
+
+
+@font-face {
+    font-family: 'TiltNeon';
+    src: url("../../Fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer{
+    position:relative !important;
+}

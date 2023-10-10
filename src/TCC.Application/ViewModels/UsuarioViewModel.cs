@@ -13,5 +13,8 @@ namespace TCC.Application.ViewModels
         public Guid Id { get; set; }
 
         public string Nome { get; set; }
+
+        public long Xp { get; set; }
+        public int QtdMoedas { get; set; }
     }
 }

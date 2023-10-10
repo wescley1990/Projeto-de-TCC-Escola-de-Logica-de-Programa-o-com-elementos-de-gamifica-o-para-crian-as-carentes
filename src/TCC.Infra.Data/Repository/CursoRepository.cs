@@ -24,12 +24,16 @@ public class CursoRepository : ICursoRepository
 
     public async Task<IEnumerable<Curso>> GetAll()
     {
-        return await DbSet.ToListAsync();
+        return await DbSet
+            .Include(t => t.Aulas)
+            .ThenInclude(a => a.Exercicios)
+            .ToListAsync();
     }
     
-    public void Add(Curso curso)
+    public async Task<bool> Add(Curso curso)
     {
-        DbSet.Add(curso);
+       DbSet.Add(curso);
+       return await Db.Commit();
     }
 
     public void Update(Curso curso)
@@ -37,9 +41,10 @@ public class CursoRepository : ICursoRepository
         DbSet.Update(curso);
     }
 
-    public void Remove(Curso curso)
+    public async Task<bool> Remove(Curso curso)
     {
         DbSet.Remove(curso);
+        return await Db.Commit();
     }
 
     public void Dispose()
@@ -48,5 +53,8 @@ public class CursoRepository : ICursoRepository
     }
 
     public async Task<Curso> GetByName(string name) => 
-        DbSet.FirstOrDefault(t => t.Nome.Contains(name));
+        DbSet
+        .Include(t => t.Aulas)
+        .ThenInclude(a => a.Exercicios)
+        .FirstOrDefault(t => t.Nome.Contains(name));
 }

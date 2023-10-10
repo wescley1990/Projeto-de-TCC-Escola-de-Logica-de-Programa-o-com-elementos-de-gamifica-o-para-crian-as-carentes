@@ -19,9 +19,15 @@ namespace TCC.Application.ViewModels
         [DisplayName("Descrição")]
         public string Descricao { get; set; }
         
-        [DisplayName("Nível Curso")]
         public Nivel NivelCurso { get; set; }
         
         public long Duracao { get; set; }
+
+        public List<AulaViewModel> Aulas { get; set; }
+
+        public int Xp { get; set; }
+        public int QtdMoeda { get; set; }
+
+        public string IconUrl { get; set; }
     }
 }

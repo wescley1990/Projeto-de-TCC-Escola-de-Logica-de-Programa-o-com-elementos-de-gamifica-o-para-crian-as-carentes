@@ -2,6 +2,7 @@
 using TCC.Application.Interfaces;
 using TCC.Application.ViewModels;
 using TCC.Domain.Interfaces;
+using TCC.Domain.Models;
 
 namespace TCC.Application.Services;
 
@@ -37,5 +38,17 @@ public class CursoAppService : ICursoAppService
     public async Task<CursoViewModel> GetByName(string name)
     {
         return _mapper.Map<CursoViewModel>(await _cursoRepository.GetByName(name));
+    }
+
+    public async Task<bool> Add(Curso curso)
+    {
+        return await _cursoRepository.Add(curso);
+    }
+
+    public async Task<bool> Remove(CursoViewModel curso)
+    {
+        var cursoDomain = _mapper.Map<Curso>(curso);
+
+        return await _cursoRepository.Remove(cursoDomain);
     }
 }

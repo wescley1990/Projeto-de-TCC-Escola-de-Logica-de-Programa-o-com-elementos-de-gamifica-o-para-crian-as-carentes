@@ -15,9 +15,13 @@ public class AppDbContext : IdentityDbContext<Usuario>, IUnitOfWork
     }
     
     public DbSet<Curso> Cursos { get; set; }
+
+    public DbSet<Aula> Aulas { get; set; }
     public DbSet<ItemLoja> Itens { get; set; }
 
     public DbSet<Usuario> Usuarios { get; set; }
+
+    public DbSet<Exercicio> Exercicios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -28,9 +32,14 @@ public class AppDbContext : IdentityDbContext<Usuario>, IUnitOfWork
                      e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
             property.SetColumnType("varchar(100)");
 
+        #region Mappers
         modelBuilder.ApplyConfiguration(new CursoMap());
         modelBuilder.ApplyConfiguration(new ItemLojaMap());
-                
+        modelBuilder.ApplyConfiguration(new AulaMap());
+        modelBuilder.ApplyConfiguration(new ExercicioMap());
+        #endregion
+
+
         base.OnModelCreating(modelBuilder);
 
         #region Usuario map

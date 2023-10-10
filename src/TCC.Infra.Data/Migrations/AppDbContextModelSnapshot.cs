@@ -159,6 +159,44 @@ namespace TCC.Infra.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("TCC.Domain.Models.Aula", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("ContentUrl")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<Guid?>("CursoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QtdMoedas")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Xp")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CursoId");
+
+                    b.ToTable("Aulas");
+                });
+
             modelBuilder.Entity("TCC.Domain.Models.Curso", b =>
                 {
                     b.Property<Guid>("Id")
@@ -173,6 +211,10 @@ namespace TCC.Infra.Data.Migrations
                     b.Property<long>("Duracao")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("IconUrl")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
                     b.Property<int>("NivelCurso")
                         .HasColumnType("int");
 
@@ -181,9 +223,62 @@ namespace TCC.Infra.Data.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
+                    b.Property<int>("QtdMoeda")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Xp")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Cursos");
+                });
+
+            modelBuilder.Entity("TCC.Domain.Models.Exercicio", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("AlternativaA")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("AlternativaB")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("AlternativaC")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("AlternativaD")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<Guid?>("AulaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Enunciado")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("QtdMoedas")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Resposta")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<int>("Xp")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AulaId");
+
+                    b.ToTable("Exercicios");
                 });
 
             modelBuilder.Entity("TCC.Domain.Models.ItemLoja", b =>
@@ -264,6 +359,9 @@ namespace TCC.Infra.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int>("QtdMoedas")
+                        .HasColumnType("int");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("varchar(100)");
 
@@ -273,6 +371,9 @@ namespace TCC.Infra.Data.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
+
+                    b.Property<long>("Xp")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -336,6 +437,30 @@ namespace TCC.Infra.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TCC.Domain.Models.Aula", b =>
+                {
+                    b.HasOne("TCC.Domain.Models.Curso", null)
+                        .WithMany("Aulas")
+                        .HasForeignKey("CursoId");
+                });
+
+            modelBuilder.Entity("TCC.Domain.Models.Exercicio", b =>
+                {
+                    b.HasOne("TCC.Domain.Models.Aula", null)
+                        .WithMany("Exercicios")
+                        .HasForeignKey("AulaId");
+                });
+
+            modelBuilder.Entity("TCC.Domain.Models.Aula", b =>
+                {
+                    b.Navigation("Exercicios");
+                });
+
+            modelBuilder.Entity("TCC.Domain.Models.Curso", b =>
+                {
+                    b.Navigation("Aulas");
                 });
 #pragma warning restore 612, 618
         }

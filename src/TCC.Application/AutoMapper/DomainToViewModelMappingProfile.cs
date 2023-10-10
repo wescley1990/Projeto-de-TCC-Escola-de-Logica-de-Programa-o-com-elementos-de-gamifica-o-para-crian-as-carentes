@@ -10,6 +10,8 @@ public class DomainToViewModelMappingProfile : Profile
     public DomainToViewModelMappingProfile()
     {
         CreateMap<Curso, CursoViewModel>();
+        CreateMap<Aula, AulaViewModel>();
+        CreateMap<Exercicio, ExercicioViewModel>();
         CreateMap<ItemLoja, ItemLojaViewModel>();
         CreateMap<Usuario, UsuarioViewModel>();
     }

@@ -8,9 +8,9 @@ namespace TCC.Domain.Interfaces
         Task<Curso> GetById(Guid id);
         Task<IEnumerable<Curso>> GetAll();
 
-        void Add(Curso curso);
+        Task<bool> Add(Curso curso);
         void Update(Curso curso);
-        void Remove(Curso curso);
+        Task<bool> Remove(Curso curso);
 
         Task<Curso> GetByName(string name);
     }
