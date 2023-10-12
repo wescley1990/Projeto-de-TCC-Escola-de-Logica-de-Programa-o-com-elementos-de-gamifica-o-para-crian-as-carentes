@@ -10,9 +10,9 @@ namespace TCC.Domain.Models
         }
 
         public string Nome { get; set; }
+        public string Descricao { get; set; }
         public string ImagemUrl { get; set; }
         public int Preco { get; set; }
-        public DateTime ValidadeInicio { get; set; }
-        public DateTime ValidadeFim { get; set; }
+        public TimeSpan Duracao { get; set; }
     }
 }

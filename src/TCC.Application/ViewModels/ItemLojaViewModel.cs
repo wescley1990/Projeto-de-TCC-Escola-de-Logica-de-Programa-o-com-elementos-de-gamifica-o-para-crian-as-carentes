@@ -7,24 +7,10 @@ namespace TCC.Application.ViewModels
     {
         [Key]
         public Guid Id { get; set; }
-        
-        [Required(ErrorMessage = "O nome é obrigatório!")]
-        [MinLength(2)]
-        [MaxLength(100)]
-        [DisplayName("Nome")]
-        //public int Nome { get; set; }
-        //public int Moeda { get; set; }
-        
-        //[Required(ErrorMessage = "O endereço da imagem é obrigatório!")]
-        //public string ImagemUrl { get; set; }
-        
-        //[Required(ErrorMessage = "O preço é obrigatório!")]
+        public string Nome { get; set; }
+        public string ImagemUrl { get; set; }
+        public string Descricao { get; set; }
         public int Preco { get; set; }
-        
-        [Required(ErrorMessage = "A validade é obrigatória!")]
-        public DateTime ValidadeInicio { get; set; }
-        
-        [Required(ErrorMessage = "A validade é obrigatória!")]
-        public DateTime ValidadeFim { get; set; }
+        public TimeSpan Duracao { get; set; }
     }
 }
