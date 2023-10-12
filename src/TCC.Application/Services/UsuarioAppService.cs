@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ using TCC.Application.Interfaces;
 using TCC.Application.ViewModels;
 using TCC.Domain.Interfaces;
 using TCC.Domain.Models;
+using TCC.Infra.Data.Context;
 using TCC.Infra.Data.Repository;
 
 namespace TCC.Application.Services
@@ -21,18 +24,26 @@ namespace TCC.Application.Services
         private readonly IMapper _mapper;
         private readonly UserManager<Usuario> _userManager;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private AppDbContext _appDbContext;
 
         public UsuarioAppService(
             IUsuarioRepository usuarioRepository,
             IMapper mapper,
             UserManager<Usuario> userManager,
-            IHttpContextAccessor httpContextAccessor
+            IHttpContextAccessor httpContextAccessor,
+            AppDbContext context
             )
         {
+            _appDbContext = context;
             _httpContextAccessor = httpContextAccessor;
             _usuarioRepository = usuarioRepository;
             _mapper = mapper;
             _userManager = userManager;
+        }
+
+        public Task<bool> AddPedidoToUser(PedidoLojaViewModel pedido, Usuario user)
+        {
+            throw new NotImplementedException();
         }
 
         public void Dispose()
@@ -42,7 +53,11 @@ namespace TCC.Application.Services
 
         public async Task<IEnumerable<UsuarioViewModel>> GetAll()
         {
-            var users = _userManager.Users.ToList();
+            var users = _userManager
+                .Users
+                .Include(u => u.Pedidos)
+                .ToList();
+
             return _mapper.Map<IEnumerable<UsuarioViewModel>>(users);
         }
 
@@ -50,12 +65,19 @@ namespace TCC.Application.Services
         {
             var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return await _userManager.FindByIdAsync(userId);
+            return await _userManager
+                .Users
+                .Include(u => u.Pedidos)
+                .ThenInclude(p => p.ItemComprado)
+                .FirstOrDefaultAsync(t => t.Id == userId);
         }
 
-        public async Task<IdentityResult> UpdateUser(Usuario user)
+        public async Task<IdentityResult> UpdatePedidoUser(Usuario user, PedidoLoja pedido)
         {
-            return await _userManager.UpdateAsync(user);
+            var result = await _userManager.UpdateAsync(user);
+            _appDbContext.Pedidos.Add(pedido);
+            _appDbContext.SaveChanges();
+            return result;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace TCC.Application.Interfaces
         Task<IEnumerable<UsuarioViewModel>> GetAll();
 
         Task<Usuario> GetCurrentUser();
-
-        Task<IdentityResult> UpdateUser(Usuario user);
+        Task<bool> AddPedidoToUser(PedidoLojaViewModel pedido, Usuario user);
+        Task<IdentityResult> UpdatePedidoUser(Usuario user, PedidoLoja pedido);
     }
 }

@@ -16,7 +16,8 @@ public class ItemLojaAppService : IItemLojaAppService
     public ItemLojaAppService(
         IItemLojaRepository itemLojaRepository,
         IMapper mapper,
-        IUsuarioAppService userAppService
+        IUsuarioAppService userAppService,
+        IPedidoLojaRepository pedidoRepository
     )
     {
         _userAppService = userAppService;
@@ -52,7 +53,7 @@ public class ItemLojaAppService : IItemLojaAppService
 
         var user = await _userAppService.GetCurrentUser();
         var item = await _itemLojaRepository.GetById(id);
-
+        
         if (item is null)
         {
             result = new OperationResultViewModel("Item não encontrado.");
@@ -104,7 +105,7 @@ public class ItemLojaAppService : IItemLojaAppService
                 break;
         }
 
-        await _userAppService.UpdateUser(user);
+        await _userAppService.UpdatePedidoUser(user, newPedido);
         return result;
     }
 }
