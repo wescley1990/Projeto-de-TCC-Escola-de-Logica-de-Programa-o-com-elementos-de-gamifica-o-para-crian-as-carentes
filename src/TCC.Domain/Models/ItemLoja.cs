@@ -1,4 +1,5 @@
 ﻿using NetDevPack.Domain;
+using System.Numerics;
 
 namespace TCC.Domain.Models
 {
@@ -13,6 +14,6 @@ namespace TCC.Domain.Models
         public string Descricao { get; set; }
         public string ImagemUrl { get; set; }
         public int Preco { get; set; }
-        public TimeSpan Duracao { get; set; }
+        public long Duracao { get; set; }
     }
 }

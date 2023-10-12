@@ -11,6 +11,6 @@ namespace TCC.Application.ViewModels
         public string ImagemUrl { get; set; }
         public string Descricao { get; set; }
         public int Preco { get; set; }
-        public TimeSpan Duracao { get; set; }
+        public long Duracao { get; set; }
     }
 }
