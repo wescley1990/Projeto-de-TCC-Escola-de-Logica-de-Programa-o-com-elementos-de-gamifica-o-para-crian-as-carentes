@@ -71,10 +71,9 @@
                     confirmButtonColor: '#201b2c',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        const baseURL = "https://localhost:7072"
-                        //const baseURL = "https://tcc-gcv5xxtscq-uc.a.run.app"
+                        //const baseURL = "https://localhost:7072"
+                        const baseURL = "https://tcc-gcv5xxtscq-uc.a.run.app"
                         console.log(this);
-                        // var itemId = $(".btnComprar").attr("data-id");
                         $.get(`${baseURL}/Loja/Comprar/${id}`)
                             .then(function (response) {
                                 if (!response.ok) {
