@@ -108,5 +108,12 @@ namespace TCC.UI.Web.Controllers
 
             return Ok($"{itens.Count()} itens deletados!");
         }
+
+
+        [HttpPost()]
+        public IActionResult Comprar(string id)
+        {
+            return Ok();
+        }
     }
 }

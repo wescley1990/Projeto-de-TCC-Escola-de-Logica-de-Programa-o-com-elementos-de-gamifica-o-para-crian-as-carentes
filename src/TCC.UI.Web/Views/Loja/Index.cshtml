@@ -22,36 +22,22 @@
     </header>
 
     <div class="scrollable-content">
-        <table class="item-table">
-            <tr>
-                @foreach (var item in Model.Take(3))
-                {
-                    <td class="item">
-                        <img src="~/assets/img/Loja/@item.ImagemUrl" alt="Item 1">
-                        <h2>@item.Nome</h2>
-                        <p>@item.Descricao</p>
-                        <p>@item.Preco</p>
-                        <button id="comprar">Comprar</button>
-                    </td>
-                } 
-        </table>
-        
-    </div>
-
-    <div class="scrollable-content">
-        <table class="item-table">
-            <tr>
-                @foreach (var item in Model.Skip(3))
-                {
-                    <td class="item">
-                        <img src="~/assets/img/Loja/@item.ImagemUrl" alt="Item 1">
-                        <h2>@item.Nome</h2>
-                        <p>@item.Descricao</p>
-                        <p>@item.Preco</p>
-                        <button id="comprar4">Comprar</button>
-                    </td>
-                }
-        </table>
+        @for (var i = 1; i <= Model.Chunk(3).Count(); i++)
+        {
+            <table class="item-table">
+                <tr>
+                    @foreach (var item in Model.Take(3))
+                    {
+                        <td class="item">
+                            <img src="~/assets/img/Loja/@item.ImagemUrl" alt="Item 1">
+                            <h2>@item.Nome</h2>
+                            <p>@item.Descricao</p>
+                            <p>@item.Preco</p>
+                            <button id="comprar" asp-controller="Loja" asp-action="Comprar">Comprar</button>
+                        </td>
+                    }
+            </table>
+        }
     </div>
 
     <div class="modal-container" id="myModal">
