@@ -20,7 +20,11 @@ namespace TCC.UI.Web.Controllers
         [HttpGet("Loja")]
         public async Task<IActionResult> Index()
         {
-            return View(await _lojaAppService.GetAll());
+            var itens = await _lojaAppService.GetAll();
+            return View(itens
+                .OrderBy(i => i.Nome)
+                .ThenBy(t => t.Preco)
+                );
         }
 
         [HttpGet("Loja/load")]
