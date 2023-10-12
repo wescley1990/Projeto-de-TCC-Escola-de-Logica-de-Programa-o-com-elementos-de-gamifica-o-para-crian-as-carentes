@@ -122,6 +122,9 @@ namespace TCC.UI.Web.Areas.Identity.Pages.Account
                     Nome = Input.Nome,
                     Email = Input.Email,
                     UserName = Input.Email,
+                    Pedidos = new List<PedidoLoja>(),
+                    QtdMoedas = 3000,
+                    MultiplicadorXp = 1.0m
                 };
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using TCC.Application.Interfaces;
 using TCC.Application.ViewModels;
+using TCC.Domain.Enums;
 using TCC.Domain.Interfaces;
 using TCC.Domain.Models;
 
@@ -61,8 +62,49 @@ public class ItemLojaAppService : IItemLojaAppService
         if (user.QtdMoedas < item.Preco)
         {
             result = new OperationResultViewModel("Você não possui moedas suficiente.");
+            return result;
         }
 
+        if (user.Pedidos != null)
+        {
+            var pedidoUser = user.Pedidos.FirstOrDefault(p => p.ItemComprado.Id == id);
+
+            if (pedidoUser != null &&
+                pedidoUser.ItemComprado.TipoItem == TipoItemLoja.Boost &&
+                !pedidoUser.IsExpired()
+                )
+            {
+                result = new OperationResultViewModel("Você já possui um boost ativo.");
+                return result;
+            }
+        }
+
+        if (user.Pedidos is null)
+        {
+            user.Pedidos = new List<PedidoLoja>();
+        }
+
+        var newPedido = new PedidoLoja()
+        {
+            Id = Guid.NewGuid(),
+            Timestamp = DateTime.Now,
+            ItemComprado = item
+        };
+
+        user.Pedidos.Add(newPedido);
+        user.QtdMoedas -= item.Preco;
+
+        switch (item.TipoItem)
+        {
+            case TipoItemLoja.Boost:
+                user.MultiplicadorXp += item.Multiplicador;
+                break;
+            case TipoItemLoja.PacoteXp:
+                user.Xp += item.QtdXp;
+                break;
+        }
+
+        await _userAppService.UpdateUser(user);
         return result;
     }
 }

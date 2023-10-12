@@ -41,7 +41,7 @@
                             <h2>@item.Nome</h2>
                             <p>@item.Descricao</p>
                             <p>@item.Preco</p>
-                            <button id="btnComprar" onclick="Comprar()" data-id="@item.Id" asp-controller="Loja" asp-action="Comprar">Comprar</button>
+                            <button id="btnComprar" onclick="Comprar(@item.Id)" data-id="@item.Id" asp-controller="Loja" asp-action="Comprar">Comprar</button>
                         </td>
                     }
                 </tr>
@@ -62,7 +62,7 @@
     @section Scripts{
 
         <script>
-            function Comprar() {
+            function Comprar(itemId) {
                 Swal.fire({
                     title: 'Deseja confirmar a compra?',
                     showCancelButton: true,
@@ -73,8 +73,6 @@
                     preConfirm: () => {
                         const baseURL = "https://localhost:7072"
                         //const baseURL = "https://tcc-gcv5xxtscq-uc.a.run.app"
-
-                        var itemId = $("#btnComprar").data('id')
 
                         $.get(`${baseURL}/Loja/Comprar/${itemId}`)
                             .then(function (response) {

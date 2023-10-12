@@ -52,5 +52,10 @@ namespace TCC.Application.Services
 
             return await _userManager.FindByIdAsync(userId);
         }
+
+        public async Task<IdentityResult> UpdateUser(Usuario user)
+        {
+            return await _userManager.UpdateAsync(user);
+        }
     }
 }

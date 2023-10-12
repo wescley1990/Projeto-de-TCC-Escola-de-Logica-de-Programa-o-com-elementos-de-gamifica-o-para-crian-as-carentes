@@ -1,4 +1,5 @@
-﻿using TCC.Application.ViewModels;
+﻿using Microsoft.AspNetCore.Identity;
+using TCC.Application.ViewModels;
 using TCC.Domain.Models;
 
 namespace TCC.Application.Interfaces
@@ -8,5 +9,7 @@ namespace TCC.Application.Interfaces
         Task<IEnumerable<UsuarioViewModel>> GetAll();
 
         Task<Usuario> GetCurrentUser();
+
+        Task<IdentityResult> UpdateUser(Usuario user);
     }
 }
