@@ -33,7 +33,7 @@
                             <h2>@item.Nome</h2>
                             <p>@item.Descricao</p>
                             <p>@item.Preco</p>
-                            <button id="comprar" asp-controller="Loja" asp-action="Comprar">Comprar</button>
+                            <button onclick="Buy()" asp-controller="Loja" asp-action="Comprar">Comprar</button>
                         </td>
                     }
             </table>
@@ -50,7 +50,21 @@
         </div>
     </div>
 
-    <script src="./js/Loja/loja.js"></script>
+    @section Scripts{
+
+        <script>
+            function Buy() {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Do you want to continue',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                });
+            }
+        </script>
+
+        <script src="~/js/Loja/loja.js"></script>
+    }
 
 </body>
 
