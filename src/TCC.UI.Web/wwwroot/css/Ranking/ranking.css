@@ -28,12 +28,14 @@ main {
     background-color: var(--roxo-claro1);
     border-radius: 5px;
     box-shadow: 0px 0px 25px black;
+    
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    
 }
 
 th, td {
@@ -57,6 +59,7 @@ footer {
     padding: 10px 0;
     background-color: var(--roxo-escuro);
     color: #fff;
+    position: fixed !important;
 }
 
 @font-face {
