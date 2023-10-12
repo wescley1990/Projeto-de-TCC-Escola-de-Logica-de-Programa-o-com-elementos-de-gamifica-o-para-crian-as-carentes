@@ -39,7 +39,9 @@ namespace TCC.UI.Web.Controllers
                     Descricao = "Bônus de XP de 75%",
                     Preco = 500,
                     ImagemUrl = "75-XP.png",
-                    Duracao = TimeSpan.FromDays(3).Ticks
+                    Duracao = TimeSpan.FromDays(3).Ticks,
+                    TipoItem = Domain.Enums.TipoItemLoja.Boost,
+                    Multiplicador = 0.75m
                 },
                 new ItemLojaViewModel
                 {
@@ -48,7 +50,9 @@ namespace TCC.UI.Web.Controllers
                     Descricao = "Bônus de XP de 50%",
                     Preco = 400,
                     ImagemUrl = "50-XP.png",
-                    Duracao = TimeSpan.FromDays(3).Ticks
+                    Duracao = TimeSpan.FromDays(3).Ticks,
+                    TipoItem = Domain.Enums.TipoItemLoja.Boost,
+                    Multiplicador = 0.50m
                 },
                 new ItemLojaViewModel
                 {
@@ -57,7 +61,9 @@ namespace TCC.UI.Web.Controllers
                     Descricao = "Bônus de XP de 25%",
                     Preco = 300,
                     ImagemUrl = "25-XP.png",
-                    Duracao = TimeSpan.FromDays(3).Ticks
+                    Duracao = TimeSpan.FromDays(3).Ticks,
+                    TipoItem = Domain.Enums.TipoItemLoja.Boost,
+                    Multiplicador = 0.25m
                 },
                 new ItemLojaViewModel
                 {
@@ -65,7 +71,9 @@ namespace TCC.UI.Web.Controllers
                     Nome = "Pacote de XP",
                     Descricao = "Receba 250 em XP",
                     Preco = 450,
-                    ImagemUrl = "250-XP.png"
+                    ImagemUrl = "250-XP.png",
+                    TipoItem = Domain.Enums.TipoItemLoja.PacoteXp,
+                    QtdXp = 250
                 },
                 new ItemLojaViewModel
                 {
@@ -73,7 +81,9 @@ namespace TCC.UI.Web.Controllers
                     Nome = "Pacote de XP",
                     Descricao = "Receba 500 em XP",
                     Preco = 900,
-                    ImagemUrl = "500-XP.png"
+                    ImagemUrl = "500-XP.png",
+                    TipoItem = Domain.Enums.TipoItemLoja.PacoteXp,
+                    QtdXp = 500
                 },
                 new ItemLojaViewModel
                 {
@@ -81,7 +91,9 @@ namespace TCC.UI.Web.Controllers
                     Nome = "Pacote de XP",
                     Descricao = "Receba 1000 em XP",
                     Preco = 1800,
-                    ImagemUrl = "1000-XP.png"
+                    ImagemUrl = "1000-XP.png",
+                    TipoItem = Domain.Enums.TipoItemLoja.PacoteXp,
+                    QtdXp = 1000
                 }
             };
 
@@ -89,7 +101,6 @@ namespace TCC.UI.Web.Controllers
             {
                 _lojaAppService.Add(item);
                 Thread.Sleep(100);
-
             }
 
             return Ok("Itens da loja adicionados!");

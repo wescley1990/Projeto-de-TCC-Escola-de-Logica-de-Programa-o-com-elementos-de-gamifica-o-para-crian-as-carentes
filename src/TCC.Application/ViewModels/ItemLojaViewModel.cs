@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using TCC.Domain.Enums;
 
 namespace TCC.Application.ViewModels
 {
@@ -14,5 +15,6 @@ namespace TCC.Application.ViewModels
         public long Duracao { get; set; }
         public decimal Multiplicador { get; set; }
         public long QtdXp { get; set; }
+        public TipoItemLoja TipoItem { get; set; }
     }
 }

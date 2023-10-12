@@ -1,5 +1,6 @@
 ﻿using NetDevPack.Domain;
 using System.Numerics;
+using TCC.Domain.Enums;
 
 namespace TCC.Domain.Models
 {
@@ -17,5 +18,6 @@ namespace TCC.Domain.Models
         public long Duracao { get; set; }
         public decimal Multiplicador { get; set; }
         public long QtdXp { get; set; }
+        public TipoItemLoja TipoItem { get; set; }
     }
 }
