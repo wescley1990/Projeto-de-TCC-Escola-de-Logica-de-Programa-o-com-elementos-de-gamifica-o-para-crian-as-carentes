@@ -115,7 +115,9 @@ namespace TCC.UI.Web.Controllers
         {
             var result = new
             {
-                isConfirmed = true
+                ok = false,
+                isConfirmed = false,
+                errorMessage = "Não foi possível efetuar a compra!"
             };
 
             return Json(result);

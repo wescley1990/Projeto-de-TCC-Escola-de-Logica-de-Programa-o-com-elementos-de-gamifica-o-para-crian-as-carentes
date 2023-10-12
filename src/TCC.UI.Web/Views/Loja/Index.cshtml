@@ -61,30 +61,33 @@
                     confirmButtonText: 'Comprar',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        //const isDevelopment = @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Production";
-                        const baseURL = "https://localhost:7072";
-                        var itemId = $("#btnComprar").data('id');
-                        return fetch(`${baseURL}/Loja/Comprar/${itemId}`)
-                            .then(response => {
+                        const baseURL = "https://localhost:7072"
+
+                        var itemId = $("#btnComprar").data('id')
+
+                        $.get(`${baseURL}/Loja/Comprar/${itemId}`)
+                            .then(function (response) {
                                 if (!response.ok) {
-                                    throw new Error(response.statusText)
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Não foi possível efetuar a compra.',
+                                        text: `${response.errorMessage}`
+                                    })
                                 }
-                                return response.json()
+                                else {
+                                    Swal.fire({
+                                        position: 'center',
+                                        icon: 'success',
+                                        title: 'Compra efetuada!',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                }
+                                return response
                             })
-                            .catch(error => {
-                                Swal.showValidationMessage(
-                                    `Request failed: ${error}`
-                                )
-                            })
+                        return promise;
                     },
-                    allowOutsideClick: () => !Swal.isLoading()
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        Swal.fire({
-                            title: `${result.value.login}'s avatar`,
-                            imageUrl: result.value.avatar_url
-                        })
-                    }
+                    allowOutsideClick: false
                 })
             }
         </script>
