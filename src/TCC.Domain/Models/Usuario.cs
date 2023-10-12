@@ -10,5 +10,6 @@ namespace TCC.Domain.Models
         public int QtdMoedas { get; set; }
 
         public decimal MultiplicadorXp { get; set; }
+        public IEnumerable<PedidoLoja> Pedidos { get; set; }
     }
 }

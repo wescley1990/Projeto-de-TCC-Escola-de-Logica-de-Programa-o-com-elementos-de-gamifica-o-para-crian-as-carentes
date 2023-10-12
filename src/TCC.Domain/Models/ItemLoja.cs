@@ -1,5 +1,4 @@
 ﻿using NetDevPack.Domain;
-using System.Numerics;
 using TCC.Domain.Enums;
 
 namespace TCC.Domain.Models
