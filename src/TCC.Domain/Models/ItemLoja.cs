@@ -15,5 +15,7 @@ namespace TCC.Domain.Models
         public string ImagemUrl { get; set; }
         public int Preco { get; set; }
         public long Duracao { get; set; }
+        public decimal Multiplicador { get; set; }
+        public long QtdXp { get; set; }
     }
 }

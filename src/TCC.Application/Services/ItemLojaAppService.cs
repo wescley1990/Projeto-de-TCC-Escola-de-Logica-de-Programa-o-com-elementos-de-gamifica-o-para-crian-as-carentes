@@ -55,11 +55,12 @@ public class ItemLojaAppService : IItemLojaAppService
         if (item is null)
         {
             result = new OperationResultViewModel("Item não encontrado.");
+            return result;
         }
 
         if (user.QtdMoedas < item.Preco)
         {
-            result = new OperationResultViewModel("Quantidade de moedas inferior ao preço do item.");
+            result = new OperationResultViewModel("Você não possui moedas suficiente.");
         }
 
         return result;

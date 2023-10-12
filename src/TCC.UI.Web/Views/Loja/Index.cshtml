@@ -1,4 +1,9 @@
+@using Microsoft.AspNetCore.Identity;
+@using TCC.Domain.Models;
 @model IEnumerable<TCC.Application.ViewModels.ItemLojaViewModel>
+
+@inject UserManager<Usuario> UserManager
+
 @{
 	ViewData["Title"] = "LogPlay - Loja";
 }
@@ -18,7 +23,10 @@
 <body>
     <header>
         <h1>Loja de Itens</h1>
-        <div class="moedas">Suas Moedas: <span id="moedas-usuario">1000</span></div>
+        <div class="moedas">
+            Suas Moedas: 
+            <span id="moedas-usuario">@UserManager.GetUserAsync(User).Result.QtdMoedas</span>
+        </div>
     </header>
 
     <div class="scrollable-content">
