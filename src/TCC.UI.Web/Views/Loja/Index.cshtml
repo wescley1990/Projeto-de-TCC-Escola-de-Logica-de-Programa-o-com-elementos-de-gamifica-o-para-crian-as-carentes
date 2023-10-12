@@ -22,20 +22,21 @@
     </header>
 
     <div class="scrollable-content">
-        @for (var i = 1; i <= Model.Chunk(3).Count(); i++)
+        @for(var i = 0; i < Model.Chunk(3).Count(); i++)
         {
             <table class="item-table">
                 <tr>
-                    @foreach (var item in Model.Take(3))
+                    @foreach (var item in Model.Skip(i*3).Take(3))
                     {
                         <td class="item">
                             <img src="~/assets/img/Loja/@item.ImagemUrl" alt="Item 1">
                             <h2>@item.Nome</h2>
                             <p>@item.Descricao</p>
                             <p>@item.Preco</p>
-                            <button id ="btnComprar" onclick="Comprar()" data-id="@item.Id" asp-controller="Loja" asp-action="Comprar">Comprar</button>
+                            <button id="btnComprar" onclick="Comprar()" data-id="@item.Id" asp-controller="Loja" asp-action="Comprar">Comprar</button>
                         </td>
                     }
+                </tr>
             </table>
         }
     </div>
@@ -62,8 +63,8 @@
                     confirmButtonColor: '#201b2c',
                     showLoaderOnConfirm: true,
                     preConfirm: () => {
-                        //const baseURL = "https://localhost:7072"
-                        const baseURL = "https://tcc-gcv5xxtscq-uc.a.run.app"
+                        const baseURL = "https://localhost:7072"
+                        //const baseURL = "https://tcc-gcv5xxtscq-uc.a.run.app"
 
                         var itemId = $("#btnComprar").data('id')
 

@@ -17,6 +17,7 @@ builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/Ide
 builder.Services.AddControllersWithViews();
 builder.Services.AddAutoMapperConfiguration();
 builder.Services.AddDependencyInjectionConfiguration();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 

@@ -111,14 +111,10 @@ namespace TCC.UI.Web.Controllers
 
 
         [HttpGet("Loja/Comprar/{id}")]
-        public IActionResult Comprar(string id)
+        public async Task<IActionResult> Comprar(string id)
         {
-            var result = new
-            {
-                ok = false,
-                isConfirmed = false,
-                errorMessage = "Não foi possível efetuar a compra!"
-            };
+            Guid.TryParse(id, out var guidResult);
+            var result = await _lojaAppService.ComprarItem(guidResult);
 
             return Json(result);
         }

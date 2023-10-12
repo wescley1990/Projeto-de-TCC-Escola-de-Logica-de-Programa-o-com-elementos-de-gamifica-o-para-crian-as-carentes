@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using TCC.Application.Interfaces;
@@ -18,13 +20,16 @@ namespace TCC.Application.Services
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IMapper _mapper;
         private readonly UserManager<Usuario> _userManager;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public UsuarioAppService(
             IUsuarioRepository usuarioRepository,
             IMapper mapper,
-            UserManager<Usuario> userManager
+            UserManager<Usuario> userManager,
+            IHttpContextAccessor httpContextAccessor
             )
         {
+            _httpContextAccessor = httpContextAccessor;
             _usuarioRepository = usuarioRepository;
             _mapper = mapper;
             _userManager = userManager;
@@ -39,6 +44,13 @@ namespace TCC.Application.Services
         {
             var users = _userManager.Users.ToList();
             return _mapper.Map<IEnumerable<UsuarioViewModel>>(users);
+        }
+
+        public async Task<Usuario> GetCurrentUser()
+        {
+            var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            return await _userManager.FindByIdAsync(userId);
         }
     }
 }

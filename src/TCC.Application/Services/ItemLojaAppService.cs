@@ -3,7 +3,6 @@ using TCC.Application.Interfaces;
 using TCC.Application.ViewModels;
 using TCC.Domain.Interfaces;
 using TCC.Domain.Models;
-using TCC.Infra.Data.Repository;
 
 namespace TCC.Application.Services;
 
@@ -11,12 +10,15 @@ public class ItemLojaAppService : IItemLojaAppService
 {
     private readonly IItemLojaRepository _itemLojaRepository;
     private readonly IMapper _mapper;
+    private readonly IUsuarioAppService _userAppService;
 
     public ItemLojaAppService(
         IItemLojaRepository itemLojaRepository,
-        IMapper mapper
+        IMapper mapper,
+        IUsuarioAppService userAppService
     )
     {
+        _userAppService = userAppService;
         _itemLojaRepository = itemLojaRepository;
         _mapper = mapper;
     }
@@ -41,5 +43,25 @@ public class ItemLojaAppService : IItemLojaAppService
         var itemDomain = _mapper.Map<ItemLoja>(item);
 
         return await _itemLojaRepository.Remove(itemDomain);
+    }
+
+    public async Task<OperationResultViewModel> ComprarItem(Guid id)
+    {
+        var result = new OperationResultViewModel();
+
+        var user = await _userAppService.GetCurrentUser();
+        var item = await _itemLojaRepository.GetById(id);
+
+        if (item is null)
+        {
+            result = new OperationResultViewModel("Item não encontrado.");
+        }
+
+        if (user.QtdMoedas < item.Preco)
+        {
+            result = new OperationResultViewModel("Quantidade de moedas inferior ao preço do item.");
+        }
+
+        return result;
     }
 }
