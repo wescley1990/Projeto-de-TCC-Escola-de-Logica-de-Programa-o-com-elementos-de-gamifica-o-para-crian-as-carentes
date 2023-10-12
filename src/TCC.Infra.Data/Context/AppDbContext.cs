@@ -22,6 +22,7 @@ public class AppDbContext : IdentityDbContext<Usuario>, IUnitOfWork
     public DbSet<Usuario> Usuarios { get; set; }
 
     public DbSet<Exercicio> Exercicios { get; set; }
+    public DbSet<PedidoLoja> Pedidos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
