@@ -33,7 +33,7 @@
                             <h2>@item.Nome</h2>
                             <p>@item.Descricao</p>
                             <p>@item.Preco</p>
-                            <button onclick="Buy()" asp-controller="Loja" asp-action="Comprar">Comprar</button>
+                            <button id ="btnComprar" onclick="Comprar()" data-id="@item.Id" asp-controller="Loja" asp-action="Comprar">Comprar</button>
                         </td>
                     }
             </table>
@@ -53,13 +53,39 @@
     @section Scripts{
 
         <script>
-            function Buy() {
+            function Comprar() {
                 Swal.fire({
-                    title: 'Error!',
-                    text: 'Do you want to continue',
-                    icon: 'error',
-                    confirmButtonText: 'Cool'
-                });
+                    title: 'Deseja confirmar a compra?',
+                    showCancelButton: true,
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonText: 'Comprar',
+                    showLoaderOnConfirm: true,
+                    preConfirm: () => {
+                        //const isDevelopment = @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Production";
+                        const baseURL = "https://localhost:7072";
+                        var itemId = $("#btnComprar").data('id');
+                        return fetch(`${baseURL}/Loja/Comprar/${itemId}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(response.statusText)
+                                }
+                                return response.json()
+                            })
+                            .catch(error => {
+                                Swal.showValidationMessage(
+                                    `Request failed: ${error}`
+                                )
+                            })
+                    },
+                    allowOutsideClick: () => !Swal.isLoading()
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: `${result.value.login}'s avatar`,
+                            imageUrl: result.value.avatar_url
+                        })
+                    }
+                })
             }
         </script>
 
