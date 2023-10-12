@@ -110,10 +110,15 @@ namespace TCC.UI.Web.Controllers
         }
 
 
-        [HttpPost()]
+        [HttpGet("Loja/Comprar/{id}")]
         public IActionResult Comprar(string id)
         {
-            return Ok();
+            var result = new
+            {
+                isConfirmed = true
+            };
+
+            return Json(result);
         }
     }
 }
